@@ -19,39 +19,39 @@ This project explores the use of Large Language Models (LLMs) as raters in large
 
 ---
 
-## Introduction
-- **Importance of Language Proficiency Tests**: Large-scale international language proficiency tests play a critical role in university admissions, employment opportunities, and immigration processes. Writing tests, in particular, provide deep insights into an examinee’s pragmatic competence.
+## Introduction  
+- **Importance of Language Proficiency Tests**: Large-scale international language proficiency tests play a critical role in university admissions, employment opportunities, and immigration processes. Writing tests, in particular, provide deep insights into an examinee’s pragmatic competence.  
   
-- **Challenges in Human Scoring**: Assessing writing proficiency is inherently complex. Human raters may suffer from fatigue, personal biases, and cultural differences, leading to inconsistent and subjective evaluations that undermine the assessment's effectiveness.
+- **Challenges in Human Scoring**: Assessing writing proficiency is inherently complex. Human raters may suffer from fatigue, personal biases, and cultural differences, leading to inconsistent and subjective evaluations that undermine the assessment's effectiveness.  
   
-- **Advancements in Automated Essay Scoring (AES)**: To address these challenges, researchers have developed AES systems leveraging machine intelligence. These systems have evolved from feature-engineered machine learning models to advanced deep learning techniques, including transformer-based models like LLMs, which significantly enhance AES capabilities.
+- **Advancements in Automated Essay Scoring (AES)**: To address these challenges, researchers have developed AES systems leveraging machine intelligence. These systems have evolved from feature-engineered machine learning models to advanced deep learning techniques, including transformer-based models like LLMs, which significantly enhance AES capabilities.  
   
-- **Need for Robust Evaluation Metrics**: Current AES evaluations primarily use metrics like Quadratic Weighted Kappa (QWK) to measure score consistency between models and human raters. However, this raises concerns about whether human scoring accurately reflects examinees’ abilities, especially with complex scoring rubrics that can be interpreted variably and subject to biases.
+- **Need for Robust Evaluation Metrics**: Current AES evaluations primarily use metrics like Quadratic Weighted Kappa (QWK) to measure score consistency between models and human raters. However, this raises concerns about whether human scoring accurately reflects examinees’ abilities, especially with complex scoring rubrics that can be interpreted variably and subject to biases.  
   
-- **Psychometric Framework**: This project employs a psychometric framework, focusing on reliability and validity, to evaluate LLMs as essay evaluators. It leverages Generalizability (G-) Theory and the Many-Facet Rasch Model (MFRM) to provide a comprehensive assessment of both human and model raters.
+- **Psychometric Framework**: This project employs a psychometric framework, focusing on reliability and validity, to evaluate LLMs as essay evaluators. It leverages Generalizability (G-) Theory and the Many-Facet Rasch Model (MFRM) to provide a comprehensive assessment of both human and model raters.  
 
----
+---  
 
-## Key Findings
-1. **Reliability**
-   - **Inter-Rater Reliability**: LLMs, particularly Claude, demonstrated higher inter-rater reliability compared to human raters and GPT, especially with complex rating scales.
-   - **Intra-Rater Reliability**: Claude also outperformed GPT in maintaining consistent evaluations over time.
+## Key Findings  
+1. **Reliability**  
+   - **Inter-Rater Reliability**: LLMs, particularly Claude, demonstrated higher inter-rater reliability compared to human raters and GPT, especially with complex rating scales.  
+   - **Intra-Rater Reliability**: Claude also outperformed GPT in maintaining consistent evaluations over time.  
 
-2. **Validity**
-   - **Convergent Validity**: Claude’s scoring aligned more closely with external standards, indicating strong convergent validity in analytic scoring.
-   - **Divergent Validity**: Both humans and GPT showed relatively low divergent validity, while Claude maintained more robust performance, though improvements are still needed.
+2. **Validity**  
+   - **Convergent Validity**: Claude’s scoring aligned more closely with external standards, indicating strong convergent validity in analytic scoring.  
+   - **Divergent Validity**: Both humans and GPT showed relatively low divergent validity, while Claude maintained more robust performance, though improvements are still needed.  
 
-3. **Information Function and Discrimination**
-   - **Human Raters**: Covered a broader range of ability levels but lacked high discrimination within specific intervals.
-   - **Model Raters**: Excelled in specific ability ranges but showed decreased discrimination outside these zones, leading to variability.
+3. **Information Function and Discrimination**  
+   - **Human Raters**: Covered a broader range of ability levels but lacked high discrimination within specific intervals.  
+   - **Model Raters**: Excelled in specific ability ranges but showed decreased discrimination outside these zones, leading to variability.  
 
-4. **Rater Effects**
-   - **Human Raters**: Tend to be more lenient and exhibit random scoring in analytic tasks involving multiple rubric dimensions.
-   - **Model Raters**: Display randomness in holistic scoring tasks, struggling to balance multiple textual features.
-   - **Conservative Scoring Patterns**: Both humans and models exhibit constrained scoring ranges, with models inheriting conservative tendencies from human-trained data.
-   - **Halo Effect**: Observed in both human and GPT raters, affecting divergent validity across rating dimensions.
+4. **Rater Effects**  
+   - **Human Raters**: Tend to be more lenient and exhibit random scoring in analytic tasks involving multiple rubric dimensions.  
+   - **Model Raters**: Display randomness in holistic scoring tasks, struggling to balance multiple textual features.  
+   - **Conservative Scoring Patterns**: Both humans and models exhibit constrained scoring ranges, with models inheriting conservative tendencies from human-trained data.  
+   - **Halo Effect**: Observed in both human and GPT raters, affecting divergent validity across rating dimensions.  
 
-5. **Generalizability**
+5. **Generalizability**  
    - The psychometric framework developed can be extended to other subjective scoring contexts, such as oral assessments and LLMs serving as judges, to further explore and refine their reliability and validity.
 
 ---
