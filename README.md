@@ -81,7 +81,7 @@ This project explores the use of Large Language Models (LLMs) as raters in large
 │ │ │ │ │ ├── SF
 │ │ │ │ │ └── Con1
 │ │ ├── data_generation/ # Data Generation Codes
-│ │ ├── visualization/ # Visualization Codes
+│ │ └── visualization/ # Visualization Codes
 
 ├── LICENSE # License information
 
@@ -93,20 +93,48 @@ This project explores the use of Large Language Models (LLMs) as raters in large
 ## Installation and Usage
 
 ### Environment Requirements
-- **Python**: 3.8+
-- **Libraries**: `numpy`, `pandas`, `scipy`, `scikit-learn`, `transformers`, etc.
-- **Hardware**: If using deep learning models, ensure CUDA drivers are installed for GPU acceleration.
+- **Python**: 3.8+ (Anaconda recommended)
+- **R**: 4.1.0+ (RStudio recommended)
+- **Core Dependencies**:
+  ```plaintext
+  Python: numpy, pandas, scipy, scikit-learn, transformers, regex
+  R: ggplot2, dplyr, patchwork, tidyr, ggsci, readxl, gridExtra
+  ```
+- **Hardware Requirements**:
+  - 16GB+ RAM recommended (for large-scale text processing)
 
 ### Installation
-1. **Clone the Repository**
+1. **Clone Repository**
    ```bash
    git clone https://github.com/your-username/LLM-Writing-Assessment.git
    cd LLM-Writing-Assessment
    ```
 
-2. **Install Dependencies**
+2. **Install Python Dependencies**
    ```bash
+   # Create conda environment (optional)
+   conda create -n llm-assessment python=3.9
+   conda activate llm-assessment
+
+   # Install core packages
    pip install -r requirements.txt
+
+   ```
+
+3. **Install R Dependencies**
+   ```R
+   # Execute in R console
+   install.packages(c("ggplot2", "dplyr", "patchwork", "tidyr", 
+                    "ggsci", "readxl", "gridExtra", "extrafont"))
+
+   # Install font support (requires admin rights)
+   extrafont::font_import()
+   ```
+
+4. **Verify Installation**
+   ```bash
+   python scripts/verify_install.py
+   Rscript scripts/verify_r_deps.R
    ```
 
 ### Usage
