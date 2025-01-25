@@ -58,12 +58,34 @@ This project explores the use of Large Language Models (LLMs) as raters in large
 
 ## Project Structure
 ```
-├── data/                 # Experimental data and sample files
-├── scripts/              # Analysis scripts and scoring logic
-├── models/               # Trained models and configuration files
-├── docs/                 # Documentation, research reports, drafts
-├── README.md             # Project documentation
-└── LICENSE               # License information
+├── repository/
+│ ├── data/ # # Experimental data and sample files
+│ │ ├── raw/ # Raw data with human raters' scores
+│ │ ├── processed/ # Model scored data
+│ │ │ ├── Essay_Set_#1/
+│ │ │ ├── Essay_Set_#2/
+│ │ │ └── Essay_Set_#3/
+│ │ └── visualization # Data for visualization
+
+│ ├── scripts/ # # Analysis scripts
+│ │ ├── analysis/ # Analysis Files
+│ │ │ ├── G_&_D_Study/ # G- and D-Study Analysis and Results Files
+│ │ │ └── MFRM/ # Many Facet Rasch Model Analysis and Results Files
+│ │ │ │ ├── Essay Set #1/
+│ │ │ │ ├── Essay Set #2/
+│ │ │ │ └── Essay Set #3/
+│ │ │ │ │ ├── I&C
+│ │ │ │ │ ├── Org
+│ │ │ │ │ ├── V
+│ │ │ │ │ ├── WC
+│ │ │ │ │ ├── SF
+│ │ │ │ │ └── Con1
+│ │ ├── data_generation/ # Data Generation Codes
+│ │ ├── visualization/ # Visualization Codes
+
+├── LICENSE # License information
+
+├── README.md # Project documentation
 ```
 
 ---
