@@ -1,0 +1,4791 @@
+
+                          GGGGGGGGGG   EEEEEEEEEEEE  NN        NN    OOOOOOOO    VV        VV   AAAAAAAAAA 
+                         GGGGGGGGGGGG  EEEEEEEEEEEE  NNN       NN   OOOOOOOOOO   VV        VV  AAAAAAAAAAAA
+                         GG         G  EE            NNNN      NN  OO        OO  VV        VV  AA        AA
+                         GG            EE            NN NN     NN  OO        OO   VV      VV   AA        AA
+                         GG            EE            NN  NN    NN  OO        OO   VV      VV   AA        AA
+                         GG            EE            NN   NN   NN  OO        OO   VV      VV   AA        AA
+                         GG            EE            NN    NN  NN  OO        OO    VV    VV    AA        AA
+                         GG            EEEEEEEE      NN     NN NN  OO        OO    VV    VV    AA        AA
+                         GG      GGGG  EEEEEEEE      NN      NNNN  OO        OO    VV    VV    AAAAAAAAAAAA
+                         GG      GGGG  EE            NN       NNN  OO        OO     VV  VV     AAAAAAAAAAAA
+                         GG        GG  EE            NN        NN  OO        OO     VV  VV     AA        AA
+                         GG        GG  EE            NN        NN  OO        OO     VV  VV     AA        AA
+                         GG        GG  EE            NN        NN  OO        OO      V  V      AA        AA
+                         GG        GG  EE            NN        NN  OO        OO      VVVV      AA        AA
+                         GGGGGGGGGGGG  EEEEEEEEEEEE  NN        NN   OOOOOOOOOO       VVVV      AA        AA
+                          GGGGGGGGGG   EEEEEEEEEEEE  NN        NN    OOOOOOOO         VV       AA        AA
+
+
+                                           A GENERAL PURPOSE ANALYSIS OF VARIANCE SYSTEM
+                                             ---                      -  --
+
+                                      GENOVA IS A FORTRAN 77 PROGRAM FOR ANALYSIS OF VARIANCE
+                                        AND GENERALIZABILITY ANALYSES WITH BALANCED DESIGNS
+
+
+                                                             AUTHORS
+
+                                                         Joe E. Crick, Ed.D.
+                                               Chief Technology & Information Officer
+                                         Vice President Applications and Database Services
+                                                National Board of Medical Examiners
+                                                      Philadelphia, PA  19104
+
+                                                      Robert L. Brennan, Ed.D.
+                                                   Director, Iowa Testing Program
+                                                         University of Iowa
+                                                       Iowa City, Iowa 52242
+
+
+                                                           VERSION 3.1
+                                                          January, 2001
+                               GENOVA has been checked for accuracy of output, however the authors
+                                can make no assurances that the program is totally without error.
+
+              GENOVA was developed in part under contract No. N00123-78-C-1206 with the Navy Personnel Research and 
+              Development Center (NPRDC); Robert L. Brennan Principal Investigator.  GENOVA does not necessarily
+              reflect NPRDC positions or policy, and no official endorsement should be inferred
+   GENOVA  VERSION 3.1                                                                                                PAGE       1
+                                                     CONTROL CARD INPUT LISTING
+
+
+   COLUMN   11111111112222222222333333333344444444445555555555666666666677777777778
+   12345678901234567890123456789012345678901234567890123456789012345678901234567890
+   STUDY       ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1                   
+   COMMENT                                                                         
+   COMMENT     # RECORDS = 300, rows                                               
+   COMMENT     # VALUES PER RECORD = 2, columns                                    
+   COMMENT                                                                         
+   OPTIONS     RECORDS ALL   CORRELATION                                           
+   EFFECT      * P 1783 0 # Student, 300 Students, can generalize to the population
+
+ *** EXTRA PARAMETERS ON AN EFFECT CARD - IGNORED ***
+   EFFECT      + R 2 0 # Rater, 2 Raters, can generalize to the population         
+
+ *** EXTRA PARAMETERS ON AN EFFECT CARD - IGNORED ***
+   FORMAT      (2F1.0) # 每条记录包含 2 个浮点数，每个浮点数占用 
+   PROCESS                                                                         
+   GENOVA  VERSION 3.1                                                                                                PAGE       2
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                             EXPANDED MAIN AND INTERACTION EFFECT TABLE             
+
+         (** = INFINITE)    P         R                  TOTAL   DEGREES                                                          
+         SAMPLE SIZE     1783         2        PRIMARY  NUMBER     OF                                                             
+         UNIVERSE SIZE   ****      ****        INDICES  INDICES  FREEDOM                                                          
+        ************************************
+        *              *         *         *
+        *  P           *    1    *    0    *      1        1       1782                                                           
+        *  R           *    0    *    1    *      1        1          1                                                           
+        *              *         *         *
+        ************************************
+        *              *         *         *
+        *  PR          *    1    *    1    *      2        2       1782                                                           
+        *              *         *         *
+        ************************************
+   GENOVA  VERSION 3.1                                                                                                PAGE       3
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #      1     4.00000     4.00000     4.00000
+
+ RECORD #      2     5.00000     4.00000     4.50000
+
+ RECORD #      3     4.00000     3.00000     3.50000
+
+ RECORD #      4     5.00000     5.00000     5.00000
+
+ RECORD #      5     4.00000     4.00000     4.00000
+
+ RECORD #      6     4.00000     4.00000     4.00000
+
+ RECORD #      7     5.00000     5.00000     5.00000
+
+ RECORD #      8     5.00000     5.00000     5.00000
+
+ RECORD #      9     4.00000     5.00000     4.50000
+
+ RECORD #     10     5.00000     4.00000     4.50000
+
+ RECORD #     11     4.00000     4.00000     4.00000
+
+ RECORD #     12     4.00000     4.00000     4.00000
+
+ RECORD #     13     4.00000     3.00000     3.50000
+
+ RECORD #     14     3.00000     3.00000     3.00000
+
+ RECORD #     15     3.00000     3.00000     3.00000
+
+ RECORD #     16     6.00000     6.00000     6.00000
+
+ RECORD #     17     4.00000     4.00000     4.00000
+
+ RECORD #     18     4.00000     4.00000     4.00000
+
+ RECORD #     19     2.00000     2.00000     2.00000
+
+ RECORD #     20     3.00000     3.00000     3.00000
+
+ RECORD #     21     4.00000     4.00000     4.00000
+
+ RECORD #     22     2.00000     1.00000     1.50000
+
+ RECORD #     23     5.00000     5.00000     5.00000
+
+ RECORD #     24     6.00000     5.00000     5.50000
+
+ RECORD #     25     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE       4
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #     26     5.00000     4.00000     4.50000
+
+ RECORD #     27     2.00000     2.00000     2.00000
+
+ RECORD #     28     5.00000     4.00000     4.50000
+
+ RECORD #     29     5.00000     4.00000     4.50000
+
+ RECORD #     30     4.00000     4.00000     4.00000
+
+ RECORD #     31     4.00000     6.00000     5.00000
+
+ RECORD #     32     5.00000     5.00000     5.00000
+
+ RECORD #     33     3.00000     3.00000     3.00000
+
+ RECORD #     34     4.00000     4.00000     4.00000
+
+ RECORD #     35     4.00000     5.00000     4.50000
+
+ RECORD #     36     5.00000     5.00000     5.00000
+
+ RECORD #     37     6.00000     6.00000     6.00000
+
+ RECORD #     38     4.00000     4.00000     4.00000
+
+ RECORD #     39     5.00000     5.00000     5.00000
+
+ RECORD #     40     4.00000     3.00000     3.50000
+
+ RECORD #     41     1.00000     1.00000     1.00000
+
+ RECORD #     42     4.00000     4.00000     4.00000
+
+ RECORD #     43     3.00000     3.00000     3.00000
+
+ RECORD #     44     4.00000     4.00000     4.00000
+
+ RECORD #     45     4.00000     4.00000     4.00000
+
+ RECORD #     46     4.00000     4.00000     4.00000
+
+ RECORD #     47     4.00000     4.00000     4.00000
+
+ RECORD #     48     6.00000     5.00000     5.50000
+
+ RECORD #     49     3.00000     3.00000     3.00000
+
+ RECORD #     50     2.00000     3.00000     2.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE       5
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #     51     5.00000     4.00000     4.50000
+
+ RECORD #     52     3.00000     4.00000     3.50000
+
+ RECORD #     53     4.00000     4.00000     4.00000
+
+ RECORD #     54     5.00000     5.00000     5.00000
+
+ RECORD #     55     4.00000     4.00000     4.00000
+
+ RECORD #     56     5.00000     5.00000     5.00000
+
+ RECORD #     57     5.00000     4.00000     4.50000
+
+ RECORD #     58     4.00000     3.00000     3.50000
+
+ RECORD #     59     4.00000     4.00000     4.00000
+
+ RECORD #     60     2.00000     2.00000     2.00000
+
+ RECORD #     61     4.00000     4.00000     4.00000
+
+ RECORD #     62     4.00000     4.00000     4.00000
+
+ RECORD #     63     4.00000     4.00000     4.00000
+
+ RECORD #     64     4.00000     3.00000     3.50000
+
+ RECORD #     65     5.00000     4.00000     4.50000
+
+ RECORD #     66     5.00000     4.00000     4.50000
+
+ RECORD #     67     4.00000     4.00000     4.00000
+
+ RECORD #     68     5.00000     4.00000     4.50000
+
+ RECORD #     69     3.00000     4.00000     3.50000
+
+ RECORD #     70     6.00000     6.00000     6.00000
+
+ RECORD #     71     5.00000     5.00000     5.00000
+
+ RECORD #     72     5.00000     5.00000     5.00000
+
+ RECORD #     73     4.00000     4.00000     4.00000
+
+ RECORD #     74     4.00000     3.00000     3.50000
+
+ RECORD #     75     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE       6
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #     76     4.00000     4.00000     4.00000
+
+ RECORD #     77     5.00000     5.00000     5.00000
+
+ RECORD #     78     5.00000     5.00000     5.00000
+
+ RECORD #     79     5.00000     5.00000     5.00000
+
+ RECORD #     80     4.00000     4.00000     4.00000
+
+ RECORD #     81     4.00000     4.00000     4.00000
+
+ RECORD #     82     4.00000     4.00000     4.00000
+
+ RECORD #     83     3.00000     4.00000     3.50000
+
+ RECORD #     84     3.00000     3.00000     3.00000
+
+ RECORD #     85     5.00000     5.00000     5.00000
+
+ RECORD #     86     4.00000     4.00000     4.00000
+
+ RECORD #     87     5.00000     5.00000     5.00000
+
+ RECORD #     88     4.00000     5.00000     4.50000
+
+ RECORD #     89     3.00000     3.00000     3.00000
+
+ RECORD #     90     3.00000     4.00000     3.50000
+
+ RECORD #     91     4.00000     4.00000     4.00000
+
+ RECORD #     92     5.00000     6.00000     5.50000
+
+ RECORD #     93     5.00000     6.00000     5.50000
+
+ RECORD #     94     4.00000     4.00000     4.00000
+
+ RECORD #     95     5.00000     5.00000     5.00000
+
+ RECORD #     96     3.00000     4.00000     3.50000
+
+ RECORD #     97     4.00000     4.00000     4.00000
+
+ RECORD #     98     5.00000     6.00000     5.50000
+
+ RECORD #     99     4.00000     4.00000     4.00000
+
+ RECORD #    100     3.00000     4.00000     3.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE       7
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    101     5.00000     5.00000     5.00000
+
+ RECORD #    102     4.00000     4.00000     4.00000
+
+ RECORD #    103     5.00000     4.00000     4.50000
+
+ RECORD #    104     5.00000     5.00000     5.00000
+
+ RECORD #    105     4.00000     5.00000     4.50000
+
+ RECORD #    106     5.00000     6.00000     5.50000
+
+ RECORD #    107     5.00000     5.00000     5.00000
+
+ RECORD #    108     4.00000     4.00000     4.00000
+
+ RECORD #    109     4.00000     4.00000     4.00000
+
+ RECORD #    110     3.00000     3.00000     3.00000
+
+ RECORD #    111     6.00000     5.00000     5.50000
+
+ RECORD #    112     5.00000     4.00000     4.50000
+
+ RECORD #    113     4.00000     4.00000     4.00000
+
+ RECORD #    114     4.00000     4.00000     4.00000
+
+ RECORD #    115     5.00000     4.00000     4.50000
+
+ RECORD #    116     2.00000     2.00000     2.00000
+
+ RECORD #    117     4.00000     4.00000     4.00000
+
+ RECORD #    118     6.00000     6.00000     6.00000
+
+ RECORD #    119     5.00000     5.00000     5.00000
+
+ RECORD #    120     4.00000     4.00000     4.00000
+
+ RECORD #    121     4.00000     4.00000     4.00000
+
+ RECORD #    122     5.00000     4.00000     4.50000
+
+ RECORD #    123     5.00000     5.00000     5.00000
+
+ RECORD #    124     4.00000     3.00000     3.50000
+
+ RECORD #    125     3.00000     2.00000     2.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE       8
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    126     4.00000     4.00000     4.00000
+
+ RECORD #    127     4.00000     5.00000     4.50000
+
+ RECORD #    128     5.00000     4.00000     4.50000
+
+ RECORD #    129     5.00000     5.00000     5.00000
+
+ RECORD #    130     5.00000     5.00000     5.00000
+
+ RECORD #    131     5.00000     5.00000     5.00000
+
+ RECORD #    132     6.00000     5.00000     5.50000
+
+ RECORD #    133     5.00000     5.00000     5.00000
+
+ RECORD #    134     5.00000     5.00000     5.00000
+
+ RECORD #    135     3.00000     4.00000     3.50000
+
+ RECORD #    136     4.00000     5.00000     4.50000
+
+ RECORD #    137     3.00000     4.00000     3.50000
+
+ RECORD #    138     4.00000     6.00000     5.00000
+
+ RECORD #    139     3.00000     4.00000     3.50000
+
+ RECORD #    140     4.00000     5.00000     4.50000
+
+ RECORD #    141     5.00000     5.00000     5.00000
+
+ RECORD #    142     5.00000     5.00000     5.00000
+
+ RECORD #    143     3.00000     4.00000     3.50000
+
+ RECORD #    144     4.00000     5.00000     4.50000
+
+ RECORD #    145     5.00000     5.00000     5.00000
+
+ RECORD #    146     3.00000     3.00000     3.00000
+
+ RECORD #    147     6.00000     6.00000     6.00000
+
+ RECORD #    148     5.00000     4.00000     4.50000
+
+ RECORD #    149     4.00000     4.00000     4.00000
+
+ RECORD #    150     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE       9
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    151     4.00000     4.00000     4.00000
+
+ RECORD #    152     3.00000     3.00000     3.00000
+
+ RECORD #    153     5.00000     4.00000     4.50000
+
+ RECORD #    154     6.00000     6.00000     6.00000
+
+ RECORD #    155     5.00000     5.00000     5.00000
+
+ RECORD #    156     4.00000     4.00000     4.00000
+
+ RECORD #    157     5.00000     4.00000     4.50000
+
+ RECORD #    158     5.00000     4.00000     4.50000
+
+ RECORD #    159     5.00000     5.00000     5.00000
+
+ RECORD #    160     4.00000     4.00000     4.00000
+
+ RECORD #    161     5.00000     5.00000     5.00000
+
+ RECORD #    162     6.00000     6.00000     6.00000
+
+ RECORD #    163     4.00000     4.00000     4.00000
+
+ RECORD #    164     4.00000     4.00000     4.00000
+
+ RECORD #    165     4.00000     5.00000     4.50000
+
+ RECORD #    166     4.00000     6.00000     5.00000
+
+ RECORD #    167     4.00000     4.00000     4.00000
+
+ RECORD #    168     5.00000     4.00000     4.50000
+
+ RECORD #    169     3.00000     3.00000     3.00000
+
+ RECORD #    170     4.00000     4.00000     4.00000
+
+ RECORD #    171     4.00000     4.00000     4.00000
+
+ RECORD #    172     4.00000     4.00000     4.00000
+
+ RECORD #    173     4.00000     4.00000     4.00000
+
+ RECORD #    174     4.00000     4.00000     4.00000
+
+ RECORD #    175     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      10
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    176     5.00000     5.00000     5.00000
+
+ RECORD #    177     4.00000     4.00000     4.00000
+
+ RECORD #    178     4.00000     4.00000     4.00000
+
+ RECORD #    179     4.00000     4.00000     4.00000
+
+ RECORD #    180     5.00000     5.00000     5.00000
+
+ RECORD #    181     5.00000     5.00000     5.00000
+
+ RECORD #    182     4.00000     4.00000     4.00000
+
+ RECORD #    183     4.00000     4.00000     4.00000
+
+ RECORD #    184     4.00000     4.00000     4.00000
+
+ RECORD #    185     4.00000     4.00000     4.00000
+
+ RECORD #    186     4.00000     4.00000     4.00000
+
+ RECORD #    187     3.00000     2.00000     2.50000
+
+ RECORD #    188     5.00000     4.00000     4.50000
+
+ RECORD #    189     3.00000     3.00000     3.00000
+
+ RECORD #    190     5.00000     5.00000     5.00000
+
+ RECORD #    191     4.00000     4.00000     4.00000
+
+ RECORD #    192     6.00000     5.00000     5.50000
+
+ RECORD #    193     4.00000     4.00000     4.00000
+
+ RECORD #    194     5.00000     5.00000     5.00000
+
+ RECORD #    195     2.00000     3.00000     2.50000
+
+ RECORD #    196     4.00000     4.00000     4.00000
+
+ RECORD #    197     5.00000     5.00000     5.00000
+
+ RECORD #    198     5.00000     5.00000     5.00000
+
+ RECORD #    199     5.00000     6.00000     5.50000
+
+ RECORD #    200     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      11
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    201     4.00000     5.00000     4.50000
+
+ RECORD #    202     4.00000     4.00000     4.00000
+
+ RECORD #    203     5.00000     5.00000     5.00000
+
+ RECORD #    204     5.00000     5.00000     5.00000
+
+ RECORD #    205     5.00000     5.00000     5.00000
+
+ RECORD #    206     5.00000     5.00000     5.00000
+
+ RECORD #    207     4.00000     4.00000     4.00000
+
+ RECORD #    208     3.00000     3.00000     3.00000
+
+ RECORD #    209     3.00000     3.00000     3.00000
+
+ RECORD #    210     4.00000     5.00000     4.50000
+
+ RECORD #    211     3.00000     3.00000     3.00000
+
+ RECORD #    212     3.00000     4.00000     3.50000
+
+ RECORD #    213     4.00000     4.00000     4.00000
+
+ RECORD #    214     4.00000     4.00000     4.00000
+
+ RECORD #    215     5.00000     5.00000     5.00000
+
+ RECORD #    216     4.00000     4.00000     4.00000
+
+ RECORD #    217     5.00000     5.00000     5.00000
+
+ RECORD #    218     4.00000     4.00000     4.00000
+
+ RECORD #    219     4.00000     5.00000     4.50000
+
+ RECORD #    220     5.00000     5.00000     5.00000
+
+ RECORD #    221     3.00000     3.00000     3.00000
+
+ RECORD #    222     5.00000     4.00000     4.50000
+
+ RECORD #    223     4.00000     4.00000     4.00000
+
+ RECORD #    224     4.00000     4.00000     4.00000
+
+ RECORD #    225     6.00000     6.00000     6.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      12
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    226     4.00000     4.00000     4.00000
+
+ RECORD #    227     5.00000     4.00000     4.50000
+
+ RECORD #    228     4.00000     4.00000     4.00000
+
+ RECORD #    229     4.00000     4.00000     4.00000
+
+ RECORD #    230     5.00000     4.00000     4.50000
+
+ RECORD #    231     4.00000     4.00000     4.00000
+
+ RECORD #    232     6.00000     6.00000     6.00000
+
+ RECORD #    233     4.00000     3.00000     3.50000
+
+ RECORD #    234     4.00000     4.00000     4.00000
+
+ RECORD #    235     3.00000     4.00000     3.50000
+
+ RECORD #    236     3.00000     3.00000     3.00000
+
+ RECORD #    237     4.00000     4.00000     4.00000
+
+ RECORD #    238     4.00000     5.00000     4.50000
+
+ RECORD #    239     5.00000     4.00000     4.50000
+
+ RECORD #    240     4.00000     4.00000     4.00000
+
+ RECORD #    241     4.00000     5.00000     4.50000
+
+ RECORD #    242     4.00000     5.00000     4.50000
+
+ RECORD #    243     5.00000     6.00000     5.50000
+
+ RECORD #    244     4.00000     3.00000     3.50000
+
+ RECORD #    245     4.00000     3.00000     3.50000
+
+ RECORD #    246     5.00000     6.00000     5.50000
+
+ RECORD #    247     4.00000     4.00000     4.00000
+
+ RECORD #    248     4.00000     5.00000     4.50000
+
+ RECORD #    249     5.00000     4.00000     4.50000
+
+ RECORD #    250     5.00000     5.00000     5.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      13
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    251     5.00000     4.00000     4.50000
+
+ RECORD #    252     5.00000     4.00000     4.50000
+
+ RECORD #    253     3.00000     3.00000     3.00000
+
+ RECORD #    254     5.00000     5.00000     5.00000
+
+ RECORD #    255     4.00000     4.00000     4.00000
+
+ RECORD #    256     4.00000     4.00000     4.00000
+
+ RECORD #    257     4.00000     4.00000     4.00000
+
+ RECORD #    258     6.00000     5.00000     5.50000
+
+ RECORD #    259     4.00000     5.00000     4.50000
+
+ RECORD #    260     4.00000     3.00000     3.50000
+
+ RECORD #    261     4.00000     5.00000     4.50000
+
+ RECORD #    262     4.00000     4.00000     4.00000
+
+ RECORD #    263     5.00000     5.00000     5.00000
+
+ RECORD #    264     4.00000     4.00000     4.00000
+
+ RECORD #    265     5.00000     6.00000     5.50000
+
+ RECORD #    266     6.00000     5.00000     5.50000
+
+ RECORD #    267     5.00000     5.00000     5.00000
+
+ RECORD #    268     4.00000     4.00000     4.00000
+
+ RECORD #    269     5.00000     4.00000     4.50000
+
+ RECORD #    270     4.00000     4.00000     4.00000
+
+ RECORD #    271     4.00000     4.00000     4.00000
+
+ RECORD #    272     5.00000     5.00000     5.00000
+
+ RECORD #    273     4.00000     4.00000     4.00000
+
+ RECORD #    274     4.00000     5.00000     4.50000
+
+ RECORD #    275     6.00000     5.00000     5.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      14
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    276     4.00000     4.00000     4.00000
+
+ RECORD #    277     4.00000     5.00000     4.50000
+
+ RECORD #    278     4.00000     4.00000     4.00000
+
+ RECORD #    279     5.00000     5.00000     5.00000
+
+ RECORD #    280     5.00000     5.00000     5.00000
+
+ RECORD #    281     4.00000     3.00000     3.50000
+
+ RECORD #    282     4.00000     4.00000     4.00000
+
+ RECORD #    283     3.00000     3.00000     3.00000
+
+ RECORD #    284     4.00000     4.00000     4.00000
+
+ RECORD #    285     6.00000     5.00000     5.50000
+
+ RECORD #    286     2.00000     2.00000     2.00000
+
+ RECORD #    287     6.00000     6.00000     6.00000
+
+ RECORD #    288     4.00000     4.00000     4.00000
+
+ RECORD #    289     5.00000     5.00000     5.00000
+
+ RECORD #    290     6.00000     5.00000     5.50000
+
+ RECORD #    291     5.00000     6.00000     5.50000
+
+ RECORD #    292     6.00000     5.00000     5.50000
+
+ RECORD #    293     4.00000     4.00000     4.00000
+
+ RECORD #    294     5.00000     5.00000     5.00000
+
+ RECORD #    295     5.00000     5.00000     5.00000
+
+ RECORD #    296     5.00000     5.00000     5.00000
+
+ RECORD #    297     4.00000     5.00000     4.50000
+
+ RECORD #    298     4.00000     4.00000     4.00000
+
+ RECORD #    299     4.00000     4.00000     4.00000
+
+ RECORD #    300     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      15
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    301     5.00000     4.00000     4.50000
+
+ RECORD #    302     5.00000     5.00000     5.00000
+
+ RECORD #    303     5.00000     5.00000     5.00000
+
+ RECORD #    304     4.00000     5.00000     4.50000
+
+ RECORD #    305     5.00000     5.00000     5.00000
+
+ RECORD #    306     4.00000     4.00000     4.00000
+
+ RECORD #    307     5.00000     4.00000     4.50000
+
+ RECORD #    308     3.00000     3.00000     3.00000
+
+ RECORD #    309     4.00000     5.00000     4.50000
+
+ RECORD #    310     5.00000     5.00000     5.00000
+
+ RECORD #    311     5.00000     4.00000     4.50000
+
+ RECORD #    312     3.00000     4.00000     3.50000
+
+ RECORD #    313     5.00000     4.00000     4.50000
+
+ RECORD #    314     5.00000     5.00000     5.00000
+
+ RECORD #    315     4.00000     5.00000     4.50000
+
+ RECORD #    316     5.00000     5.00000     5.00000
+
+ RECORD #    317     4.00000     4.00000     4.00000
+
+ RECORD #    318     4.00000     5.00000     4.50000
+
+ RECORD #    319     4.00000     4.00000     4.00000
+
+ RECORD #    320     6.00000     6.00000     6.00000
+
+ RECORD #    321     4.00000     4.00000     4.00000
+
+ RECORD #    322     5.00000     5.00000     5.00000
+
+ RECORD #    323     4.00000     4.00000     4.00000
+
+ RECORD #    324     5.00000     4.00000     4.50000
+
+ RECORD #    325     4.00000     6.00000     5.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      16
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    326     3.00000     3.00000     3.00000
+
+ RECORD #    327     4.00000     4.00000     4.00000
+
+ RECORD #    328     4.00000     4.00000     4.00000
+
+ RECORD #    329     6.00000     5.00000     5.50000
+
+ RECORD #    330     5.00000     5.00000     5.00000
+
+ RECORD #    331     4.00000     4.00000     4.00000
+
+ RECORD #    332     5.00000     4.00000     4.50000
+
+ RECORD #    333     5.00000     5.00000     5.00000
+
+ RECORD #    334     5.00000     4.00000     4.50000
+
+ RECORD #    335     6.00000     5.00000     5.50000
+
+ RECORD #    336     5.00000     5.00000     5.00000
+
+ RECORD #    337     4.00000     4.00000     4.00000
+
+ RECORD #    338     6.00000     5.00000     5.50000
+
+ RECORD #    339     4.00000     5.00000     4.50000
+
+ RECORD #    340     4.00000     4.00000     4.00000
+
+ RECORD #    341     5.00000     4.00000     4.50000
+
+ RECORD #    342     5.00000     4.00000     4.50000
+
+ RECORD #    343     5.00000     5.00000     5.00000
+
+ RECORD #    344     6.00000     6.00000     6.00000
+
+ RECORD #    345     4.00000     3.00000     3.50000
+
+ RECORD #    346     4.00000     4.00000     4.00000
+
+ RECORD #    347     4.00000     4.00000     4.00000
+
+ RECORD #    348     4.00000     4.00000     4.00000
+
+ RECORD #    349     4.00000     5.00000     4.50000
+
+ RECORD #    350     4.00000     3.00000     3.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      17
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    351     3.00000     2.00000     2.50000
+
+ RECORD #    352     4.00000     4.00000     4.00000
+
+ RECORD #    353     3.00000     3.00000     3.00000
+
+ RECORD #    354     4.00000     4.00000     4.00000
+
+ RECORD #    355     4.00000     4.00000     4.00000
+
+ RECORD #    356     4.00000     3.00000     3.50000
+
+ RECORD #    357     1.00000     1.00000     1.00000
+
+ RECORD #    358     3.00000     3.00000     3.00000
+
+ RECORD #    359     5.00000     5.00000     5.00000
+
+ RECORD #    360     5.00000     5.00000     5.00000
+
+ RECORD #    361     4.00000     4.00000     4.00000
+
+ RECORD #    362     6.00000     5.00000     5.50000
+
+ RECORD #    363     4.00000     5.00000     4.50000
+
+ RECORD #    364     4.00000     4.00000     4.00000
+
+ RECORD #    365     4.00000     4.00000     4.00000
+
+ RECORD #    366     4.00000     5.00000     4.50000
+
+ RECORD #    367     4.00000     4.00000     4.00000
+
+ RECORD #    368     5.00000     5.00000     5.00000
+
+ RECORD #    369     4.00000     4.00000     4.00000
+
+ RECORD #    370     5.00000     5.00000     5.00000
+
+ RECORD #    371     4.00000     4.00000     4.00000
+
+ RECORD #    372     3.00000     4.00000     3.50000
+
+ RECORD #    373     2.00000     2.00000     2.00000
+
+ RECORD #    374     4.00000     4.00000     4.00000
+
+ RECORD #    375     5.00000     5.00000     5.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      18
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    376     6.00000     5.00000     5.50000
+
+ RECORD #    377     5.00000     4.00000     4.50000
+
+ RECORD #    378     5.00000     5.00000     5.00000
+
+ RECORD #    379     5.00000     5.00000     5.00000
+
+ RECORD #    380     3.00000     4.00000     3.50000
+
+ RECORD #    381     6.00000     5.00000     5.50000
+
+ RECORD #    382     4.00000     4.00000     4.00000
+
+ RECORD #    383     5.00000     6.00000     5.50000
+
+ RECORD #    384     5.00000     5.00000     5.00000
+
+ RECORD #    385     4.00000     4.00000     4.00000
+
+ RECORD #    386     4.00000     3.00000     3.50000
+
+ RECORD #    387     4.00000     4.00000     4.00000
+
+ RECORD #    388     5.00000     5.00000     5.00000
+
+ RECORD #    389     6.00000     6.00000     6.00000
+
+ RECORD #    390     4.00000     4.00000     4.00000
+
+ RECORD #    391     4.00000     4.00000     4.00000
+
+ RECORD #    392     4.00000     3.00000     3.50000
+
+ RECORD #    393     3.00000     3.00000     3.00000
+
+ RECORD #    394     4.00000     3.00000     3.50000
+
+ RECORD #    395     5.00000     5.00000     5.00000
+
+ RECORD #    396     5.00000     5.00000     5.00000
+
+ RECORD #    397     4.00000     4.00000     4.00000
+
+ RECORD #    398     4.00000     4.00000     4.00000
+
+ RECORD #    399     3.00000     3.00000     3.00000
+
+ RECORD #    400     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      19
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    401     4.00000     4.00000     4.00000
+
+ RECORD #    402     4.00000     4.00000     4.00000
+
+ RECORD #    403     4.00000     5.00000     4.50000
+
+ RECORD #    404     4.00000     4.00000     4.00000
+
+ RECORD #    405     4.00000     4.00000     4.00000
+
+ RECORD #    406     4.00000     4.00000     4.00000
+
+ RECORD #    407     4.00000     4.00000     4.00000
+
+ RECORD #    408     4.00000     4.00000     4.00000
+
+ RECORD #    409     6.00000     6.00000     6.00000
+
+ RECORD #    410     6.00000     4.00000     5.00000
+
+ RECORD #    411     4.00000     5.00000     4.50000
+
+ RECORD #    412     4.00000     4.00000     4.00000
+
+ RECORD #    413     3.00000     4.00000     3.50000
+
+ RECORD #    414     3.00000     3.00000     3.00000
+
+ RECORD #    415     4.00000     4.00000     4.00000
+
+ RECORD #    416     6.00000     6.00000     6.00000
+
+ RECORD #    417     3.00000     3.00000     3.00000
+
+ RECORD #    418     4.00000     4.00000     4.00000
+
+ RECORD #    419     3.00000     3.00000     3.00000
+
+ RECORD #    420     4.00000     3.00000     3.50000
+
+ RECORD #    421     4.00000     5.00000     4.50000
+
+ RECORD #    422     5.00000     4.00000     4.50000
+
+ RECORD #    423     5.00000     5.00000     5.00000
+
+ RECORD #    424     5.00000     4.00000     4.50000
+
+ RECORD #    425     6.00000     5.00000     5.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      20
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    426     4.00000     4.00000     4.00000
+
+ RECORD #    427     5.00000     4.00000     4.50000
+
+ RECORD #    428     4.00000     4.00000     4.00000
+
+ RECORD #    429     5.00000     6.00000     5.50000
+
+ RECORD #    430     4.00000     4.00000     4.00000
+
+ RECORD #    431     6.00000     5.00000     5.50000
+
+ RECORD #    432     4.00000     3.00000     3.50000
+
+ RECORD #    433     6.00000     5.00000     5.50000
+
+ RECORD #    434     4.00000     4.00000     4.00000
+
+ RECORD #    435     4.00000     4.00000     4.00000
+
+ RECORD #    436     4.00000     4.00000     4.00000
+
+ RECORD #    437     5.00000     5.00000     5.00000
+
+ RECORD #    438     4.00000     4.00000     4.00000
+
+ RECORD #    439     4.00000     4.00000     4.00000
+
+ RECORD #    440     5.00000     5.00000     5.00000
+
+ RECORD #    441     4.00000     4.00000     4.00000
+
+ RECORD #    442     4.00000     4.00000     4.00000
+
+ RECORD #    443     4.00000     4.00000     4.00000
+
+ RECORD #    444     5.00000     5.00000     5.00000
+
+ RECORD #    445     6.00000     5.00000     5.50000
+
+ RECORD #    446     5.00000     4.00000     4.50000
+
+ RECORD #    447     1.00000     1.00000     1.00000
+
+ RECORD #    448     4.00000     3.00000     3.50000
+
+ RECORD #    449     4.00000     4.00000     4.00000
+
+ RECORD #    450     4.00000     3.00000     3.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      21
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    451     4.00000     5.00000     4.50000
+
+ RECORD #    452     4.00000     4.00000     4.00000
+
+ RECORD #    453     2.00000     2.00000     2.00000
+
+ RECORD #    454     3.00000     4.00000     3.50000
+
+ RECORD #    455     5.00000     5.00000     5.00000
+
+ RECORD #    456     4.00000     5.00000     4.50000
+
+ RECORD #    457     4.00000     4.00000     4.00000
+
+ RECORD #    458     4.00000     4.00000     4.00000
+
+ RECORD #    459     4.00000     4.00000     4.00000
+
+ RECORD #    460     4.00000     4.00000     4.00000
+
+ RECORD #    461     4.00000     4.00000     4.00000
+
+ RECORD #    462     3.00000     4.00000     3.50000
+
+ RECORD #    463     4.00000     4.00000     4.00000
+
+ RECORD #    464     4.00000     5.00000     4.50000
+
+ RECORD #    465     4.00000     4.00000     4.00000
+
+ RECORD #    466     4.00000     4.00000     4.00000
+
+ RECORD #    467     4.00000     5.00000     4.50000
+
+ RECORD #    468     4.00000     4.00000     4.00000
+
+ RECORD #    469     4.00000     4.00000     4.00000
+
+ RECORD #    470     6.00000     6.00000     6.00000
+
+ RECORD #    471     3.00000     4.00000     3.50000
+
+ RECORD #    472     3.00000     3.00000     3.00000
+
+ RECORD #    473     5.00000     4.00000     4.50000
+
+ RECORD #    474     4.00000     4.00000     4.00000
+
+ RECORD #    475     3.00000     3.00000     3.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      22
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    476     4.00000     4.00000     4.00000
+
+ RECORD #    477     5.00000     5.00000     5.00000
+
+ RECORD #    478     4.00000     4.00000     4.00000
+
+ RECORD #    479     5.00000     5.00000     5.00000
+
+ RECORD #    480     5.00000     4.00000     4.50000
+
+ RECORD #    481     5.00000     4.00000     4.50000
+
+ RECORD #    482     3.00000     4.00000     3.50000
+
+ RECORD #    483     5.00000     5.00000     5.00000
+
+ RECORD #    484     4.00000     5.00000     4.50000
+
+ RECORD #    485     4.00000     4.00000     4.00000
+
+ RECORD #    486     4.00000     4.00000     4.00000
+
+ RECORD #    487     4.00000     5.00000     4.50000
+
+ RECORD #    488     4.00000     4.00000     4.00000
+
+ RECORD #    489     4.00000     4.00000     4.00000
+
+ RECORD #    490     3.00000     4.00000     3.50000
+
+ RECORD #    491     4.00000     4.00000     4.00000
+
+ RECORD #    492     4.00000     5.00000     4.50000
+
+ RECORD #    493     4.00000     4.00000     4.00000
+
+ RECORD #    494     4.00000     5.00000     4.50000
+
+ RECORD #    495     5.00000     4.00000     4.50000
+
+ RECORD #    496     6.00000     6.00000     6.00000
+
+ RECORD #    497     4.00000     5.00000     4.50000
+
+ RECORD #    498     5.00000     5.00000     5.00000
+
+ RECORD #    499     4.00000     4.00000     4.00000
+
+ RECORD #    500     4.00000     3.00000     3.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      23
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    501     4.00000     4.00000     4.00000
+
+ RECORD #    502     5.00000     5.00000     5.00000
+
+ RECORD #    503     5.00000     5.00000     5.00000
+
+ RECORD #    504     4.00000     3.00000     3.50000
+
+ RECORD #    505     6.00000     4.00000     5.00000
+
+ RECORD #    506     5.00000     4.00000     4.50000
+
+ RECORD #    507     6.00000     5.00000     5.50000
+
+ RECORD #    508     4.00000     3.00000     3.50000
+
+ RECORD #    509     4.00000     4.00000     4.00000
+
+ RECORD #    510     4.00000     4.00000     4.00000
+
+ RECORD #    511     4.00000     4.00000     4.00000
+
+ RECORD #    512     4.00000     4.00000     4.00000
+
+ RECORD #    513     4.00000     4.00000     4.00000
+
+ RECORD #    514     4.00000     4.00000     4.00000
+
+ RECORD #    515     4.00000     4.00000     4.00000
+
+ RECORD #    516     4.00000     4.00000     4.00000
+
+ RECORD #    517     6.00000     6.00000     6.00000
+
+ RECORD #    518     3.00000     3.00000     3.00000
+
+ RECORD #    519     3.00000     4.00000     3.50000
+
+ RECORD #    520     5.00000     4.00000     4.50000
+
+ RECORD #    521     5.00000     5.00000     5.00000
+
+ RECORD #    522     4.00000     4.00000     4.00000
+
+ RECORD #    523     5.00000     4.00000     4.50000
+
+ RECORD #    524     3.00000     4.00000     3.50000
+
+ RECORD #    525     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      24
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    526     3.00000     3.00000     3.00000
+
+ RECORD #    527     3.00000     4.00000     3.50000
+
+ RECORD #    528     5.00000     5.00000     5.00000
+
+ RECORD #    529     4.00000     6.00000     5.00000
+
+ RECORD #    530     4.00000     4.00000     4.00000
+
+ RECORD #    531     4.00000     4.00000     4.00000
+
+ RECORD #    532     6.00000     5.00000     5.50000
+
+ RECORD #    533     4.00000     4.00000     4.00000
+
+ RECORD #    534     4.00000     4.00000     4.00000
+
+ RECORD #    535     4.00000     4.00000     4.00000
+
+ RECORD #    536     4.00000     4.00000     4.00000
+
+ RECORD #    537     5.00000     4.00000     4.50000
+
+ RECORD #    538     4.00000     4.00000     4.00000
+
+ RECORD #    539     4.00000     4.00000     4.00000
+
+ RECORD #    540     5.00000     5.00000     5.00000
+
+ RECORD #    541     4.00000     4.00000     4.00000
+
+ RECORD #    542     4.00000     4.00000     4.00000
+
+ RECORD #    543     1.00000     1.00000     1.00000
+
+ RECORD #    544     3.00000     3.00000     3.00000
+
+ RECORD #    545     4.00000     4.00000     4.00000
+
+ RECORD #    546     4.00000     4.00000     4.00000
+
+ RECORD #    547     4.00000     4.00000     4.00000
+
+ RECORD #    548     6.00000     4.00000     5.00000
+
+ RECORD #    549     4.00000     4.00000     4.00000
+
+ RECORD #    550     3.00000     3.00000     3.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      25
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    551     4.00000     4.00000     4.00000
+
+ RECORD #    552     4.00000     4.00000     4.00000
+
+ RECORD #    553     5.00000     6.00000     5.50000
+
+ RECORD #    554     5.00000     5.00000     5.00000
+
+ RECORD #    555     5.00000     5.00000     5.00000
+
+ RECORD #    556     5.00000     5.00000     5.00000
+
+ RECORD #    557     6.00000     6.00000     6.00000
+
+ RECORD #    558     4.00000     4.00000     4.00000
+
+ RECORD #    559     4.00000     4.00000     4.00000
+
+ RECORD #    560     5.00000     5.00000     5.00000
+
+ RECORD #    561     3.00000     4.00000     3.50000
+
+ RECORD #    562     4.00000     4.00000     4.00000
+
+ RECORD #    563     5.00000     4.00000     4.50000
+
+ RECORD #    564     4.00000     4.00000     4.00000
+
+ RECORD #    565     4.00000     4.00000     4.00000
+
+ RECORD #    566     4.00000     4.00000     4.00000
+
+ RECORD #    567     4.00000     4.00000     4.00000
+
+ RECORD #    568     4.00000     4.00000     4.00000
+
+ RECORD #    569     4.00000     5.00000     4.50000
+
+ RECORD #    570     6.00000     5.00000     5.50000
+
+ RECORD #    571     5.00000     5.00000     5.00000
+
+ RECORD #    572     4.00000     4.00000     4.00000
+
+ RECORD #    573     5.00000     5.00000     5.00000
+
+ RECORD #    574     4.00000     4.00000     4.00000
+
+ RECORD #    575     3.00000     3.00000     3.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      26
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    576     5.00000     4.00000     4.50000
+
+ RECORD #    577     4.00000     4.00000     4.00000
+
+ RECORD #    578     4.00000     4.00000     4.00000
+
+ RECORD #    579     4.00000     4.00000     4.00000
+
+ RECORD #    580     6.00000     5.00000     5.50000
+
+ RECORD #    581     4.00000     5.00000     4.50000
+
+ RECORD #    582     4.00000     5.00000     4.50000
+
+ RECORD #    583     5.00000     6.00000     5.50000
+
+ RECORD #    584     4.00000     4.00000     4.00000
+
+ RECORD #    585     5.00000     4.00000     4.50000
+
+ RECORD #    586     5.00000     5.00000     5.00000
+
+ RECORD #    587     2.00000     3.00000     2.50000
+
+ RECORD #    588     3.00000     3.00000     3.00000
+
+ RECORD #    589     4.00000     4.00000     4.00000
+
+ RECORD #    590     4.00000     4.00000     4.00000
+
+ RECORD #    591     5.00000     5.00000     5.00000
+
+ RECORD #    592     3.00000     4.00000     3.50000
+
+ RECORD #    593     4.00000     4.00000     4.00000
+
+ RECORD #    594     3.00000     3.00000     3.00000
+
+ RECORD #    595     4.00000     4.00000     4.00000
+
+ RECORD #    596     4.00000     4.00000     4.00000
+
+ RECORD #    597     4.00000     4.00000     4.00000
+
+ RECORD #    598     3.00000     3.00000     3.00000
+
+ RECORD #    599     4.00000     4.00000     4.00000
+
+ RECORD #    600     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      27
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    601     6.00000     5.00000     5.50000
+
+ RECORD #    602     5.00000     4.00000     4.50000
+
+ RECORD #    603     3.00000     3.00000     3.00000
+
+ RECORD #    604     4.00000     4.00000     4.00000
+
+ RECORD #    605     4.00000     5.00000     4.50000
+
+ RECORD #    606     4.00000     3.00000     3.50000
+
+ RECORD #    607     4.00000     3.00000     3.50000
+
+ RECORD #    608     3.00000     4.00000     3.50000
+
+ RECORD #    609     4.00000     5.00000     4.50000
+
+ RECORD #    610     5.00000     5.00000     5.00000
+
+ RECORD #    611     4.00000     4.00000     4.00000
+
+ RECORD #    612     3.00000     3.00000     3.00000
+
+ RECORD #    613     4.00000     5.00000     4.50000
+
+ RECORD #    614     4.00000     4.00000     4.00000
+
+ RECORD #    615     4.00000     5.00000     4.50000
+
+ RECORD #    616     4.00000     4.00000     4.00000
+
+ RECORD #    617     5.00000     6.00000     5.50000
+
+ RECORD #    618     3.00000     4.00000     3.50000
+
+ RECORD #    619     4.00000     4.00000     4.00000
+
+ RECORD #    620     4.00000     4.00000     4.00000
+
+ RECORD #    621     3.00000     3.00000     3.00000
+
+ RECORD #    622     4.00000     4.00000     4.00000
+
+ RECORD #    623     5.00000     6.00000     5.50000
+
+ RECORD #    624     3.00000     4.00000     3.50000
+
+ RECORD #    625     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      28
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    626     6.00000     5.00000     5.50000
+
+ RECORD #    627     5.00000     6.00000     5.50000
+
+ RECORD #    628     4.00000     4.00000     4.00000
+
+ RECORD #    629     3.00000     3.00000     3.00000
+
+ RECORD #    630     5.00000     5.00000     5.00000
+
+ RECORD #    631     4.00000     4.00000     4.00000
+
+ RECORD #    632     2.00000     3.00000     2.50000
+
+ RECORD #    633     5.00000     5.00000     5.00000
+
+ RECORD #    634     4.00000     5.00000     4.50000
+
+ RECORD #    635     4.00000     4.00000     4.00000
+
+ RECORD #    636     4.00000     4.00000     4.00000
+
+ RECORD #    637     3.00000     3.00000     3.00000
+
+ RECORD #    638     4.00000     3.00000     3.50000
+
+ RECORD #    639     4.00000     3.00000     3.50000
+
+ RECORD #    640     4.00000     4.00000     4.00000
+
+ RECORD #    641     5.00000     5.00000     5.00000
+
+ RECORD #    642     4.00000     4.00000     4.00000
+
+ RECORD #    643     4.00000     4.00000     4.00000
+
+ RECORD #    644     4.00000     5.00000     4.50000
+
+ RECORD #    645     6.00000     5.00000     5.50000
+
+ RECORD #    646     3.00000     3.00000     3.00000
+
+ RECORD #    647     4.00000     4.00000     4.00000
+
+ RECORD #    648     5.00000     5.00000     5.00000
+
+ RECORD #    649     4.00000     4.00000     4.00000
+
+ RECORD #    650     5.00000     4.00000     4.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      29
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    651     4.00000     4.00000     4.00000
+
+ RECORD #    652     5.00000     5.00000     5.00000
+
+ RECORD #    653     3.00000     4.00000     3.50000
+
+ RECORD #    654     4.00000     5.00000     4.50000
+
+ RECORD #    655     5.00000     4.00000     4.50000
+
+ RECORD #    656     4.00000     4.00000     4.00000
+
+ RECORD #    657     5.00000     5.00000     5.00000
+
+ RECORD #    658     6.00000     5.00000     5.50000
+
+ RECORD #    659     4.00000     4.00000     4.00000
+
+ RECORD #    660     3.00000     3.00000     3.00000
+
+ RECORD #    661     4.00000     4.00000     4.00000
+
+ RECORD #    662     4.00000     5.00000     4.50000
+
+ RECORD #    663     3.00000     4.00000     3.50000
+
+ RECORD #    664     4.00000     4.00000     4.00000
+
+ RECORD #    665     4.00000     5.00000     4.50000
+
+ RECORD #    666     5.00000     5.00000     5.00000
+
+ RECORD #    667     4.00000     4.00000     4.00000
+
+ RECORD #    668     4.00000     4.00000     4.00000
+
+ RECORD #    669     4.00000     4.00000     4.00000
+
+ RECORD #    670     4.00000     5.00000     4.50000
+
+ RECORD #    671     3.00000     3.00000     3.00000
+
+ RECORD #    672     4.00000     4.00000     4.00000
+
+ RECORD #    673     4.00000     4.00000     4.00000
+
+ RECORD #    674     4.00000     4.00000     4.00000
+
+ RECORD #    675     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      30
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    676     4.00000     4.00000     4.00000
+
+ RECORD #    677     4.00000     4.00000     4.00000
+
+ RECORD #    678     5.00000     4.00000     4.50000
+
+ RECORD #    679     4.00000     4.00000     4.00000
+
+ RECORD #    680     5.00000     6.00000     5.50000
+
+ RECORD #    681     5.00000     5.00000     5.00000
+
+ RECORD #    682     4.00000     4.00000     4.00000
+
+ RECORD #    683     4.00000     4.00000     4.00000
+
+ RECORD #    684     5.00000     4.00000     4.50000
+
+ RECORD #    685     4.00000     4.00000     4.00000
+
+ RECORD #    686     4.00000     5.00000     4.50000
+
+ RECORD #    687     4.00000     4.00000     4.00000
+
+ RECORD #    688     5.00000     4.00000     4.50000
+
+ RECORD #    689     3.00000     3.00000     3.00000
+
+ RECORD #    690     3.00000     3.00000     3.00000
+
+ RECORD #    691     4.00000     4.00000     4.00000
+
+ RECORD #    692     4.00000     4.00000     4.00000
+
+ RECORD #    693     5.00000     4.00000     4.50000
+
+ RECORD #    694     4.00000     4.00000     4.00000
+
+ RECORD #    695     4.00000     4.00000     4.00000
+
+ RECORD #    696     3.00000     3.00000     3.00000
+
+ RECORD #    697     6.00000     6.00000     6.00000
+
+ RECORD #    698     4.00000     4.00000     4.00000
+
+ RECORD #    699     4.00000     4.00000     4.00000
+
+ RECORD #    700     3.00000     3.00000     3.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      31
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    701     4.00000     4.00000     4.00000
+
+ RECORD #    702     3.00000     4.00000     3.50000
+
+ RECORD #    703     4.00000     4.00000     4.00000
+
+ RECORD #    704     5.00000     5.00000     5.00000
+
+ RECORD #    705     4.00000     4.00000     4.00000
+
+ RECORD #    706     4.00000     5.00000     4.50000
+
+ RECORD #    707     5.00000     5.00000     5.00000
+
+ RECORD #    708     6.00000     5.00000     5.50000
+
+ RECORD #    709     5.00000     5.00000     5.00000
+
+ RECORD #    710     4.00000     5.00000     4.50000
+
+ RECORD #    711     5.00000     5.00000     5.00000
+
+ RECORD #    712     4.00000     5.00000     4.50000
+
+ RECORD #    713     4.00000     4.00000     4.00000
+
+ RECORD #    714     5.00000     4.00000     4.50000
+
+ RECORD #    715     4.00000     4.00000     4.00000
+
+ RECORD #    716     5.00000     5.00000     5.00000
+
+ RECORD #    717     3.00000     4.00000     3.50000
+
+ RECORD #    718     5.00000     5.00000     5.00000
+
+ RECORD #    719     5.00000     4.00000     4.50000
+
+ RECORD #    720     5.00000     5.00000     5.00000
+
+ RECORD #    721     5.00000     5.00000     5.00000
+
+ RECORD #    722     4.00000     4.00000     4.00000
+
+ RECORD #    723     3.00000     3.00000     3.00000
+
+ RECORD #    724     5.00000     5.00000     5.00000
+
+ RECORD #    725     3.00000     3.00000     3.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      32
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    726     4.00000     4.00000     4.00000
+
+ RECORD #    727     3.00000     4.00000     3.50000
+
+ RECORD #    728     5.00000     5.00000     5.00000
+
+ RECORD #    729     4.00000     4.00000     4.00000
+
+ RECORD #    730     4.00000     5.00000     4.50000
+
+ RECORD #    731     4.00000     4.00000     4.00000
+
+ RECORD #    732     5.00000     5.00000     5.00000
+
+ RECORD #    733     5.00000     4.00000     4.50000
+
+ RECORD #    734     5.00000     5.00000     5.00000
+
+ RECORD #    735     4.00000     4.00000     4.00000
+
+ RECORD #    736     3.00000     3.00000     3.00000
+
+ RECORD #    737     5.00000     4.00000     4.50000
+
+ RECORD #    738     4.00000     4.00000     4.00000
+
+ RECORD #    739     4.00000     4.00000     4.00000
+
+ RECORD #    740     5.00000     5.00000     5.00000
+
+ RECORD #    741     5.00000     5.00000     5.00000
+
+ RECORD #    742     5.00000     4.00000     4.50000
+
+ RECORD #    743     5.00000     4.00000     4.50000
+
+ RECORD #    744     4.00000     4.00000     4.00000
+
+ RECORD #    745     4.00000     4.00000     4.00000
+
+ RECORD #    746     4.00000     4.00000     4.00000
+
+ RECORD #    747     5.00000     5.00000     5.00000
+
+ RECORD #    748     4.00000     4.00000     4.00000
+
+ RECORD #    749     4.00000     4.00000     4.00000
+
+ RECORD #    750     3.00000     4.00000     3.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      33
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    751     4.00000     4.00000     4.00000
+
+ RECORD #    752     5.00000     4.00000     4.50000
+
+ RECORD #    753     4.00000     5.00000     4.50000
+
+ RECORD #    754     4.00000     4.00000     4.00000
+
+ RECORD #    755     4.00000     5.00000     4.50000
+
+ RECORD #    756     4.00000     4.00000     4.00000
+
+ RECORD #    757     6.00000     4.00000     5.00000
+
+ RECORD #    758     4.00000     5.00000     4.50000
+
+ RECORD #    759     4.00000     4.00000     4.00000
+
+ RECORD #    760     5.00000     5.00000     5.00000
+
+ RECORD #    761     4.00000     4.00000     4.00000
+
+ RECORD #    762     5.00000     4.00000     4.50000
+
+ RECORD #    763     4.00000     3.00000     3.50000
+
+ RECORD #    764     4.00000     4.00000     4.00000
+
+ RECORD #    765     4.00000     4.00000     4.00000
+
+ RECORD #    766     4.00000     4.00000     4.00000
+
+ RECORD #    767     5.00000     5.00000     5.00000
+
+ RECORD #    768     4.00000     4.00000     4.00000
+
+ RECORD #    769     5.00000     4.00000     4.50000
+
+ RECORD #    770     5.00000     5.00000     5.00000
+
+ RECORD #    771     4.00000     4.00000     4.00000
+
+ RECORD #    772     4.00000     4.00000     4.00000
+
+ RECORD #    773     3.00000     4.00000     3.50000
+
+ RECORD #    774     3.00000     4.00000     3.50000
+
+ RECORD #    775     5.00000     5.00000     5.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      34
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    776     5.00000     4.00000     4.50000
+
+ RECORD #    777     4.00000     4.00000     4.00000
+
+ RECORD #    778     5.00000     4.00000     4.50000
+
+ RECORD #    779     5.00000     5.00000     5.00000
+
+ RECORD #    780     6.00000     5.00000     5.50000
+
+ RECORD #    781     3.00000     4.00000     3.50000
+
+ RECORD #    782     5.00000     5.00000     5.00000
+
+ RECORD #    783     4.00000     4.00000     4.00000
+
+ RECORD #    784     4.00000     4.00000     4.00000
+
+ RECORD #    785     4.00000     4.00000     4.00000
+
+ RECORD #    786     4.00000     4.00000     4.00000
+
+ RECORD #    787     3.00000     4.00000     3.50000
+
+ RECORD #    788     5.00000     4.00000     4.50000
+
+ RECORD #    789     4.00000     4.00000     4.00000
+
+ RECORD #    790     4.00000     4.00000     4.00000
+
+ RECORD #    791     5.00000     6.00000     5.50000
+
+ RECORD #    792     4.00000     4.00000     4.00000
+
+ RECORD #    793     4.00000     4.00000     4.00000
+
+ RECORD #    794     4.00000     4.00000     4.00000
+
+ RECORD #    795     5.00000     5.00000     5.00000
+
+ RECORD #    796     5.00000     4.00000     4.50000
+
+ RECORD #    797     4.00000     4.00000     4.00000
+
+ RECORD #    798     5.00000     5.00000     5.00000
+
+ RECORD #    799     4.00000     5.00000     4.50000
+
+ RECORD #    800     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      35
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    801     3.00000     3.00000     3.00000
+
+ RECORD #    802     4.00000     4.00000     4.00000
+
+ RECORD #    803     4.00000     5.00000     4.50000
+
+ RECORD #    804     3.00000     3.00000     3.00000
+
+ RECORD #    805     6.00000     5.00000     5.50000
+
+ RECORD #    806     4.00000     3.00000     3.50000
+
+ RECORD #    807     4.00000     5.00000     4.50000
+
+ RECORD #    808     4.00000     4.00000     4.00000
+
+ RECORD #    809     4.00000     4.00000     4.00000
+
+ RECORD #    810     4.00000     4.00000     4.00000
+
+ RECORD #    811     4.00000     4.00000     4.00000
+
+ RECORD #    812     4.00000     4.00000     4.00000
+
+ RECORD #    813     5.00000     5.00000     5.00000
+
+ RECORD #    814     5.00000     4.00000     4.50000
+
+ RECORD #    815     6.00000     6.00000     6.00000
+
+ RECORD #    816     4.00000     4.00000     4.00000
+
+ RECORD #    817     4.00000     4.00000     4.00000
+
+ RECORD #    818     2.00000     3.00000     2.50000
+
+ RECORD #    819     5.00000     4.00000     4.50000
+
+ RECORD #    820     4.00000     4.00000     4.00000
+
+ RECORD #    821     4.00000     4.00000     4.00000
+
+ RECORD #    822     4.00000     5.00000     4.50000
+
+ RECORD #    823     3.00000     3.00000     3.00000
+
+ RECORD #    824     5.00000     5.00000     5.00000
+
+ RECORD #    825     3.00000     3.00000     3.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      36
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    826     4.00000     5.00000     4.50000
+
+ RECORD #    827     4.00000     4.00000     4.00000
+
+ RECORD #    828     5.00000     5.00000     5.00000
+
+ RECORD #    829     4.00000     4.00000     4.00000
+
+ RECORD #    830     1.00000     1.00000     1.00000
+
+ RECORD #    831     5.00000     4.00000     4.50000
+
+ RECORD #    832     5.00000     5.00000     5.00000
+
+ RECORD #    833     5.00000     5.00000     5.00000
+
+ RECORD #    834     4.00000     4.00000     4.00000
+
+ RECORD #    835     4.00000     4.00000     4.00000
+
+ RECORD #    836     2.00000     3.00000     2.50000
+
+ RECORD #    837     5.00000     5.00000     5.00000
+
+ RECORD #    838     4.00000     4.00000     4.00000
+
+ RECORD #    839     3.00000     4.00000     3.50000
+
+ RECORD #    840     4.00000     4.00000     4.00000
+
+ RECORD #    841     4.00000     4.00000     4.00000
+
+ RECORD #    842     4.00000     4.00000     4.00000
+
+ RECORD #    843     5.00000     5.00000     5.00000
+
+ RECORD #    844     4.00000     4.00000     4.00000
+
+ RECORD #    845     6.00000     6.00000     6.00000
+
+ RECORD #    846     3.00000     3.00000     3.00000
+
+ RECORD #    847     3.00000     4.00000     3.50000
+
+ RECORD #    848     5.00000     5.00000     5.00000
+
+ RECORD #    849     5.00000     4.00000     4.50000
+
+ RECORD #    850     5.00000     5.00000     5.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      37
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    851     4.00000     5.00000     4.50000
+
+ RECORD #    852     3.00000     5.00000     4.00000
+
+ RECORD #    853     4.00000     4.00000     4.00000
+
+ RECORD #    854     5.00000     5.00000     5.00000
+
+ RECORD #    855     4.00000     4.00000     4.00000
+
+ RECORD #    856     5.00000     4.00000     4.50000
+
+ RECORD #    857     6.00000     6.00000     6.00000
+
+ RECORD #    858     4.00000     4.00000     4.00000
+
+ RECORD #    859     4.00000     4.00000     4.00000
+
+ RECORD #    860     4.00000     4.00000     4.00000
+
+ RECORD #    861     4.00000     6.00000     5.00000
+
+ RECORD #    862     5.00000     5.00000     5.00000
+
+ RECORD #    863     4.00000     4.00000     4.00000
+
+ RECORD #    864     3.00000     4.00000     3.50000
+
+ RECORD #    865     4.00000     4.00000     4.00000
+
+ RECORD #    866     6.00000     6.00000     6.00000
+
+ RECORD #    867     3.00000     3.00000     3.00000
+
+ RECORD #    868     4.00000     5.00000     4.50000
+
+ RECORD #    869     5.00000     5.00000     5.00000
+
+ RECORD #    870     4.00000     4.00000     4.00000
+
+ RECORD #    871     5.00000     4.00000     4.50000
+
+ RECORD #    872     6.00000     6.00000     6.00000
+
+ RECORD #    873     5.00000     6.00000     5.50000
+
+ RECORD #    874     4.00000     4.00000     4.00000
+
+ RECORD #    875     6.00000     5.00000     5.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      38
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    876     4.00000     5.00000     4.50000
+
+ RECORD #    877     4.00000     4.00000     4.00000
+
+ RECORD #    878     5.00000     5.00000     5.00000
+
+ RECORD #    879     4.00000     4.00000     4.00000
+
+ RECORD #    880     5.00000     4.00000     4.50000
+
+ RECORD #    881     5.00000     4.00000     4.50000
+
+ RECORD #    882     4.00000     4.00000     4.00000
+
+ RECORD #    883     3.00000     4.00000     3.50000
+
+ RECORD #    884     6.00000     5.00000     5.50000
+
+ RECORD #    885     4.00000     5.00000     4.50000
+
+ RECORD #    886     5.00000     5.00000     5.00000
+
+ RECORD #    887     4.00000     4.00000     4.00000
+
+ RECORD #    888     4.00000     4.00000     4.00000
+
+ RECORD #    889     5.00000     4.00000     4.50000
+
+ RECORD #    890     5.00000     5.00000     5.00000
+
+ RECORD #    891     2.00000     2.00000     2.00000
+
+ RECORD #    892     5.00000     5.00000     5.00000
+
+ RECORD #    893     6.00000     4.00000     5.00000
+
+ RECORD #    894     4.00000     4.00000     4.00000
+
+ RECORD #    895     4.00000     5.00000     4.50000
+
+ RECORD #    896     4.00000     4.00000     4.00000
+
+ RECORD #    897     4.00000     4.00000     4.00000
+
+ RECORD #    898     5.00000     5.00000     5.00000
+
+ RECORD #    899     4.00000     4.00000     4.00000
+
+ RECORD #    900     5.00000     5.00000     5.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      39
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    901     4.00000     4.00000     4.00000
+
+ RECORD #    902     4.00000     4.00000     4.00000
+
+ RECORD #    903     3.00000     3.00000     3.00000
+
+ RECORD #    904     6.00000     5.00000     5.50000
+
+ RECORD #    905     5.00000     4.00000     4.50000
+
+ RECORD #    906     5.00000     5.00000     5.00000
+
+ RECORD #    907     5.00000     5.00000     5.00000
+
+ RECORD #    908     4.00000     4.00000     4.00000
+
+ RECORD #    909     4.00000     4.00000     4.00000
+
+ RECORD #    910     5.00000     5.00000     5.00000
+
+ RECORD #    911     5.00000     5.00000     5.00000
+
+ RECORD #    912     5.00000     4.00000     4.50000
+
+ RECORD #    913     5.00000     5.00000     5.00000
+
+ RECORD #    914     6.00000     5.00000     5.50000
+
+ RECORD #    915     3.00000     3.00000     3.00000
+
+ RECORD #    916     5.00000     5.00000     5.00000
+
+ RECORD #    917     5.00000     6.00000     5.50000
+
+ RECORD #    918     4.00000     4.00000     4.00000
+
+ RECORD #    919     4.00000     4.00000     4.00000
+
+ RECORD #    920     4.00000     4.00000     4.00000
+
+ RECORD #    921     3.00000     3.00000     3.00000
+
+ RECORD #    922     4.00000     4.00000     4.00000
+
+ RECORD #    923     4.00000     3.00000     3.50000
+
+ RECORD #    924     4.00000     3.00000     3.50000
+
+ RECORD #    925     3.00000     4.00000     3.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      40
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    926     5.00000     5.00000     5.00000
+
+ RECORD #    927     5.00000     5.00000     5.00000
+
+ RECORD #    928     4.00000     4.00000     4.00000
+
+ RECORD #    929     4.00000     4.00000     4.00000
+
+ RECORD #    930     6.00000     6.00000     6.00000
+
+ RECORD #    931     4.00000     4.00000     4.00000
+
+ RECORD #    932     4.00000     4.00000     4.00000
+
+ RECORD #    933     4.00000     5.00000     4.50000
+
+ RECORD #    934     3.00000     4.00000     3.50000
+
+ RECORD #    935     5.00000     6.00000     5.50000
+
+ RECORD #    936     6.00000     5.00000     5.50000
+
+ RECORD #    937     3.00000     3.00000     3.00000
+
+ RECORD #    938     4.00000     4.00000     4.00000
+
+ RECORD #    939     6.00000     6.00000     6.00000
+
+ RECORD #    940     5.00000     4.00000     4.50000
+
+ RECORD #    941     4.00000     5.00000     4.50000
+
+ RECORD #    942     4.00000     4.00000     4.00000
+
+ RECORD #    943     4.00000     4.00000     4.00000
+
+ RECORD #    944     4.00000     4.00000     4.00000
+
+ RECORD #    945     5.00000     5.00000     5.00000
+
+ RECORD #    946     4.00000     5.00000     4.50000
+
+ RECORD #    947     4.00000     4.00000     4.00000
+
+ RECORD #    948     5.00000     5.00000     5.00000
+
+ RECORD #    949     3.00000     4.00000     3.50000
+
+ RECORD #    950     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      41
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    951     6.00000     6.00000     6.00000
+
+ RECORD #    952     5.00000     5.00000     5.00000
+
+ RECORD #    953     4.00000     4.00000     4.00000
+
+ RECORD #    954     5.00000     4.00000     4.50000
+
+ RECORD #    955     4.00000     5.00000     4.50000
+
+ RECORD #    956     4.00000     4.00000     4.00000
+
+ RECORD #    957     5.00000     4.00000     4.50000
+
+ RECORD #    958     4.00000     3.00000     3.50000
+
+ RECORD #    959     4.00000     4.00000     4.00000
+
+ RECORD #    960     4.00000     5.00000     4.50000
+
+ RECORD #    961     4.00000     4.00000     4.00000
+
+ RECORD #    962     5.00000     6.00000     5.50000
+
+ RECORD #    963     4.00000     3.00000     3.50000
+
+ RECORD #    964     3.00000     4.00000     3.50000
+
+ RECORD #    965     6.00000     5.00000     5.50000
+
+ RECORD #    966     5.00000     4.00000     4.50000
+
+ RECORD #    967     4.00000     4.00000     4.00000
+
+ RECORD #    968     5.00000     6.00000     5.50000
+
+ RECORD #    969     4.00000     5.00000     4.50000
+
+ RECORD #    970     4.00000     4.00000     4.00000
+
+ RECORD #    971     3.00000     3.00000     3.00000
+
+ RECORD #    972     1.00000     1.00000     1.00000
+
+ RECORD #    973     4.00000     4.00000     4.00000
+
+ RECORD #    974     4.00000     4.00000     4.00000
+
+ RECORD #    975     3.00000     4.00000     3.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      42
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #    976     4.00000     4.00000     4.00000
+
+ RECORD #    977     5.00000     5.00000     5.00000
+
+ RECORD #    978     5.00000     5.00000     5.00000
+
+ RECORD #    979     4.00000     4.00000     4.00000
+
+ RECORD #    980     4.00000     4.00000     4.00000
+
+ RECORD #    981     4.00000     4.00000     4.00000
+
+ RECORD #    982     4.00000     4.00000     4.00000
+
+ RECORD #    983     4.00000     5.00000     4.50000
+
+ RECORD #    984     6.00000     5.00000     5.50000
+
+ RECORD #    985     4.00000     4.00000     4.00000
+
+ RECORD #    986     4.00000     4.00000     4.00000
+
+ RECORD #    987     5.00000     4.00000     4.50000
+
+ RECORD #    988     4.00000     4.00000     4.00000
+
+ RECORD #    989     3.00000     3.00000     3.00000
+
+ RECORD #    990     3.00000     2.00000     2.50000
+
+ RECORD #    991     4.00000     5.00000     4.50000
+
+ RECORD #    992     4.00000     5.00000     4.50000
+
+ RECORD #    993     2.00000     2.00000     2.00000
+
+ RECORD #    994     3.00000     4.00000     3.50000
+
+ RECORD #    995     5.00000     5.00000     5.00000
+
+ RECORD #    996     5.00000     4.00000     4.50000
+
+ RECORD #    997     6.00000     6.00000     6.00000
+
+ RECORD #    998     6.00000     6.00000     6.00000
+
+ RECORD #    999     4.00000     4.00000     4.00000
+
+ RECORD #   1000     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      43
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1001     5.00000     4.00000     4.50000
+
+ RECORD #   1002     3.00000     3.00000     3.00000
+
+ RECORD #   1003     4.00000     5.00000     4.50000
+
+ RECORD #   1004     4.00000     4.00000     4.00000
+
+ RECORD #   1005     5.00000     5.00000     5.00000
+
+ RECORD #   1006     5.00000     5.00000     5.00000
+
+ RECORD #   1007     4.00000     4.00000     4.00000
+
+ RECORD #   1008     4.00000     4.00000     4.00000
+
+ RECORD #   1009     4.00000     4.00000     4.00000
+
+ RECORD #   1010     5.00000     4.00000     4.50000
+
+ RECORD #   1011     3.00000     4.00000     3.50000
+
+ RECORD #   1012     4.00000     4.00000     4.00000
+
+ RECORD #   1013     5.00000     5.00000     5.00000
+
+ RECORD #   1014     4.00000     4.00000     4.00000
+
+ RECORD #   1015     4.00000     4.00000     4.00000
+
+ RECORD #   1016     5.00000     5.00000     5.00000
+
+ RECORD #   1017     5.00000     5.00000     5.00000
+
+ RECORD #   1018     4.00000     4.00000     4.00000
+
+ RECORD #   1019     4.00000     5.00000     4.50000
+
+ RECORD #   1020     6.00000     5.00000     5.50000
+
+ RECORD #   1021     4.00000     4.00000     4.00000
+
+ RECORD #   1022     4.00000     5.00000     4.50000
+
+ RECORD #   1023     4.00000     4.00000     4.00000
+
+ RECORD #   1024     5.00000     5.00000     5.00000
+
+ RECORD #   1025     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      44
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1026     4.00000     6.00000     5.00000
+
+ RECORD #   1027     5.00000     5.00000     5.00000
+
+ RECORD #   1028     4.00000     4.00000     4.00000
+
+ RECORD #   1029     5.00000     4.00000     4.50000
+
+ RECORD #   1030     4.00000     4.00000     4.00000
+
+ RECORD #   1031     5.00000     5.00000     5.00000
+
+ RECORD #   1032     4.00000     4.00000     4.00000
+
+ RECORD #   1033     4.00000     4.00000     4.00000
+
+ RECORD #   1034     5.00000     4.00000     4.50000
+
+ RECORD #   1035     4.00000     4.00000     4.00000
+
+ RECORD #   1036     6.00000     5.00000     5.50000
+
+ RECORD #   1037     4.00000     4.00000     4.00000
+
+ RECORD #   1038     3.00000     3.00000     3.00000
+
+ RECORD #   1039     3.00000     3.00000     3.00000
+
+ RECORD #   1040     4.00000     4.00000     4.00000
+
+ RECORD #   1041     4.00000     5.00000     4.50000
+
+ RECORD #   1042     3.00000     4.00000     3.50000
+
+ RECORD #   1043     5.00000     4.00000     4.50000
+
+ RECORD #   1044     4.00000     5.00000     4.50000
+
+ RECORD #   1045     5.00000     6.00000     5.50000
+
+ RECORD #   1046     5.00000     5.00000     5.00000
+
+ RECORD #   1047     5.00000     5.00000     5.00000
+
+ RECORD #   1048     6.00000     5.00000     5.50000
+
+ RECORD #   1049     3.00000     4.00000     3.50000
+
+ RECORD #   1050     4.00000     5.00000     4.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      45
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1051     4.00000     5.00000     4.50000
+
+ RECORD #   1052     4.00000     4.00000     4.00000
+
+ RECORD #   1053     4.00000     4.00000     4.00000
+
+ RECORD #   1054     3.00000     3.00000     3.00000
+
+ RECORD #   1055     5.00000     5.00000     5.00000
+
+ RECORD #   1056     4.00000     4.00000     4.00000
+
+ RECORD #   1057     4.00000     4.00000     4.00000
+
+ RECORD #   1058     4.00000     4.00000     4.00000
+
+ RECORD #   1059     4.00000     4.00000     4.00000
+
+ RECORD #   1060     5.00000     5.00000     5.00000
+
+ RECORD #   1061     5.00000     5.00000     5.00000
+
+ RECORD #   1062     4.00000     5.00000     4.50000
+
+ RECORD #   1063     3.00000     4.00000     3.50000
+
+ RECORD #   1064     5.00000     4.00000     4.50000
+
+ RECORD #   1065     5.00000     4.00000     4.50000
+
+ RECORD #   1066     5.00000     4.00000     4.50000
+
+ RECORD #   1067     5.00000     5.00000     5.00000
+
+ RECORD #   1068     4.00000     3.00000     3.50000
+
+ RECORD #   1069     4.00000     4.00000     4.00000
+
+ RECORD #   1070     4.00000     4.00000     4.00000
+
+ RECORD #   1071     4.00000     4.00000     4.00000
+
+ RECORD #   1072     4.00000     4.00000     4.00000
+
+ RECORD #   1073     4.00000     4.00000     4.00000
+
+ RECORD #   1074     5.00000     5.00000     5.00000
+
+ RECORD #   1075     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      46
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1076     6.00000     6.00000     6.00000
+
+ RECORD #   1077     4.00000     4.00000     4.00000
+
+ RECORD #   1078     4.00000     4.00000     4.00000
+
+ RECORD #   1079     4.00000     3.00000     3.50000
+
+ RECORD #   1080     4.00000     5.00000     4.50000
+
+ RECORD #   1081     3.00000     4.00000     3.50000
+
+ RECORD #   1082     4.00000     5.00000     4.50000
+
+ RECORD #   1083     5.00000     5.00000     5.00000
+
+ RECORD #   1084     4.00000     4.00000     4.00000
+
+ RECORD #   1085     6.00000     5.00000     5.50000
+
+ RECORD #   1086     4.00000     4.00000     4.00000
+
+ RECORD #   1087     4.00000     4.00000     4.00000
+
+ RECORD #   1088     3.00000     3.00000     3.00000
+
+ RECORD #   1089     5.00000     5.00000     5.00000
+
+ RECORD #   1090     5.00000     5.00000     5.00000
+
+ RECORD #   1091     4.00000     4.00000     4.00000
+
+ RECORD #   1092     4.00000     4.00000     4.00000
+
+ RECORD #   1093     4.00000     4.00000     4.00000
+
+ RECORD #   1094     2.00000     2.00000     2.00000
+
+ RECORD #   1095     5.00000     5.00000     5.00000
+
+ RECORD #   1096     4.00000     5.00000     4.50000
+
+ RECORD #   1097     4.00000     4.00000     4.00000
+
+ RECORD #   1098     5.00000     4.00000     4.50000
+
+ RECORD #   1099     4.00000     4.00000     4.00000
+
+ RECORD #   1100     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      47
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1101     3.00000     3.00000     3.00000
+
+ RECORD #   1102     5.00000     5.00000     5.00000
+
+ RECORD #   1103     5.00000     4.00000     4.50000
+
+ RECORD #   1104     5.00000     4.00000     4.50000
+
+ RECORD #   1105     2.00000     2.00000     2.00000
+
+ RECORD #   1106     5.00000     4.00000     4.50000
+
+ RECORD #   1107     4.00000     4.00000     4.00000
+
+ RECORD #   1108     4.00000     4.00000     4.00000
+
+ RECORD #   1109     6.00000     5.00000     5.50000
+
+ RECORD #   1110     4.00000     4.00000     4.00000
+
+ RECORD #   1111     5.00000     5.00000     5.00000
+
+ RECORD #   1112     5.00000     5.00000     5.00000
+
+ RECORD #   1113     4.00000     5.00000     4.50000
+
+ RECORD #   1114     4.00000     4.00000     4.00000
+
+ RECORD #   1115     3.00000     4.00000     3.50000
+
+ RECORD #   1116     4.00000     4.00000     4.00000
+
+ RECORD #   1117     4.00000     5.00000     4.50000
+
+ RECORD #   1118     4.00000     4.00000     4.00000
+
+ RECORD #   1119     1.00000     1.00000     1.00000
+
+ RECORD #   1120     5.00000     5.00000     5.00000
+
+ RECORD #   1121     3.00000     3.00000     3.00000
+
+ RECORD #   1122     5.00000     4.00000     4.50000
+
+ RECORD #   1123     4.00000     4.00000     4.00000
+
+ RECORD #   1124     5.00000     5.00000     5.00000
+
+ RECORD #   1125     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      48
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1126     4.00000     4.00000     4.00000
+
+ RECORD #   1127     4.00000     4.00000     4.00000
+
+ RECORD #   1128     3.00000     3.00000     3.00000
+
+ RECORD #   1129     4.00000     4.00000     4.00000
+
+ RECORD #   1130     6.00000     6.00000     6.00000
+
+ RECORD #   1131     3.00000     3.00000     3.00000
+
+ RECORD #   1132     5.00000     6.00000     5.50000
+
+ RECORD #   1133     4.00000     4.00000     4.00000
+
+ RECORD #   1134     4.00000     4.00000     4.00000
+
+ RECORD #   1135     4.00000     4.00000     4.00000
+
+ RECORD #   1136     5.00000     5.00000     5.00000
+
+ RECORD #   1137     4.00000     5.00000     4.50000
+
+ RECORD #   1138     3.00000     3.00000     3.00000
+
+ RECORD #   1139     4.00000     4.00000     4.00000
+
+ RECORD #   1140     4.00000     4.00000     4.00000
+
+ RECORD #   1141     5.00000     6.00000     5.50000
+
+ RECORD #   1142     4.00000     5.00000     4.50000
+
+ RECORD #   1143     4.00000     4.00000     4.00000
+
+ RECORD #   1144     4.00000     5.00000     4.50000
+
+ RECORD #   1145     5.00000     4.00000     4.50000
+
+ RECORD #   1146     5.00000     5.00000     5.00000
+
+ RECORD #   1147     4.00000     4.00000     4.00000
+
+ RECORD #   1148     5.00000     5.00000     5.00000
+
+ RECORD #   1149     4.00000     4.00000     4.00000
+
+ RECORD #   1150     5.00000     4.00000     4.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      49
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1151     4.00000     4.00000     4.00000
+
+ RECORD #   1152     4.00000     4.00000     4.00000
+
+ RECORD #   1153     5.00000     5.00000     5.00000
+
+ RECORD #   1154     3.00000     3.00000     3.00000
+
+ RECORD #   1155     4.00000     5.00000     4.50000
+
+ RECORD #   1156     6.00000     6.00000     6.00000
+
+ RECORD #   1157     4.00000     4.00000     4.00000
+
+ RECORD #   1158     4.00000     4.00000     4.00000
+
+ RECORD #   1159     4.00000     4.00000     4.00000
+
+ RECORD #   1160     5.00000     5.00000     5.00000
+
+ RECORD #   1161     4.00000     5.00000     4.50000
+
+ RECORD #   1162     4.00000     4.00000     4.00000
+
+ RECORD #   1163     4.00000     5.00000     4.50000
+
+ RECORD #   1164     5.00000     5.00000     5.00000
+
+ RECORD #   1165     4.00000     4.00000     4.00000
+
+ RECORD #   1166     5.00000     5.00000     5.00000
+
+ RECORD #   1167     6.00000     6.00000     6.00000
+
+ RECORD #   1168     6.00000     6.00000     6.00000
+
+ RECORD #   1169     3.00000     4.00000     3.50000
+
+ RECORD #   1170     4.00000     4.00000     4.00000
+
+ RECORD #   1171     5.00000     5.00000     5.00000
+
+ RECORD #   1172     5.00000     4.00000     4.50000
+
+ RECORD #   1173     4.00000     4.00000     4.00000
+
+ RECORD #   1174     3.00000     3.00000     3.00000
+
+ RECORD #   1175     4.00000     5.00000     4.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      50
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1176     4.00000     4.00000     4.00000
+
+ RECORD #   1177     4.00000     4.00000     4.00000
+
+ RECORD #   1178     5.00000     5.00000     5.00000
+
+ RECORD #   1179     4.00000     3.00000     3.50000
+
+ RECORD #   1180     4.00000     4.00000     4.00000
+
+ RECORD #   1181     5.00000     5.00000     5.00000
+
+ RECORD #   1182     4.00000     4.00000     4.00000
+
+ RECORD #   1183     5.00000     4.00000     4.50000
+
+ RECORD #   1184     5.00000     5.00000     5.00000
+
+ RECORD #   1185     4.00000     4.00000     4.00000
+
+ RECORD #   1186     4.00000     5.00000     4.50000
+
+ RECORD #   1187     4.00000     5.00000     4.50000
+
+ RECORD #   1188     4.00000     4.00000     4.00000
+
+ RECORD #   1189     4.00000     4.00000     4.00000
+
+ RECORD #   1190     5.00000     5.00000     5.00000
+
+ RECORD #   1191     5.00000     5.00000     5.00000
+
+ RECORD #   1192     6.00000     5.00000     5.50000
+
+ RECORD #   1193     4.00000     4.00000     4.00000
+
+ RECORD #   1194     4.00000     4.00000     4.00000
+
+ RECORD #   1195     3.00000     4.00000     3.50000
+
+ RECORD #   1196     4.00000     4.00000     4.00000
+
+ RECORD #   1197     5.00000     4.00000     4.50000
+
+ RECORD #   1198     6.00000     6.00000     6.00000
+
+ RECORD #   1199     4.00000     4.00000     4.00000
+
+ RECORD #   1200     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      51
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1201     4.00000     5.00000     4.50000
+
+ RECORD #   1202     4.00000     4.00000     4.00000
+
+ RECORD #   1203     6.00000     5.00000     5.50000
+
+ RECORD #   1204     4.00000     4.00000     4.00000
+
+ RECORD #   1205     3.00000     4.00000     3.50000
+
+ RECORD #   1206     4.00000     4.00000     4.00000
+
+ RECORD #   1207     4.00000     4.00000     4.00000
+
+ RECORD #   1208     4.00000     5.00000     4.50000
+
+ RECORD #   1209     5.00000     4.00000     4.50000
+
+ RECORD #   1210     4.00000     4.00000     4.00000
+
+ RECORD #   1211     5.00000     5.00000     5.00000
+
+ RECORD #   1212     4.00000     4.00000     4.00000
+
+ RECORD #   1213     5.00000     4.00000     4.50000
+
+ RECORD #   1214     2.00000     2.00000     2.00000
+
+ RECORD #   1215     4.00000     5.00000     4.50000
+
+ RECORD #   1216     4.00000     4.00000     4.00000
+
+ RECORD #   1217     5.00000     5.00000     5.00000
+
+ RECORD #   1218     4.00000     6.00000     5.00000
+
+ RECORD #   1219     3.00000     3.00000     3.00000
+
+ RECORD #   1220     5.00000     4.00000     4.50000
+
+ RECORD #   1221     4.00000     5.00000     4.50000
+
+ RECORD #   1222     4.00000     4.00000     4.00000
+
+ RECORD #   1223     4.00000     4.00000     4.00000
+
+ RECORD #   1224     4.00000     4.00000     4.00000
+
+ RECORD #   1225     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      52
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1226     4.00000     4.00000     4.00000
+
+ RECORD #   1227     5.00000     5.00000     5.00000
+
+ RECORD #   1228     3.00000     3.00000     3.00000
+
+ RECORD #   1229     5.00000     5.00000     5.00000
+
+ RECORD #   1230     5.00000     4.00000     4.50000
+
+ RECORD #   1231     4.00000     4.00000     4.00000
+
+ RECORD #   1232     5.00000     5.00000     5.00000
+
+ RECORD #   1233     6.00000     5.00000     5.50000
+
+ RECORD #   1234     5.00000     5.00000     5.00000
+
+ RECORD #   1235     6.00000     5.00000     5.50000
+
+ RECORD #   1236     5.00000     5.00000     5.00000
+
+ RECORD #   1237     4.00000     5.00000     4.50000
+
+ RECORD #   1238     4.00000     4.00000     4.00000
+
+ RECORD #   1239     5.00000     4.00000     4.50000
+
+ RECORD #   1240     4.00000     4.00000     4.00000
+
+ RECORD #   1241     5.00000     5.00000     5.00000
+
+ RECORD #   1242     4.00000     3.00000     3.50000
+
+ RECORD #   1243     4.00000     4.00000     4.00000
+
+ RECORD #   1244     4.00000     4.00000     4.00000
+
+ RECORD #   1245     5.00000     5.00000     5.00000
+
+ RECORD #   1246     6.00000     6.00000     6.00000
+
+ RECORD #   1247     4.00000     4.00000     4.00000
+
+ RECORD #   1248     5.00000     6.00000     5.50000
+
+ RECORD #   1249     2.00000     2.00000     2.00000
+
+ RECORD #   1250     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      53
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1251     6.00000     5.00000     5.50000
+
+ RECORD #   1252     4.00000     4.00000     4.00000
+
+ RECORD #   1253     5.00000     4.00000     4.50000
+
+ RECORD #   1254     6.00000     6.00000     6.00000
+
+ RECORD #   1255     5.00000     5.00000     5.00000
+
+ RECORD #   1256     4.00000     4.00000     4.00000
+
+ RECORD #   1257     4.00000     5.00000     4.50000
+
+ RECORD #   1258     4.00000     4.00000     4.00000
+
+ RECORD #   1259     5.00000     4.00000     4.50000
+
+ RECORD #   1260     4.00000     5.00000     4.50000
+
+ RECORD #   1261     5.00000     5.00000     5.00000
+
+ RECORD #   1262     4.00000     4.00000     4.00000
+
+ RECORD #   1263     4.00000     4.00000     4.00000
+
+ RECORD #   1264     4.00000     4.00000     4.00000
+
+ RECORD #   1265     5.00000     6.00000     5.50000
+
+ RECORD #   1266     4.00000     6.00000     5.00000
+
+ RECORD #   1267     4.00000     4.00000     4.00000
+
+ RECORD #   1268     4.00000     5.00000     4.50000
+
+ RECORD #   1269     5.00000     5.00000     5.00000
+
+ RECORD #   1270     3.00000     3.00000     3.00000
+
+ RECORD #   1271     3.00000     4.00000     3.50000
+
+ RECORD #   1272     4.00000     4.00000     4.00000
+
+ RECORD #   1273     3.00000     4.00000     3.50000
+
+ RECORD #   1274     4.00000     4.00000     4.00000
+
+ RECORD #   1275     5.00000     4.00000     4.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      54
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1276     3.00000     3.00000     3.00000
+
+ RECORD #   1277     4.00000     4.00000     4.00000
+
+ RECORD #   1278     5.00000     5.00000     5.00000
+
+ RECORD #   1279     5.00000     5.00000     5.00000
+
+ RECORD #   1280     4.00000     4.00000     4.00000
+
+ RECORD #   1281     4.00000     4.00000     4.00000
+
+ RECORD #   1282     4.00000     4.00000     4.00000
+
+ RECORD #   1283     5.00000     5.00000     5.00000
+
+ RECORD #   1284     5.00000     5.00000     5.00000
+
+ RECORD #   1285     4.00000     3.00000     3.50000
+
+ RECORD #   1286     4.00000     4.00000     4.00000
+
+ RECORD #   1287     4.00000     4.00000     4.00000
+
+ RECORD #   1288     4.00000     4.00000     4.00000
+
+ RECORD #   1289     4.00000     3.00000     3.50000
+
+ RECORD #   1290     5.00000     4.00000     4.50000
+
+ RECORD #   1291     2.00000     2.00000     2.00000
+
+ RECORD #   1292     5.00000     4.00000     4.50000
+
+ RECORD #   1293     4.00000     4.00000     4.00000
+
+ RECORD #   1294     3.00000     4.00000     3.50000
+
+ RECORD #   1295     5.00000     6.00000     5.50000
+
+ RECORD #   1296     3.00000     4.00000     3.50000
+
+ RECORD #   1297     4.00000     4.00000     4.00000
+
+ RECORD #   1298     5.00000     5.00000     5.00000
+
+ RECORD #   1299     3.00000     4.00000     3.50000
+
+ RECORD #   1300     5.00000     6.00000     5.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      55
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1301     6.00000     5.00000     5.50000
+
+ RECORD #   1302     4.00000     4.00000     4.00000
+
+ RECORD #   1303     4.00000     5.00000     4.50000
+
+ RECORD #   1304     5.00000     4.00000     4.50000
+
+ RECORD #   1305     4.00000     4.00000     4.00000
+
+ RECORD #   1306     4.00000     3.00000     3.50000
+
+ RECORD #   1307     5.00000     5.00000     5.00000
+
+ RECORD #   1308     5.00000     4.00000     4.50000
+
+ RECORD #   1309     4.00000     4.00000     4.00000
+
+ RECORD #   1310     5.00000     5.00000     5.00000
+
+ RECORD #   1311     4.00000     5.00000     4.50000
+
+ RECORD #   1312     5.00000     4.00000     4.50000
+
+ RECORD #   1313     4.00000     4.00000     4.00000
+
+ RECORD #   1314     4.00000     4.00000     4.00000
+
+ RECORD #   1315     5.00000     4.00000     4.50000
+
+ RECORD #   1316     5.00000     6.00000     5.50000
+
+ RECORD #   1317     5.00000     4.00000     4.50000
+
+ RECORD #   1318     5.00000     4.00000     4.50000
+
+ RECORD #   1319     4.00000     4.00000     4.00000
+
+ RECORD #   1320     4.00000     4.00000     4.00000
+
+ RECORD #   1321     5.00000     5.00000     5.00000
+
+ RECORD #   1322     4.00000     4.00000     4.00000
+
+ RECORD #   1323     5.00000     6.00000     5.50000
+
+ RECORD #   1324     4.00000     4.00000     4.00000
+
+ RECORD #   1325     4.00000     3.00000     3.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      56
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1326     4.00000     4.00000     4.00000
+
+ RECORD #   1327     5.00000     4.00000     4.50000
+
+ RECORD #   1328     5.00000     4.00000     4.50000
+
+ RECORD #   1329     4.00000     4.00000     4.00000
+
+ RECORD #   1330     4.00000     4.00000     4.00000
+
+ RECORD #   1331     3.00000     4.00000     3.50000
+
+ RECORD #   1332     5.00000     5.00000     5.00000
+
+ RECORD #   1333     4.00000     4.00000     4.00000
+
+ RECORD #   1334     4.00000     5.00000     4.50000
+
+ RECORD #   1335     4.00000     4.00000     4.00000
+
+ RECORD #   1336     4.00000     4.00000     4.00000
+
+ RECORD #   1337     5.00000     5.00000     5.00000
+
+ RECORD #   1338     4.00000     4.00000     4.00000
+
+ RECORD #   1339     4.00000     4.00000     4.00000
+
+ RECORD #   1340     4.00000     4.00000     4.00000
+
+ RECORD #   1341     4.00000     4.00000     4.00000
+
+ RECORD #   1342     4.00000     4.00000     4.00000
+
+ RECORD #   1343     4.00000     4.00000     4.00000
+
+ RECORD #   1344     3.00000     4.00000     3.50000
+
+ RECORD #   1345     6.00000     5.00000     5.50000
+
+ RECORD #   1346     5.00000     5.00000     5.00000
+
+ RECORD #   1347     4.00000     5.00000     4.50000
+
+ RECORD #   1348     4.00000     4.00000     4.00000
+
+ RECORD #   1349     5.00000     5.00000     5.00000
+
+ RECORD #   1350     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      57
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1351     4.00000     4.00000     4.00000
+
+ RECORD #   1352     4.00000     4.00000     4.00000
+
+ RECORD #   1353     4.00000     4.00000     4.00000
+
+ RECORD #   1354     6.00000     5.00000     5.50000
+
+ RECORD #   1355     6.00000     5.00000     5.50000
+
+ RECORD #   1356     4.00000     4.00000     4.00000
+
+ RECORD #   1357     5.00000     5.00000     5.00000
+
+ RECORD #   1358     5.00000     4.00000     4.50000
+
+ RECORD #   1359     4.00000     4.00000     4.00000
+
+ RECORD #   1360     4.00000     5.00000     4.50000
+
+ RECORD #   1361     4.00000     4.00000     4.00000
+
+ RECORD #   1362     4.00000     4.00000     4.00000
+
+ RECORD #   1363     3.00000     3.00000     3.00000
+
+ RECORD #   1364     3.00000     4.00000     3.50000
+
+ RECORD #   1365     5.00000     4.00000     4.50000
+
+ RECORD #   1366     4.00000     5.00000     4.50000
+
+ RECORD #   1367     6.00000     6.00000     6.00000
+
+ RECORD #   1368     4.00000     4.00000     4.00000
+
+ RECORD #   1369     4.00000     4.00000     4.00000
+
+ RECORD #   1370     5.00000     5.00000     5.00000
+
+ RECORD #   1371     5.00000     5.00000     5.00000
+
+ RECORD #   1372     4.00000     4.00000     4.00000
+
+ RECORD #   1373     4.00000     4.00000     4.00000
+
+ RECORD #   1374     5.00000     4.00000     4.50000
+
+ RECORD #   1375     5.00000     5.00000     5.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      58
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1376     6.00000     6.00000     6.00000
+
+ RECORD #   1377     4.00000     4.00000     4.00000
+
+ RECORD #   1378     5.00000     5.00000     5.00000
+
+ RECORD #   1379     4.00000     5.00000     4.50000
+
+ RECORD #   1380     5.00000     5.00000     5.00000
+
+ RECORD #   1381     4.00000     5.00000     4.50000
+
+ RECORD #   1382     5.00000     4.00000     4.50000
+
+ RECORD #   1383     3.00000     4.00000     3.50000
+
+ RECORD #   1384     4.00000     4.00000     4.00000
+
+ RECORD #   1385     4.00000     4.00000     4.00000
+
+ RECORD #   1386     4.00000     4.00000     4.00000
+
+ RECORD #   1387     4.00000     4.00000     4.00000
+
+ RECORD #   1388     2.00000     3.00000     2.50000
+
+ RECORD #   1389     5.00000     6.00000     5.50000
+
+ RECORD #   1390     3.00000     3.00000     3.00000
+
+ RECORD #   1391     5.00000     4.00000     4.50000
+
+ RECORD #   1392     4.00000     5.00000     4.50000
+
+ RECORD #   1393     3.00000     4.00000     3.50000
+
+ RECORD #   1394     5.00000     4.00000     4.50000
+
+ RECORD #   1395     4.00000     4.00000     4.00000
+
+ RECORD #   1396     4.00000     5.00000     4.50000
+
+ RECORD #   1397     5.00000     5.00000     5.00000
+
+ RECORD #   1398     4.00000     5.00000     4.50000
+
+ RECORD #   1399     5.00000     6.00000     5.50000
+
+ RECORD #   1400     5.00000     5.00000     5.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      59
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1401     5.00000     4.00000     4.50000
+
+ RECORD #   1402     4.00000     5.00000     4.50000
+
+ RECORD #   1403     5.00000     5.00000     5.00000
+
+ RECORD #   1404     4.00000     4.00000     4.00000
+
+ RECORD #   1405     4.00000     5.00000     4.50000
+
+ RECORD #   1406     4.00000     3.00000     3.50000
+
+ RECORD #   1407     5.00000     6.00000     5.50000
+
+ RECORD #   1408     5.00000     5.00000     5.00000
+
+ RECORD #   1409     5.00000     4.00000     4.50000
+
+ RECORD #   1410     4.00000     4.00000     4.00000
+
+ RECORD #   1411     6.00000     6.00000     6.00000
+
+ RECORD #   1412     4.00000     4.00000     4.00000
+
+ RECORD #   1413     5.00000     5.00000     5.00000
+
+ RECORD #   1414     4.00000     4.00000     4.00000
+
+ RECORD #   1415     5.00000     5.00000     5.00000
+
+ RECORD #   1416     4.00000     4.00000     4.00000
+
+ RECORD #   1417     3.00000     3.00000     3.00000
+
+ RECORD #   1418     3.00000     5.00000     4.00000
+
+ RECORD #   1419     4.00000     4.00000     4.00000
+
+ RECORD #   1420     5.00000     5.00000     5.00000
+
+ RECORD #   1421     4.00000     4.00000     4.00000
+
+ RECORD #   1422     5.00000     5.00000     5.00000
+
+ RECORD #   1423     6.00000     5.00000     5.50000
+
+ RECORD #   1424     3.00000     3.00000     3.00000
+
+ RECORD #   1425     3.00000     4.00000     3.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      60
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1426     4.00000     4.00000     4.00000
+
+ RECORD #   1427     3.00000     3.00000     3.00000
+
+ RECORD #   1428     4.00000     4.00000     4.00000
+
+ RECORD #   1429     4.00000     4.00000     4.00000
+
+ RECORD #   1430     5.00000     4.00000     4.50000
+
+ RECORD #   1431     5.00000     5.00000     5.00000
+
+ RECORD #   1432     4.00000     4.00000     4.00000
+
+ RECORD #   1433     4.00000     4.00000     4.00000
+
+ RECORD #   1434     4.00000     5.00000     4.50000
+
+ RECORD #   1435     5.00000     5.00000     5.00000
+
+ RECORD #   1436     5.00000     5.00000     5.00000
+
+ RECORD #   1437     4.00000     4.00000     4.00000
+
+ RECORD #   1438     3.00000     3.00000     3.00000
+
+ RECORD #   1439     6.00000     6.00000     6.00000
+
+ RECORD #   1440     5.00000     5.00000     5.00000
+
+ RECORD #   1441     4.00000     4.00000     4.00000
+
+ RECORD #   1442     5.00000     5.00000     5.00000
+
+ RECORD #   1443     6.00000     6.00000     6.00000
+
+ RECORD #   1444     5.00000     4.00000     4.50000
+
+ RECORD #   1445     4.00000     5.00000     4.50000
+
+ RECORD #   1446     5.00000     5.00000     5.00000
+
+ RECORD #   1447     5.00000     4.00000     4.50000
+
+ RECORD #   1448     6.00000     6.00000     6.00000
+
+ RECORD #   1449     4.00000     5.00000     4.50000
+
+ RECORD #   1450     5.00000     6.00000     5.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      61
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1451     4.00000     4.00000     4.00000
+
+ RECORD #   1452     5.00000     5.00000     5.00000
+
+ RECORD #   1453     4.00000     3.00000     3.50000
+
+ RECORD #   1454     4.00000     5.00000     4.50000
+
+ RECORD #   1455     4.00000     4.00000     4.00000
+
+ RECORD #   1456     5.00000     5.00000     5.00000
+
+ RECORD #   1457     3.00000     3.00000     3.00000
+
+ RECORD #   1458     4.00000     3.00000     3.50000
+
+ RECORD #   1459     4.00000     4.00000     4.00000
+
+ RECORD #   1460     5.00000     5.00000     5.00000
+
+ RECORD #   1461     4.00000     4.00000     4.00000
+
+ RECORD #   1462     4.00000     4.00000     4.00000
+
+ RECORD #   1463     5.00000     5.00000     5.00000
+
+ RECORD #   1464     4.00000     5.00000     4.50000
+
+ RECORD #   1465     4.00000     4.00000     4.00000
+
+ RECORD #   1466     5.00000     5.00000     5.00000
+
+ RECORD #   1467     4.00000     4.00000     4.00000
+
+ RECORD #   1468     4.00000     4.00000     4.00000
+
+ RECORD #   1469     3.00000     3.00000     3.00000
+
+ RECORD #   1470     2.00000     2.00000     2.00000
+
+ RECORD #   1471     4.00000     4.00000     4.00000
+
+ RECORD #   1472     5.00000     4.00000     4.50000
+
+ RECORD #   1473     3.00000     3.00000     3.00000
+
+ RECORD #   1474     5.00000     4.00000     4.50000
+
+ RECORD #   1475     3.00000     4.00000     3.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      62
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1476     5.00000     4.00000     4.50000
+
+ RECORD #   1477     4.00000     3.00000     3.50000
+
+ RECORD #   1478     4.00000     3.00000     3.50000
+
+ RECORD #   1479     3.00000     3.00000     3.00000
+
+ RECORD #   1480     5.00000     4.00000     4.50000
+
+ RECORD #   1481     5.00000     4.00000     4.50000
+
+ RECORD #   1482     4.00000     4.00000     4.00000
+
+ RECORD #   1483     4.00000     4.00000     4.00000
+
+ RECORD #   1484     4.00000     4.00000     4.00000
+
+ RECORD #   1485     5.00000     4.00000     4.50000
+
+ RECORD #   1486     3.00000     3.00000     3.00000
+
+ RECORD #   1487     5.00000     6.00000     5.50000
+
+ RECORD #   1488     4.00000     4.00000     4.00000
+
+ RECORD #   1489     5.00000     6.00000     5.50000
+
+ RECORD #   1490     5.00000     5.00000     5.00000
+
+ RECORD #   1491     4.00000     4.00000     4.00000
+
+ RECORD #   1492     3.00000     3.00000     3.00000
+
+ RECORD #   1493     4.00000     5.00000     4.50000
+
+ RECORD #   1494     4.00000     4.00000     4.00000
+
+ RECORD #   1495     5.00000     5.00000     5.00000
+
+ RECORD #   1496     4.00000     4.00000     4.00000
+
+ RECORD #   1497     4.00000     4.00000     4.00000
+
+ RECORD #   1498     6.00000     4.00000     5.00000
+
+ RECORD #   1499     4.00000     5.00000     4.50000
+
+ RECORD #   1500     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      63
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1501     5.00000     4.00000     4.50000
+
+ RECORD #   1502     4.00000     4.00000     4.00000
+
+ RECORD #   1503     4.00000     5.00000     4.50000
+
+ RECORD #   1504     4.00000     4.00000     4.00000
+
+ RECORD #   1505     4.00000     4.00000     4.00000
+
+ RECORD #   1506     4.00000     4.00000     4.00000
+
+ RECORD #   1507     4.00000     3.00000     3.50000
+
+ RECORD #   1508     4.00000     4.00000     4.00000
+
+ RECORD #   1509     3.00000     2.00000     2.50000
+
+ RECORD #   1510     4.00000     4.00000     4.00000
+
+ RECORD #   1511     5.00000     5.00000     5.00000
+
+ RECORD #   1512     4.00000     4.00000     4.00000
+
+ RECORD #   1513     4.00000     4.00000     4.00000
+
+ RECORD #   1514     5.00000     5.00000     5.00000
+
+ RECORD #   1515     4.00000     4.00000     4.00000
+
+ RECORD #   1516     4.00000     5.00000     4.50000
+
+ RECORD #   1517     4.00000     4.00000     4.00000
+
+ RECORD #   1518     5.00000     5.00000     5.00000
+
+ RECORD #   1519     4.00000     4.00000     4.00000
+
+ RECORD #   1520     3.00000     3.00000     3.00000
+
+ RECORD #   1521     4.00000     4.00000     4.00000
+
+ RECORD #   1522     5.00000     5.00000     5.00000
+
+ RECORD #   1523     5.00000     5.00000     5.00000
+
+ RECORD #   1524     3.00000     3.00000     3.00000
+
+ RECORD #   1525     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      64
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1526     4.00000     4.00000     4.00000
+
+ RECORD #   1527     4.00000     4.00000     4.00000
+
+ RECORD #   1528     3.00000     3.00000     3.00000
+
+ RECORD #   1529     3.00000     3.00000     3.00000
+
+ RECORD #   1530     4.00000     5.00000     4.50000
+
+ RECORD #   1531     3.00000     3.00000     3.00000
+
+ RECORD #   1532     2.00000     2.00000     2.00000
+
+ RECORD #   1533     4.00000     4.00000     4.00000
+
+ RECORD #   1534     4.00000     5.00000     4.50000
+
+ RECORD #   1535     5.00000     4.00000     4.50000
+
+ RECORD #   1536     4.00000     4.00000     4.00000
+
+ RECORD #   1537     4.00000     4.00000     4.00000
+
+ RECORD #   1538     5.00000     5.00000     5.00000
+
+ RECORD #   1539     4.00000     4.00000     4.00000
+
+ RECORD #   1540     5.00000     5.00000     5.00000
+
+ RECORD #   1541     4.00000     4.00000     4.00000
+
+ RECORD #   1542     6.00000     4.00000     5.00000
+
+ RECORD #   1543     3.00000     4.00000     3.50000
+
+ RECORD #   1544     4.00000     4.00000     4.00000
+
+ RECORD #   1545     3.00000     3.00000     3.00000
+
+ RECORD #   1546     4.00000     4.00000     4.00000
+
+ RECORD #   1547     4.00000     5.00000     4.50000
+
+ RECORD #   1548     3.00000     3.00000     3.00000
+
+ RECORD #   1549     3.00000     4.00000     3.50000
+
+ RECORD #   1550     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      65
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1551     1.00000     1.00000     1.00000
+
+ RECORD #   1552     4.00000     4.00000     4.00000
+
+ RECORD #   1553     4.00000     4.00000     4.00000
+
+ RECORD #   1554     4.00000     4.00000     4.00000
+
+ RECORD #   1555     4.00000     3.00000     3.50000
+
+ RECORD #   1556     5.00000     4.00000     4.50000
+
+ RECORD #   1557     4.00000     5.00000     4.50000
+
+ RECORD #   1558     2.00000     2.00000     2.00000
+
+ RECORD #   1559     3.00000     3.00000     3.00000
+
+ RECORD #   1560     4.00000     4.00000     4.00000
+
+ RECORD #   1561     4.00000     4.00000     4.00000
+
+ RECORD #   1562     4.00000     4.00000     4.00000
+
+ RECORD #   1563     6.00000     5.00000     5.50000
+
+ RECORD #   1564     4.00000     3.00000     3.50000
+
+ RECORD #   1565     3.00000     2.00000     2.50000
+
+ RECORD #   1566     6.00000     5.00000     5.50000
+
+ RECORD #   1567     3.00000     4.00000     3.50000
+
+ RECORD #   1568     4.00000     4.00000     4.00000
+
+ RECORD #   1569     5.00000     5.00000     5.00000
+
+ RECORD #   1570     4.00000     4.00000     4.00000
+
+ RECORD #   1571     4.00000     5.00000     4.50000
+
+ RECORD #   1572     4.00000     4.00000     4.00000
+
+ RECORD #   1573     4.00000     4.00000     4.00000
+
+ RECORD #   1574     4.00000     5.00000     4.50000
+
+ RECORD #   1575     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      66
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1576     4.00000     4.00000     4.00000
+
+ RECORD #   1577     5.00000     6.00000     5.50000
+
+ RECORD #   1578     5.00000     5.00000     5.00000
+
+ RECORD #   1579     4.00000     4.00000     4.00000
+
+ RECORD #   1580     5.00000     4.00000     4.50000
+
+ RECORD #   1581     4.00000     5.00000     4.50000
+
+ RECORD #   1582     4.00000     3.00000     3.50000
+
+ RECORD #   1583     5.00000     5.00000     5.00000
+
+ RECORD #   1584     5.00000     5.00000     5.00000
+
+ RECORD #   1585     5.00000     5.00000     5.00000
+
+ RECORD #   1586     6.00000     5.00000     5.50000
+
+ RECORD #   1587     4.00000     5.00000     4.50000
+
+ RECORD #   1588     1.00000     1.00000     1.00000
+
+ RECORD #   1589     5.00000     5.00000     5.00000
+
+ RECORD #   1590     4.00000     4.00000     4.00000
+
+ RECORD #   1591     4.00000     4.00000     4.00000
+
+ RECORD #   1592     4.00000     5.00000     4.50000
+
+ RECORD #   1593     6.00000     5.00000     5.50000
+
+ RECORD #   1594     5.00000     5.00000     5.00000
+
+ RECORD #   1595     4.00000     5.00000     4.50000
+
+ RECORD #   1596     4.00000     4.00000     4.00000
+
+ RECORD #   1597     4.00000     4.00000     4.00000
+
+ RECORD #   1598     5.00000     5.00000     5.00000
+
+ RECORD #   1599     4.00000     4.00000     4.00000
+
+ RECORD #   1600     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      67
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1601     4.00000     4.00000     4.00000
+
+ RECORD #   1602     4.00000     5.00000     4.50000
+
+ RECORD #   1603     5.00000     4.00000     4.50000
+
+ RECORD #   1604     4.00000     4.00000     4.00000
+
+ RECORD #   1605     4.00000     5.00000     4.50000
+
+ RECORD #   1606     5.00000     6.00000     5.50000
+
+ RECORD #   1607     4.00000     4.00000     4.00000
+
+ RECORD #   1608     4.00000     4.00000     4.00000
+
+ RECORD #   1609     5.00000     4.00000     4.50000
+
+ RECORD #   1610     5.00000     4.00000     4.50000
+
+ RECORD #   1611     5.00000     4.00000     4.50000
+
+ RECORD #   1612     4.00000     5.00000     4.50000
+
+ RECORD #   1613     4.00000     4.00000     4.00000
+
+ RECORD #   1614     4.00000     4.00000     4.00000
+
+ RECORD #   1615     4.00000     5.00000     4.50000
+
+ RECORD #   1616     3.00000     4.00000     3.50000
+
+ RECORD #   1617     5.00000     5.00000     5.00000
+
+ RECORD #   1618     5.00000     5.00000     5.00000
+
+ RECORD #   1619     4.00000     5.00000     4.50000
+
+ RECORD #   1620     4.00000     4.00000     4.00000
+
+ RECORD #   1621     4.00000     4.00000     4.00000
+
+ RECORD #   1622     4.00000     4.00000     4.00000
+
+ RECORD #   1623     4.00000     4.00000     4.00000
+
+ RECORD #   1624     5.00000     5.00000     5.00000
+
+ RECORD #   1625     6.00000     4.00000     5.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      68
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1626     5.00000     5.00000     5.00000
+
+ RECORD #   1627     4.00000     4.00000     4.00000
+
+ RECORD #   1628     4.00000     4.00000     4.00000
+
+ RECORD #   1629     4.00000     4.00000     4.00000
+
+ RECORD #   1630     4.00000     4.00000     4.00000
+
+ RECORD #   1631     5.00000     5.00000     5.00000
+
+ RECORD #   1632     5.00000     5.00000     5.00000
+
+ RECORD #   1633     4.00000     4.00000     4.00000
+
+ RECORD #   1634     4.00000     4.00000     4.00000
+
+ RECORD #   1635     5.00000     5.00000     5.00000
+
+ RECORD #   1636     4.00000     4.00000     4.00000
+
+ RECORD #   1637     4.00000     4.00000     4.00000
+
+ RECORD #   1638     4.00000     4.00000     4.00000
+
+ RECORD #   1639     6.00000     5.00000     5.50000
+
+ RECORD #   1640     4.00000     4.00000     4.00000
+
+ RECORD #   1641     6.00000     5.00000     5.50000
+
+ RECORD #   1642     4.00000     4.00000     4.00000
+
+ RECORD #   1643     3.00000     3.00000     3.00000
+
+ RECORD #   1644     6.00000     5.00000     5.50000
+
+ RECORD #   1645     4.00000     5.00000     4.50000
+
+ RECORD #   1646     4.00000     4.00000     4.00000
+
+ RECORD #   1647     5.00000     4.00000     4.50000
+
+ RECORD #   1648     4.00000     4.00000     4.00000
+
+ RECORD #   1649     4.00000     4.00000     4.00000
+
+ RECORD #   1650     5.00000     4.00000     4.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      69
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1651     4.00000     4.00000     4.00000
+
+ RECORD #   1652     4.00000     4.00000     4.00000
+
+ RECORD #   1653     4.00000     4.00000     4.00000
+
+ RECORD #   1654     4.00000     5.00000     4.50000
+
+ RECORD #   1655     5.00000     4.00000     4.50000
+
+ RECORD #   1656     4.00000     4.00000     4.00000
+
+ RECORD #   1657     5.00000     5.00000     5.00000
+
+ RECORD #   1658     4.00000     4.00000     4.00000
+
+ RECORD #   1659     4.00000     5.00000     4.50000
+
+ RECORD #   1660     4.00000     4.00000     4.00000
+
+ RECORD #   1661     4.00000     5.00000     4.50000
+
+ RECORD #   1662     5.00000     4.00000     4.50000
+
+ RECORD #   1663     5.00000     5.00000     5.00000
+
+ RECORD #   1664     5.00000     4.00000     4.50000
+
+ RECORD #   1665     5.00000     5.00000     5.00000
+
+ RECORD #   1666     5.00000     4.00000     4.50000
+
+ RECORD #   1667     5.00000     6.00000     5.50000
+
+ RECORD #   1668     3.00000     3.00000     3.00000
+
+ RECORD #   1669     2.00000     3.00000     2.50000
+
+ RECORD #   1670     4.00000     4.00000     4.00000
+
+ RECORD #   1671     5.00000     6.00000     5.50000
+
+ RECORD #   1672     4.00000     4.00000     4.00000
+
+ RECORD #   1673     5.00000     5.00000     5.00000
+
+ RECORD #   1674     4.00000     4.00000     4.00000
+
+ RECORD #   1675     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      70
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1676     4.00000     4.00000     4.00000
+
+ RECORD #   1677     3.00000     3.00000     3.00000
+
+ RECORD #   1678     4.00000     4.00000     4.00000
+
+ RECORD #   1679     3.00000     4.00000     3.50000
+
+ RECORD #   1680     4.00000     4.00000     4.00000
+
+ RECORD #   1681     4.00000     4.00000     4.00000
+
+ RECORD #   1682     2.00000     3.00000     2.50000
+
+ RECORD #   1683     5.00000     5.00000     5.00000
+
+ RECORD #   1684     4.00000     4.00000     4.00000
+
+ RECORD #   1685     4.00000     3.00000     3.50000
+
+ RECORD #   1686     4.00000     5.00000     4.50000
+
+ RECORD #   1687     6.00000     5.00000     5.50000
+
+ RECORD #   1688     5.00000     4.00000     4.50000
+
+ RECORD #   1689     5.00000     5.00000     5.00000
+
+ RECORD #   1690     5.00000     5.00000     5.00000
+
+ RECORD #   1691     4.00000     5.00000     4.50000
+
+ RECORD #   1692     4.00000     5.00000     4.50000
+
+ RECORD #   1693     4.00000     4.00000     4.00000
+
+ RECORD #   1694     4.00000     4.00000     4.00000
+
+ RECORD #   1695     4.00000     4.00000     4.00000
+
+ RECORD #   1696     4.00000     5.00000     4.50000
+
+ RECORD #   1697     4.00000     4.00000     4.00000
+
+ RECORD #   1698     4.00000     4.00000     4.00000
+
+ RECORD #   1699     5.00000     6.00000     5.50000
+
+ RECORD #   1700     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      71
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1701     6.00000     6.00000     6.00000
+
+ RECORD #   1702     3.00000     3.00000     3.00000
+
+ RECORD #   1703     4.00000     3.00000     3.50000
+
+ RECORD #   1704     4.00000     3.00000     3.50000
+
+ RECORD #   1705     4.00000     4.00000     4.00000
+
+ RECORD #   1706     4.00000     5.00000     4.50000
+
+ RECORD #   1707     3.00000     3.00000     3.00000
+
+ RECORD #   1708     4.00000     5.00000     4.50000
+
+ RECORD #   1709     4.00000     4.00000     4.00000
+
+ RECORD #   1710     3.00000     3.00000     3.00000
+
+ RECORD #   1711     5.00000     5.00000     5.00000
+
+ RECORD #   1712     3.00000     4.00000     3.50000
+
+ RECORD #   1713     4.00000     4.00000     4.00000
+
+ RECORD #   1714     5.00000     4.00000     4.50000
+
+ RECORD #   1715     4.00000     4.00000     4.00000
+
+ RECORD #   1716     5.00000     6.00000     5.50000
+
+ RECORD #   1717     5.00000     4.00000     4.50000
+
+ RECORD #   1718     4.00000     5.00000     4.50000
+
+ RECORD #   1719     5.00000     4.00000     4.50000
+
+ RECORD #   1720     5.00000     5.00000     5.00000
+
+ RECORD #   1721     5.00000     4.00000     4.50000
+
+ RECORD #   1722     4.00000     5.00000     4.50000
+
+ RECORD #   1723     5.00000     5.00000     5.00000
+
+ RECORD #   1724     4.00000     5.00000     4.50000
+
+ RECORD #   1725     4.00000     4.00000     4.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      72
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1726     4.00000     6.00000     5.00000
+
+ RECORD #   1727     5.00000     4.00000     4.50000
+
+ RECORD #   1728     4.00000     4.00000     4.00000
+
+ RECORD #   1729     4.00000     4.00000     4.00000
+
+ RECORD #   1730     5.00000     4.00000     4.50000
+
+ RECORD #   1731     4.00000     3.00000     3.50000
+
+ RECORD #   1732     6.00000     5.00000     5.50000
+
+ RECORD #   1733     4.00000     4.00000     4.00000
+
+ RECORD #   1734     4.00000     3.00000     3.50000
+
+ RECORD #   1735     4.00000     6.00000     5.00000
+
+ RECORD #   1736     4.00000     4.00000     4.00000
+
+ RECORD #   1737     4.00000     4.00000     4.00000
+
+ RECORD #   1738     3.00000     3.00000     3.00000
+
+ RECORD #   1739     4.00000     5.00000     4.50000
+
+ RECORD #   1740     5.00000     6.00000     5.50000
+
+ RECORD #   1741     5.00000     5.00000     5.00000
+
+ RECORD #   1742     5.00000     5.00000     5.00000
+
+ RECORD #   1743     4.00000     4.00000     4.00000
+
+ RECORD #   1744     4.00000     5.00000     4.50000
+
+ RECORD #   1745     3.00000     3.00000     3.00000
+
+ RECORD #   1746     4.00000     4.00000     4.00000
+
+ RECORD #   1747     4.00000     4.00000     4.00000
+
+ RECORD #   1748     4.00000     5.00000     4.50000
+
+ RECORD #   1749     4.00000     4.00000     4.00000
+
+ RECORD #   1750     5.00000     5.00000     5.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      73
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1751     4.00000     4.00000     4.00000
+
+ RECORD #   1752     5.00000     5.00000     5.00000
+
+ RECORD #   1753     4.00000     4.00000     4.00000
+
+ RECORD #   1754     5.00000     5.00000     5.00000
+
+ RECORD #   1755     5.00000     5.00000     5.00000
+
+ RECORD #   1756     6.00000     6.00000     6.00000
+
+ RECORD #   1757     4.00000     4.00000     4.00000
+
+ RECORD #   1758     4.00000     4.00000     4.00000
+
+ RECORD #   1759     6.00000     6.00000     6.00000
+
+ RECORD #   1760     4.00000     4.00000     4.00000
+
+ RECORD #   1761     2.00000     3.00000     2.50000
+
+ RECORD #   1762     4.00000     4.00000     4.00000
+
+ RECORD #   1763     4.00000     5.00000     4.50000
+
+ RECORD #   1764     4.00000     4.00000     4.00000
+
+ RECORD #   1765     4.00000     5.00000     4.50000
+
+ RECORD #   1766     5.00000     5.00000     5.00000
+
+ RECORD #   1767     4.00000     4.00000     4.00000
+
+ RECORD #   1768     5.00000     5.00000     5.00000
+
+ RECORD #   1769     4.00000     4.00000     4.00000
+
+ RECORD #   1770     6.00000     4.00000     5.00000
+
+ RECORD #   1771     4.00000     5.00000     4.50000
+
+ RECORD #   1772     4.00000     5.00000     4.50000
+
+ RECORD #   1773     6.00000     5.00000     5.50000
+
+ RECORD #   1774     3.00000     2.00000     2.50000
+
+ RECORD #   1775     5.00000     5.00000     5.00000
+   GENOVA  VERSION 3.1                                                                                                PAGE      74
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                               INPUT RECORD LISTING WITH RECORD MEANS               
+
+
+ RECORD #   1776     5.00000     4.00000     4.50000
+
+ RECORD #   1777     5.00000     5.00000     5.00000
+
+ RECORD #   1778     4.00000     4.00000     4.00000
+
+ RECORD #   1779     4.00000     4.00000     4.00000
+
+ RECORD #   1780     3.00000     4.00000     3.50000
+
+ RECORD #   1781     4.00000     4.00000     4.00000
+
+ RECORD #   1782     1.00000     1.00000     1.00000
+
+ RECORD #   1783     4.00000     3.00000     3.50000
+   GENOVA  VERSION 3.1                                                                                                PAGE      75
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                                          CELL MEAN SCORES                          
+
+
+ **********************************************************************************************************************************
+
+                                             *** GRAND MEAN =            4.2641615 ***
+
+
+ **********************************************************************************************************************************
+
+   MEAN SCORES FOR EFFECT:  R              SUBSCRIPT NOTATION:  (R)                
+
+
+         (1) =           4.260796        (2) =           4.267527                                                                 
+   GENOVA  VERSION 3.1                                                                                                PAGE      76
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                                            ANOVA TABLE                             
+
+         (** = INFINITE)    P         R                                                                                           
+         SAMPLE SIZE     1783         2                                                                                           
+         UNIVERSE SIZE   ****      ****                                                                                           
+        ------------------------------------------------------------------------------------------------------------------
+                      DEGREES      SUMS OF        SUMS OF                             (QF = QUASI F RATIO)
+                         OF      SQUARES FOR    SQUARES FOR       MEAN            F            F-TEST DEGREES OF FREEDOM
+         EFFECT       FREEDOM    MEAN SCORES   SCORE EFFECTS     SQUARES      STATISTIC        NUMERATOR      DENOMINATOR
+        ------------------------------------------------------------------------------------------------------------------
+         P               1782    66950.00000     2109.15984       1.18359       6.16786            1782            1782           
+         R                  1    64840.88054        0.04038       0.04038       0.21043               1            1782           
+        ------------------------------------------------------------------------------------------------------------------
+         PR              1782    67292.00000      341.95962       0.19190                                                         
+        ------------------------------------------------------------------------------------------------------------------
+         MEAN                    64840.84016
+        ------------------------------------------------------------------------------------------------------------------
+         TOTAL           3565                    2451.15984
+        ------------------------------------------------------------------------------------------------------------------
+           NOTE: FOR GENERALIZABILITY ANALYSES, F-STATISTICS SHOULD BE IGNORED
+   GENOVA  VERSION 3.1                                                                                                PAGE      77
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                                          G STUDY RESULTS                           
+
+         (** = INFINITE)    P         R                                                                                           
+         SAMPLE SIZE     1783         2                                                                                           
+         UNIVERSE SIZE   ****      ****                                               QFM = QUADRATIC FORM                        
+        -----------------------------------------------------------------------------
+                                   M O D E L   V A R I A N C E   C O M P O N E N T S
+                      DEGREES      - - - - -   - - - - - - - -   - - - - - - - - - -
+                         OF          USING            USING EMS          STANDARD
+         EFFECT       FREEDOM      ALGORITHM          EQUATIONS           ERROR
+        -----------------------------------------------------------------------------
+         P               1782        0.4958474          0.4958474          0.0200735                                              
+         R                  1        (0.0)             (0.0)               0.0000188                                              
+        -----------------------------------------------------------------------------
+         PR              1782        0.1918965          0.1918965          0.0064252                                              
+        -----------------------------------------------------------------------------
+           NOTE: THE "ALGORITHM" AND "EMS" ESTIMATED VARIANCE COMPONENTS WILL BE
+                 IDENTICAL IF THERE ARE NO NEGATIVE ESTIMATES
+   GENOVA  VERSION 3.1                                                                                                PAGE      78
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                                   EXPECTED MEAN SQUARE EQUATIONS                   
+
+         (** = INFINITE)    P         R                                                                                           
+         SAMPLE SIZE     1783         2                                                                                           
+         UNIVERSE SIZE   ****      ****                                                                                           
+
+
+
+ EMS(P)           =  1.00*VC(PR)  +  2.00*VC(P)                                                                                    
+
+ EMS(R)           =  1.00*VC(PR)  +  1783.00*VC(R)                                                                                 
+
+ EMS(PR)          =  1.00*VC(PR)                                                                                                   
+   GENOVA  VERSION 3.1                                                                                                PAGE      79
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                 VARIANCE - COVARIANCE MATRIX FOR ESTIMATED VARIANCE COMPONENTS (V) 
+
+
+                  P             R             PR                                                                                  
+
+ P                0.0004029
+ R                0.0000000     0.0000000
+ PR              -0.0000206     0.0000000     0.0000413
+   GENOVA  VERSION 3.1                                                                                                PAGE      80
+          G STUDY                        ESSAY SET 1 - RANDOM MODEL - P X R DESIGN - RUN 1          
+
+                                        CORRELATION MATRIX FOR ESTIMATED VARIANCE COMPONENTS        
+
+
+                  P             R             PR                                                                                  
+
+ P                1.0000000
+ R                0.0306117     1.0000000
+ PR              -0.1600409    -0.1912739     1.0000000
+   GENOVA  VERSION 3.1                                                                                                PAGE      81
+                                                     CONTROL CARD INPUT LISTING
+
+
+   COLUMN   11111111112222222222333333333344444444445555555555666666666677777777778
+   12345678901234567890123456789012345678901234567890123456789012345678901234567890
+   DSTUDY        EXPERT RATER P X R DESIGN                                         
+   DEFFECT       $ P                                                               
+   DEFFECT          R 01 02 03 04 05 06 07 08 09 10 11 12                          
+   ENDDSTUDY                                                                       
+   GENOVA  VERSION 3.1                                                                                                PAGE      82
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-001                    
+
+       OBJECT OF MEASUREMENT :      P                       FACETS :      R      
+     G STUDY POPULATION SIZE : INFINITE     G STUDY UNIVERSE SIZES : INFINITE                                                    
+     D STUDY POPULATION SIZE : INFINITE     D STUDY UNIVERSE SIZES : INFINITE                                                    
+         D STUDY SAMPLE SIZE :  1783          D STUDY SAMPLE SIZES :     1                                                       
+ ----------------------------------------------------------------------------------------------------------------------------------
+                          VARIANCE COMPONENTS IN TERMS OF                            VARIANCE COMPONENTS IN TERMS OF
+                G STUDY UNIVERSE (OF ADMISSIBLE OBSERVATIONS) SIZES             D STUDY UNIVERSE (OF GENERALIZATION) SIZES
+             ---------------------------------------------------------- -----------------------------------------------------------
+                                                VARIANCE COMPONENTS                                        VARIANCE COMPONENTS
+               VARIANCE     FINITE   D STUDY      FOR MEAN SCORES         VARIANCE     FINITE   D STUDY      FOR MEAN SCORES
+              COMPONENTS   UNIVERSE SAMPLING --------------------------  COMPONENTS   UNIVERSE SAMPLING ---------------------------
+              FOR SINGLE     COR-     FRE-                   STANDARD    FOR SINGLE     COR-     FRE-                   STANDARD
+ EFFECT      OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS    OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS
+ ----------------------------------------------------------------------------------------------------------------------------------
+ P              0.49585     1.0000        1     0.49585       0.02007      0.49585     1.0000        1     0.49585       0.02007   
+ R          0.00000E+00     1.0000        1 0.00000E+00       0.00002  0.00000E+00     1.0000        1 0.00000E+00       0.00002   
+ PR             0.19190     1.0000        1     0.19190       0.00643      0.19190     1.0000        1     0.19190       0.00643   
+ ----------------------------------------------------------------------------------------------------------------------------------
+            QFM = QUADRATIC FORM
+
+ ----------------------------------------------------------------------------------------------------------------------------------
+
+
+                                                    STANDARD
+                                          STANDARD  ERROR OF
+                                VARIANCE DEVIATION  VARIANCE
+
+              UNIVERSE SCORE     0.49585   0.70416   0.02007
+     EXPECTED OBSERVED SCORE     0.68774   0.82930   0.02007
+            LOWER CASE DELTA     0.19190   0.43806   0.00643          GENERALIZABILITY COEFFICIENT =  0.72098  ( 2.58393)
+            UPPER CASE DELTA     0.19190   0.43806   0.00642                                   PHI =  0.72098  ( 2.58393)
+                        MEAN     0.00039   0.01964
+ ----------------------------------------------------------------------------------------------------------------------------------
+        NOTE:  SIGNAL/NOISE RATIOS ARE IN PARENTHESES
+   GENOVA  VERSION 3.1                                                                                                PAGE      83
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-001                    
+
+
+         VARIANCE - COVARIANCE MATRIX FOR ESTIMATED VARIANCE COMPONENTS (FOR MEAN SCORES) IN UNIVERSE OF GENERALIZATION (W)
+
+
+                  P             R             PR                                                                                  
+
+ P                0.0004029
+ R                0.0000000     0.0000000
+ PR              -0.0000206     0.0000000     0.0000413
+   GENOVA  VERSION 3.1                                                                                                PAGE      84
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-002                    
+
+       OBJECT OF MEASUREMENT :      P                       FACETS :      R      
+     G STUDY POPULATION SIZE : INFINITE     G STUDY UNIVERSE SIZES : INFINITE                                                    
+     D STUDY POPULATION SIZE : INFINITE     D STUDY UNIVERSE SIZES : INFINITE                                                    
+         D STUDY SAMPLE SIZE :  1783          D STUDY SAMPLE SIZES :     2                                                       
+ ----------------------------------------------------------------------------------------------------------------------------------
+                          VARIANCE COMPONENTS IN TERMS OF                            VARIANCE COMPONENTS IN TERMS OF
+                G STUDY UNIVERSE (OF ADMISSIBLE OBSERVATIONS) SIZES             D STUDY UNIVERSE (OF GENERALIZATION) SIZES
+             ---------------------------------------------------------- -----------------------------------------------------------
+                                                VARIANCE COMPONENTS                                        VARIANCE COMPONENTS
+               VARIANCE     FINITE   D STUDY      FOR MEAN SCORES         VARIANCE     FINITE   D STUDY      FOR MEAN SCORES
+              COMPONENTS   UNIVERSE SAMPLING --------------------------  COMPONENTS   UNIVERSE SAMPLING ---------------------------
+              FOR SINGLE     COR-     FRE-                   STANDARD    FOR SINGLE     COR-     FRE-                   STANDARD
+ EFFECT      OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS    OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS
+ ----------------------------------------------------------------------------------------------------------------------------------
+ P              0.49585     1.0000        1     0.49585       0.02007      0.49585     1.0000        1     0.49585       0.02007   
+ R          0.00000E+00     1.0000        2 0.00000E+00   0.94199E-05  0.00000E+00     1.0000        2 0.00000E+00   0.94199E-05   
+ PR             0.19190     1.0000        2     0.09595       0.00321      0.19190     1.0000        2     0.09595       0.00321   
+ ----------------------------------------------------------------------------------------------------------------------------------
+            QFM = QUADRATIC FORM
+
+ ----------------------------------------------------------------------------------------------------------------------------------
+
+
+                                                    STANDARD
+                                          STANDARD  ERROR OF
+                                VARIANCE DEVIATION  VARIANCE
+
+              UNIVERSE SCORE     0.49585   0.70416   0.02007
+     EXPECTED OBSERVED SCORE     0.59180   0.76928   0.01981
+            LOWER CASE DELTA     0.09595   0.30976   0.00321          GENERALIZABILITY COEFFICIENT =  0.83787  ( 5.16786)
+            UPPER CASE DELTA     0.09595   0.30976   0.00321                                   PHI =  0.83787  ( 5.16786)
+                        MEAN     0.00033   0.01822
+ ----------------------------------------------------------------------------------------------------------------------------------
+        NOTE:  SIGNAL/NOISE RATIOS ARE IN PARENTHESES
+   GENOVA  VERSION 3.1                                                                                                PAGE      85
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-002                    
+
+
+         VARIANCE - COVARIANCE MATRIX FOR ESTIMATED VARIANCE COMPONENTS (FOR MEAN SCORES) IN UNIVERSE OF GENERALIZATION (W)
+
+
+                  P             R             PR                                                                                  
+
+ P                0.0004029
+ R                0.0000000     0.0000000
+ PR              -0.0000103     0.0000000     0.0000103
+   GENOVA  VERSION 3.1                                                                                                PAGE      86
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-003                    
+
+       OBJECT OF MEASUREMENT :      P                       FACETS :      R      
+     G STUDY POPULATION SIZE : INFINITE     G STUDY UNIVERSE SIZES : INFINITE                                                    
+     D STUDY POPULATION SIZE : INFINITE     D STUDY UNIVERSE SIZES : INFINITE                                                    
+         D STUDY SAMPLE SIZE :  1783          D STUDY SAMPLE SIZES :     3                                                       
+ ----------------------------------------------------------------------------------------------------------------------------------
+                          VARIANCE COMPONENTS IN TERMS OF                            VARIANCE COMPONENTS IN TERMS OF
+                G STUDY UNIVERSE (OF ADMISSIBLE OBSERVATIONS) SIZES             D STUDY UNIVERSE (OF GENERALIZATION) SIZES
+             ---------------------------------------------------------- -----------------------------------------------------------
+                                                VARIANCE COMPONENTS                                        VARIANCE COMPONENTS
+               VARIANCE     FINITE   D STUDY      FOR MEAN SCORES         VARIANCE     FINITE   D STUDY      FOR MEAN SCORES
+              COMPONENTS   UNIVERSE SAMPLING --------------------------  COMPONENTS   UNIVERSE SAMPLING ---------------------------
+              FOR SINGLE     COR-     FRE-                   STANDARD    FOR SINGLE     COR-     FRE-                   STANDARD
+ EFFECT      OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS    OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS
+ ----------------------------------------------------------------------------------------------------------------------------------
+ P              0.49585     1.0000        1     0.49585       0.02007      0.49585     1.0000        1     0.49585       0.02007   
+ R          0.00000E+00     1.0000        3 0.00000E+00   0.62800E-05  0.00000E+00     1.0000        3 0.00000E+00   0.62800E-05   
+ PR             0.19190     1.0000        3     0.06397       0.00214      0.19190     1.0000        3     0.06397       0.00214   
+ ----------------------------------------------------------------------------------------------------------------------------------
+            QFM = QUADRATIC FORM
+
+ ----------------------------------------------------------------------------------------------------------------------------------
+
+
+                                                    STANDARD
+                                          STANDARD  ERROR OF
+                                VARIANCE DEVIATION  VARIANCE
+
+              UNIVERSE SCORE     0.49585   0.70416   0.02007
+     EXPECTED OBSERVED SCORE     0.55981   0.74821   0.01984
+            LOWER CASE DELTA     0.06397   0.25291   0.00214          GENERALIZABILITY COEFFICIENT =  0.88574  ( 7.75179)
+            UPPER CASE DELTA     0.06397   0.25291   0.00214                                   PHI =  0.88574  ( 7.75179)
+                        MEAN     0.00031   0.01772
+ ----------------------------------------------------------------------------------------------------------------------------------
+        NOTE:  SIGNAL/NOISE RATIOS ARE IN PARENTHESES
+   GENOVA  VERSION 3.1                                                                                                PAGE      87
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-003                    
+
+
+         VARIANCE - COVARIANCE MATRIX FOR ESTIMATED VARIANCE COMPONENTS (FOR MEAN SCORES) IN UNIVERSE OF GENERALIZATION (W)
+
+
+                  P             R             PR                                                                                  
+
+ P                0.0004029
+ R                0.0000000     0.0000000
+ PR              -0.0000069     0.0000000     0.0000046
+   GENOVA  VERSION 3.1                                                                                                PAGE      88
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-004                    
+
+       OBJECT OF MEASUREMENT :      P                       FACETS :      R      
+     G STUDY POPULATION SIZE : INFINITE     G STUDY UNIVERSE SIZES : INFINITE                                                    
+     D STUDY POPULATION SIZE : INFINITE     D STUDY UNIVERSE SIZES : INFINITE                                                    
+         D STUDY SAMPLE SIZE :  1783          D STUDY SAMPLE SIZES :     4                                                       
+ ----------------------------------------------------------------------------------------------------------------------------------
+                          VARIANCE COMPONENTS IN TERMS OF                            VARIANCE COMPONENTS IN TERMS OF
+                G STUDY UNIVERSE (OF ADMISSIBLE OBSERVATIONS) SIZES             D STUDY UNIVERSE (OF GENERALIZATION) SIZES
+             ---------------------------------------------------------- -----------------------------------------------------------
+                                                VARIANCE COMPONENTS                                        VARIANCE COMPONENTS
+               VARIANCE     FINITE   D STUDY      FOR MEAN SCORES         VARIANCE     FINITE   D STUDY      FOR MEAN SCORES
+              COMPONENTS   UNIVERSE SAMPLING --------------------------  COMPONENTS   UNIVERSE SAMPLING ---------------------------
+              FOR SINGLE     COR-     FRE-                   STANDARD    FOR SINGLE     COR-     FRE-                   STANDARD
+ EFFECT      OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS    OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS
+ ----------------------------------------------------------------------------------------------------------------------------------
+ P              0.49585     1.0000        1     0.49585       0.02007      0.49585     1.0000        1     0.49585       0.02007   
+ R          0.00000E+00     1.0000        4 0.00000E+00   0.47100E-05  0.00000E+00     1.0000        4 0.00000E+00   0.47100E-05   
+ PR             0.19190     1.0000        4     0.04797       0.00161      0.19190     1.0000        4     0.04797       0.00161   
+ ----------------------------------------------------------------------------------------------------------------------------------
+            QFM = QUADRATIC FORM
+
+ ----------------------------------------------------------------------------------------------------------------------------------
+
+
+                                                    STANDARD
+                                          STANDARD  ERROR OF
+                                VARIANCE DEVIATION  VARIANCE
+
+              UNIVERSE SCORE     0.49585   0.70416   0.02007
+     EXPECTED OBSERVED SCORE     0.54382   0.73744   0.01988
+            LOWER CASE DELTA     0.04797   0.21903   0.00161          GENERALIZABILITY COEFFICIENT =  0.91178  (10.33572)
+            UPPER CASE DELTA     0.04797   0.21903   0.00161                                   PHI =  0.91178  (10.33572)
+                        MEAN     0.00031   0.01746
+ ----------------------------------------------------------------------------------------------------------------------------------
+        NOTE:  SIGNAL/NOISE RATIOS ARE IN PARENTHESES
+   GENOVA  VERSION 3.1                                                                                                PAGE      89
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-004                    
+
+
+         VARIANCE - COVARIANCE MATRIX FOR ESTIMATED VARIANCE COMPONENTS (FOR MEAN SCORES) IN UNIVERSE OF GENERALIZATION (W)
+
+
+                  P             R             PR                                                                                  
+
+ P                0.0004029
+ R                0.0000000     0.0000000
+ PR              -0.0000052     0.0000000     0.0000026
+   GENOVA  VERSION 3.1                                                                                                PAGE      90
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-005                    
+
+       OBJECT OF MEASUREMENT :      P                       FACETS :      R      
+     G STUDY POPULATION SIZE : INFINITE     G STUDY UNIVERSE SIZES : INFINITE                                                    
+     D STUDY POPULATION SIZE : INFINITE     D STUDY UNIVERSE SIZES : INFINITE                                                    
+         D STUDY SAMPLE SIZE :  1783          D STUDY SAMPLE SIZES :     5                                                       
+ ----------------------------------------------------------------------------------------------------------------------------------
+                          VARIANCE COMPONENTS IN TERMS OF                            VARIANCE COMPONENTS IN TERMS OF
+                G STUDY UNIVERSE (OF ADMISSIBLE OBSERVATIONS) SIZES             D STUDY UNIVERSE (OF GENERALIZATION) SIZES
+             ---------------------------------------------------------- -----------------------------------------------------------
+                                                VARIANCE COMPONENTS                                        VARIANCE COMPONENTS
+               VARIANCE     FINITE   D STUDY      FOR MEAN SCORES         VARIANCE     FINITE   D STUDY      FOR MEAN SCORES
+              COMPONENTS   UNIVERSE SAMPLING --------------------------  COMPONENTS   UNIVERSE SAMPLING ---------------------------
+              FOR SINGLE     COR-     FRE-                   STANDARD    FOR SINGLE     COR-     FRE-                   STANDARD
+ EFFECT      OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS    OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS
+ ----------------------------------------------------------------------------------------------------------------------------------
+ P              0.49585     1.0000        1     0.49585       0.02007      0.49585     1.0000        1     0.49585       0.02007   
+ R          0.00000E+00     1.0000        5 0.00000E+00   0.37680E-05  0.00000E+00     1.0000        5 0.00000E+00   0.37680E-05   
+ PR             0.19190     1.0000        5     0.03838       0.00129      0.19190     1.0000        5     0.03838       0.00129   
+ ----------------------------------------------------------------------------------------------------------------------------------
+            QFM = QUADRATIC FORM
+
+ ----------------------------------------------------------------------------------------------------------------------------------
+
+
+                                                    STANDARD
+                                          STANDARD  ERROR OF
+                                VARIANCE DEVIATION  VARIANCE
+
+              UNIVERSE SCORE     0.49585   0.70416   0.02007
+     EXPECTED OBSERVED SCORE     0.53423   0.73091   0.01991
+            LOWER CASE DELTA     0.03838   0.19591   0.00129          GENERALIZABILITY COEFFICIENT =  0.92816  (12.91966)
+            UPPER CASE DELTA     0.03838   0.19591   0.00128                                   PHI =  0.92816  (12.91966)
+                        MEAN     0.00030   0.01731
+ ----------------------------------------------------------------------------------------------------------------------------------
+        NOTE:  SIGNAL/NOISE RATIOS ARE IN PARENTHESES
+   GENOVA  VERSION 3.1                                                                                                PAGE      91
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-005                    
+
+
+         VARIANCE - COVARIANCE MATRIX FOR ESTIMATED VARIANCE COMPONENTS (FOR MEAN SCORES) IN UNIVERSE OF GENERALIZATION (W)
+
+
+                  P             R             PR                                                                                  
+
+ P                0.0004029
+ R                0.0000000     0.0000000
+ PR              -0.0000041     0.0000000     0.0000017
+   GENOVA  VERSION 3.1                                                                                                PAGE      92
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-006                    
+
+       OBJECT OF MEASUREMENT :      P                       FACETS :      R      
+     G STUDY POPULATION SIZE : INFINITE     G STUDY UNIVERSE SIZES : INFINITE                                                    
+     D STUDY POPULATION SIZE : INFINITE     D STUDY UNIVERSE SIZES : INFINITE                                                    
+         D STUDY SAMPLE SIZE :  1783          D STUDY SAMPLE SIZES :     6                                                       
+ ----------------------------------------------------------------------------------------------------------------------------------
+                          VARIANCE COMPONENTS IN TERMS OF                            VARIANCE COMPONENTS IN TERMS OF
+                G STUDY UNIVERSE (OF ADMISSIBLE OBSERVATIONS) SIZES             D STUDY UNIVERSE (OF GENERALIZATION) SIZES
+             ---------------------------------------------------------- -----------------------------------------------------------
+                                                VARIANCE COMPONENTS                                        VARIANCE COMPONENTS
+               VARIANCE     FINITE   D STUDY      FOR MEAN SCORES         VARIANCE     FINITE   D STUDY      FOR MEAN SCORES
+              COMPONENTS   UNIVERSE SAMPLING --------------------------  COMPONENTS   UNIVERSE SAMPLING ---------------------------
+              FOR SINGLE     COR-     FRE-                   STANDARD    FOR SINGLE     COR-     FRE-                   STANDARD
+ EFFECT      OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS    OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS
+ ----------------------------------------------------------------------------------------------------------------------------------
+ P              0.49585     1.0000        1     0.49585       0.02007      0.49585     1.0000        1     0.49585       0.02007   
+ R          0.00000E+00     1.0000        6 0.00000E+00   0.31400E-05  0.00000E+00     1.0000        6 0.00000E+00   0.31400E-05   
+ PR             0.19190     1.0000        6     0.03198       0.00107      0.19190     1.0000        6     0.03198       0.00107   
+ ----------------------------------------------------------------------------------------------------------------------------------
+            QFM = QUADRATIC FORM
+
+ ----------------------------------------------------------------------------------------------------------------------------------
+
+
+                                                    STANDARD
+                                          STANDARD  ERROR OF
+                                VARIANCE DEVIATION  VARIANCE
+
+              UNIVERSE SCORE     0.49585   0.70416   0.02007
+     EXPECTED OBSERVED SCORE     0.52783   0.72652   0.01993
+            LOWER CASE DELTA     0.03198   0.17884   0.00107          GENERALIZABILITY COEFFICIENT =  0.93941  (15.50359)
+            UPPER CASE DELTA     0.03198   0.17884   0.00107                                   PHI =  0.93941  (15.50359)
+                        MEAN     0.00030   0.01721
+ ----------------------------------------------------------------------------------------------------------------------------------
+        NOTE:  SIGNAL/NOISE RATIOS ARE IN PARENTHESES
+   GENOVA  VERSION 3.1                                                                                                PAGE      93
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-006                    
+
+
+         VARIANCE - COVARIANCE MATRIX FOR ESTIMATED VARIANCE COMPONENTS (FOR MEAN SCORES) IN UNIVERSE OF GENERALIZATION (W)
+
+
+                  P             R             PR                                                                                  
+
+ P                0.0004029
+ R                0.0000000     0.0000000
+ PR              -0.0000034     0.0000000     0.0000011
+   GENOVA  VERSION 3.1                                                                                                PAGE      94
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-007                    
+
+       OBJECT OF MEASUREMENT :      P                       FACETS :      R      
+     G STUDY POPULATION SIZE : INFINITE     G STUDY UNIVERSE SIZES : INFINITE                                                    
+     D STUDY POPULATION SIZE : INFINITE     D STUDY UNIVERSE SIZES : INFINITE                                                    
+         D STUDY SAMPLE SIZE :  1783          D STUDY SAMPLE SIZES :     7                                                       
+ ----------------------------------------------------------------------------------------------------------------------------------
+                          VARIANCE COMPONENTS IN TERMS OF                            VARIANCE COMPONENTS IN TERMS OF
+                G STUDY UNIVERSE (OF ADMISSIBLE OBSERVATIONS) SIZES             D STUDY UNIVERSE (OF GENERALIZATION) SIZES
+             ---------------------------------------------------------- -----------------------------------------------------------
+                                                VARIANCE COMPONENTS                                        VARIANCE COMPONENTS
+               VARIANCE     FINITE   D STUDY      FOR MEAN SCORES         VARIANCE     FINITE   D STUDY      FOR MEAN SCORES
+              COMPONENTS   UNIVERSE SAMPLING --------------------------  COMPONENTS   UNIVERSE SAMPLING ---------------------------
+              FOR SINGLE     COR-     FRE-                   STANDARD    FOR SINGLE     COR-     FRE-                   STANDARD
+ EFFECT      OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS    OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS
+ ----------------------------------------------------------------------------------------------------------------------------------
+ P              0.49585     1.0000        1     0.49585       0.02007      0.49585     1.0000        1     0.49585       0.02007   
+ R          0.00000E+00     1.0000        7 0.00000E+00   0.26914E-05  0.00000E+00     1.0000        7 0.00000E+00   0.26914E-05   
+ PR             0.19190     1.0000        7     0.02741       0.00092      0.19190     1.0000        7     0.02741       0.00092   
+ ----------------------------------------------------------------------------------------------------------------------------------
+            QFM = QUADRATIC FORM
+
+ ----------------------------------------------------------------------------------------------------------------------------------
+
+
+                                                    STANDARD
+                                          STANDARD  ERROR OF
+                                VARIANCE DEVIATION  VARIANCE
+
+              UNIVERSE SCORE     0.49585   0.70416   0.02007
+     EXPECTED OBSERVED SCORE     0.52326   0.72337   0.01995
+            LOWER CASE DELTA     0.02741   0.16557   0.00092          GENERALIZABILITY COEFFICIENT =  0.94761  (18.08752)
+            UPPER CASE DELTA     0.02741   0.16557   0.00092                                   PHI =  0.94761  (18.08752)
+                        MEAN     0.00029   0.01713
+ ----------------------------------------------------------------------------------------------------------------------------------
+        NOTE:  SIGNAL/NOISE RATIOS ARE IN PARENTHESES
+   GENOVA  VERSION 3.1                                                                                                PAGE      95
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-007                    
+
+
+         VARIANCE - COVARIANCE MATRIX FOR ESTIMATED VARIANCE COMPONENTS (FOR MEAN SCORES) IN UNIVERSE OF GENERALIZATION (W)
+
+
+                  P             R             PR                                                                                  
+
+ P                0.0004029
+ R                0.0000000     0.0000000
+ PR              -0.0000029     0.0000000     0.0000008
+   GENOVA  VERSION 3.1                                                                                                PAGE      96
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-008                    
+
+       OBJECT OF MEASUREMENT :      P                       FACETS :      R      
+     G STUDY POPULATION SIZE : INFINITE     G STUDY UNIVERSE SIZES : INFINITE                                                    
+     D STUDY POPULATION SIZE : INFINITE     D STUDY UNIVERSE SIZES : INFINITE                                                    
+         D STUDY SAMPLE SIZE :  1783          D STUDY SAMPLE SIZES :     8                                                       
+ ----------------------------------------------------------------------------------------------------------------------------------
+                          VARIANCE COMPONENTS IN TERMS OF                            VARIANCE COMPONENTS IN TERMS OF
+                G STUDY UNIVERSE (OF ADMISSIBLE OBSERVATIONS) SIZES             D STUDY UNIVERSE (OF GENERALIZATION) SIZES
+             ---------------------------------------------------------- -----------------------------------------------------------
+                                                VARIANCE COMPONENTS                                        VARIANCE COMPONENTS
+               VARIANCE     FINITE   D STUDY      FOR MEAN SCORES         VARIANCE     FINITE   D STUDY      FOR MEAN SCORES
+              COMPONENTS   UNIVERSE SAMPLING --------------------------  COMPONENTS   UNIVERSE SAMPLING ---------------------------
+              FOR SINGLE     COR-     FRE-                   STANDARD    FOR SINGLE     COR-     FRE-                   STANDARD
+ EFFECT      OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS    OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS
+ ----------------------------------------------------------------------------------------------------------------------------------
+ P              0.49585     1.0000        1     0.49585       0.02007      0.49585     1.0000        1     0.49585       0.02007   
+ R          0.00000E+00     1.0000        8 0.00000E+00   0.23550E-05  0.00000E+00     1.0000        8 0.00000E+00   0.23550E-05   
+ PR             0.19190     1.0000        8     0.02399       0.00080      0.19190     1.0000        8     0.02399       0.00080   
+ ----------------------------------------------------------------------------------------------------------------------------------
+            QFM = QUADRATIC FORM
+
+ ----------------------------------------------------------------------------------------------------------------------------------
+
+
+                                                    STANDARD
+                                          STANDARD  ERROR OF
+                                VARIANCE DEVIATION  VARIANCE
+
+              UNIVERSE SCORE     0.49585   0.70416   0.02007
+     EXPECTED OBSERVED SCORE     0.51983   0.72100   0.01996
+            LOWER CASE DELTA     0.02399   0.15488   0.00080          GENERALIZABILITY COEFFICIENT =  0.95386  (20.67145)
+            UPPER CASE DELTA     0.02399   0.15488   0.00080                                   PHI =  0.95386  (20.67145)
+                        MEAN     0.00029   0.01707
+ ----------------------------------------------------------------------------------------------------------------------------------
+        NOTE:  SIGNAL/NOISE RATIOS ARE IN PARENTHESES
+   GENOVA  VERSION 3.1                                                                                                PAGE      97
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-008                    
+
+
+         VARIANCE - COVARIANCE MATRIX FOR ESTIMATED VARIANCE COMPONENTS (FOR MEAN SCORES) IN UNIVERSE OF GENERALIZATION (W)
+
+
+                  P             R             PR                                                                                  
+
+ P                0.0004029
+ R                0.0000000     0.0000000
+ PR              -0.0000026     0.0000000     0.0000006
+   GENOVA  VERSION 3.1                                                                                                PAGE      98
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-009                    
+
+       OBJECT OF MEASUREMENT :      P                       FACETS :      R      
+     G STUDY POPULATION SIZE : INFINITE     G STUDY UNIVERSE SIZES : INFINITE                                                    
+     D STUDY POPULATION SIZE : INFINITE     D STUDY UNIVERSE SIZES : INFINITE                                                    
+         D STUDY SAMPLE SIZE :  1783          D STUDY SAMPLE SIZES :     9                                                       
+ ----------------------------------------------------------------------------------------------------------------------------------
+                          VARIANCE COMPONENTS IN TERMS OF                            VARIANCE COMPONENTS IN TERMS OF
+                G STUDY UNIVERSE (OF ADMISSIBLE OBSERVATIONS) SIZES             D STUDY UNIVERSE (OF GENERALIZATION) SIZES
+             ---------------------------------------------------------- -----------------------------------------------------------
+                                                VARIANCE COMPONENTS                                        VARIANCE COMPONENTS
+               VARIANCE     FINITE   D STUDY      FOR MEAN SCORES         VARIANCE     FINITE   D STUDY      FOR MEAN SCORES
+              COMPONENTS   UNIVERSE SAMPLING --------------------------  COMPONENTS   UNIVERSE SAMPLING ---------------------------
+              FOR SINGLE     COR-     FRE-                   STANDARD    FOR SINGLE     COR-     FRE-                   STANDARD
+ EFFECT      OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS    OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS
+ ----------------------------------------------------------------------------------------------------------------------------------
+ P              0.49585     1.0000        1     0.49585       0.02007      0.49585     1.0000        1     0.49585       0.02007   
+ R          0.00000E+00     1.0000        9 0.00000E+00   0.20933E-05  0.00000E+00     1.0000        9 0.00000E+00   0.20933E-05   
+ PR             0.19190     1.0000        9     0.02132       0.00071      0.19190     1.0000        9     0.02132       0.00071   
+ ----------------------------------------------------------------------------------------------------------------------------------
+            QFM = QUADRATIC FORM
+
+ ----------------------------------------------------------------------------------------------------------------------------------
+
+
+                                                    STANDARD
+                                          STANDARD  ERROR OF
+                                VARIANCE DEVIATION  VARIANCE
+
+              UNIVERSE SCORE     0.49585   0.70416   0.02007
+     EXPECTED OBSERVED SCORE     0.51717   0.71914   0.01997
+            LOWER CASE DELTA     0.02132   0.14602   0.00071          GENERALIZABILITY COEFFICIENT =  0.95877  (23.25538)
+            UPPER CASE DELTA     0.02132   0.14602   0.00071                                   PHI =  0.95877  (23.25538)
+                        MEAN     0.00029   0.01703
+ ----------------------------------------------------------------------------------------------------------------------------------
+        NOTE:  SIGNAL/NOISE RATIOS ARE IN PARENTHESES
+   GENOVA  VERSION 3.1                                                                                                PAGE      99
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-009                    
+
+
+         VARIANCE - COVARIANCE MATRIX FOR ESTIMATED VARIANCE COMPONENTS (FOR MEAN SCORES) IN UNIVERSE OF GENERALIZATION (W)
+
+
+                  P             R             PR                                                                                  
+
+ P                0.0004029
+ R                0.0000000     0.0000000
+ PR              -0.0000023     0.0000000     0.0000005
+   GENOVA  VERSION 3.1                                                                                                PAGE     100
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-010                    
+
+       OBJECT OF MEASUREMENT :      P                       FACETS :      R      
+     G STUDY POPULATION SIZE : INFINITE     G STUDY UNIVERSE SIZES : INFINITE                                                    
+     D STUDY POPULATION SIZE : INFINITE     D STUDY UNIVERSE SIZES : INFINITE                                                    
+         D STUDY SAMPLE SIZE :  1783          D STUDY SAMPLE SIZES :    10                                                       
+ ----------------------------------------------------------------------------------------------------------------------------------
+                          VARIANCE COMPONENTS IN TERMS OF                            VARIANCE COMPONENTS IN TERMS OF
+                G STUDY UNIVERSE (OF ADMISSIBLE OBSERVATIONS) SIZES             D STUDY UNIVERSE (OF GENERALIZATION) SIZES
+             ---------------------------------------------------------- -----------------------------------------------------------
+                                                VARIANCE COMPONENTS                                        VARIANCE COMPONENTS
+               VARIANCE     FINITE   D STUDY      FOR MEAN SCORES         VARIANCE     FINITE   D STUDY      FOR MEAN SCORES
+              COMPONENTS   UNIVERSE SAMPLING --------------------------  COMPONENTS   UNIVERSE SAMPLING ---------------------------
+              FOR SINGLE     COR-     FRE-                   STANDARD    FOR SINGLE     COR-     FRE-                   STANDARD
+ EFFECT      OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS    OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS
+ ----------------------------------------------------------------------------------------------------------------------------------
+ P              0.49585     1.0000        1     0.49585       0.02007      0.49585     1.0000        1     0.49585       0.02007   
+ R          0.00000E+00     1.0000       10 0.00000E+00   0.18840E-05  0.00000E+00     1.0000       10 0.00000E+00   0.18840E-05   
+ PR             0.19190     1.0000       10     0.01919       0.00064      0.19190     1.0000       10     0.01919       0.00064   
+ ----------------------------------------------------------------------------------------------------------------------------------
+            QFM = QUADRATIC FORM
+
+ ----------------------------------------------------------------------------------------------------------------------------------
+
+
+                                                    STANDARD
+                                          STANDARD  ERROR OF
+                                VARIANCE DEVIATION  VARIANCE
+
+              UNIVERSE SCORE     0.49585   0.70416   0.02007
+     EXPECTED OBSERVED SCORE     0.51504   0.71766   0.01998
+            LOWER CASE DELTA     0.01919   0.13853   0.00064          GENERALIZABILITY COEFFICIENT =  0.96274  (25.83931)
+            UPPER CASE DELTA     0.01919   0.13853   0.00064                                   PHI =  0.96274  (25.83931)
+                        MEAN     0.00029   0.01700
+ ----------------------------------------------------------------------------------------------------------------------------------
+        NOTE:  SIGNAL/NOISE RATIOS ARE IN PARENTHESES
+   GENOVA  VERSION 3.1                                                                                                PAGE     101
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-010                    
+
+
+         VARIANCE - COVARIANCE MATRIX FOR ESTIMATED VARIANCE COMPONENTS (FOR MEAN SCORES) IN UNIVERSE OF GENERALIZATION (W)
+
+
+                  P             R             PR                                                                                  
+
+ P                0.0004029
+ R                0.0000000     0.0000000
+ PR              -0.0000021     0.0000000     0.0000004
+   GENOVA  VERSION 3.1                                                                                                PAGE     102
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-011                    
+
+       OBJECT OF MEASUREMENT :      P                       FACETS :      R      
+     G STUDY POPULATION SIZE : INFINITE     G STUDY UNIVERSE SIZES : INFINITE                                                    
+     D STUDY POPULATION SIZE : INFINITE     D STUDY UNIVERSE SIZES : INFINITE                                                    
+         D STUDY SAMPLE SIZE :  1783          D STUDY SAMPLE SIZES :    11                                                       
+ ----------------------------------------------------------------------------------------------------------------------------------
+                          VARIANCE COMPONENTS IN TERMS OF                            VARIANCE COMPONENTS IN TERMS OF
+                G STUDY UNIVERSE (OF ADMISSIBLE OBSERVATIONS) SIZES             D STUDY UNIVERSE (OF GENERALIZATION) SIZES
+             ---------------------------------------------------------- -----------------------------------------------------------
+                                                VARIANCE COMPONENTS                                        VARIANCE COMPONENTS
+               VARIANCE     FINITE   D STUDY      FOR MEAN SCORES         VARIANCE     FINITE   D STUDY      FOR MEAN SCORES
+              COMPONENTS   UNIVERSE SAMPLING --------------------------  COMPONENTS   UNIVERSE SAMPLING ---------------------------
+              FOR SINGLE     COR-     FRE-                   STANDARD    FOR SINGLE     COR-     FRE-                   STANDARD
+ EFFECT      OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS    OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS
+ ----------------------------------------------------------------------------------------------------------------------------------
+ P              0.49585     1.0000        1     0.49585       0.02007      0.49585     1.0000        1     0.49585       0.02007   
+ R          0.00000E+00     1.0000       11 0.00000E+00   0.17127E-05  0.00000E+00     1.0000       11 0.00000E+00   0.17127E-05   
+ PR             0.19190     1.0000       11     0.01745       0.00058      0.19190     1.0000       11     0.01745       0.00058   
+ ----------------------------------------------------------------------------------------------------------------------------------
+            QFM = QUADRATIC FORM
+
+ ----------------------------------------------------------------------------------------------------------------------------------
+
+
+                                                    STANDARD
+                                          STANDARD  ERROR OF
+                                VARIANCE DEVIATION  VARIANCE
+
+              UNIVERSE SCORE     0.49585   0.70416   0.02007
+     EXPECTED OBSERVED SCORE     0.51329   0.71644   0.01999
+            LOWER CASE DELTA     0.01745   0.13208   0.00058          GENERALIZABILITY COEFFICIENT =  0.96601  (28.42324)
+            UPPER CASE DELTA     0.01745   0.13208   0.00058                                   PHI =  0.96601  (28.42324)
+                        MEAN     0.00029   0.01697
+ ----------------------------------------------------------------------------------------------------------------------------------
+        NOTE:  SIGNAL/NOISE RATIOS ARE IN PARENTHESES
+   GENOVA  VERSION 3.1                                                                                                PAGE     103
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-011                    
+
+
+         VARIANCE - COVARIANCE MATRIX FOR ESTIMATED VARIANCE COMPONENTS (FOR MEAN SCORES) IN UNIVERSE OF GENERALIZATION (W)
+
+
+                  P             R             PR                                                                                  
+
+ P                0.0004029
+ R                0.0000000     0.0000000
+ PR              -0.0000019     0.0000000     0.0000003
+   GENOVA  VERSION 3.1                                                                                                PAGE     104
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-012                    
+
+       OBJECT OF MEASUREMENT :      P                       FACETS :      R      
+     G STUDY POPULATION SIZE : INFINITE     G STUDY UNIVERSE SIZES : INFINITE                                                    
+     D STUDY POPULATION SIZE : INFINITE     D STUDY UNIVERSE SIZES : INFINITE                                                    
+         D STUDY SAMPLE SIZE :  1783          D STUDY SAMPLE SIZES :    12                                                       
+ ----------------------------------------------------------------------------------------------------------------------------------
+                          VARIANCE COMPONENTS IN TERMS OF                            VARIANCE COMPONENTS IN TERMS OF
+                G STUDY UNIVERSE (OF ADMISSIBLE OBSERVATIONS) SIZES             D STUDY UNIVERSE (OF GENERALIZATION) SIZES
+             ---------------------------------------------------------- -----------------------------------------------------------
+                                                VARIANCE COMPONENTS                                        VARIANCE COMPONENTS
+               VARIANCE     FINITE   D STUDY      FOR MEAN SCORES         VARIANCE     FINITE   D STUDY      FOR MEAN SCORES
+              COMPONENTS   UNIVERSE SAMPLING --------------------------  COMPONENTS   UNIVERSE SAMPLING ---------------------------
+              FOR SINGLE     COR-     FRE-                   STANDARD    FOR SINGLE     COR-     FRE-                   STANDARD
+ EFFECT      OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS    OBSERVATIONS  RECTIONS QUENCIES   ESTIMATES      ERRORS
+ ----------------------------------------------------------------------------------------------------------------------------------
+ P              0.49585     1.0000        1     0.49585       0.02007      0.49585     1.0000        1     0.49585       0.02007   
+ R          0.00000E+00     1.0000       12 0.00000E+00   0.15700E-05  0.00000E+00     1.0000       12 0.00000E+00   0.15700E-05   
+ PR             0.19190     1.0000       12     0.01599       0.00054      0.19190     1.0000       12     0.01599       0.00054   
+ ----------------------------------------------------------------------------------------------------------------------------------
+            QFM = QUADRATIC FORM
+
+ ----------------------------------------------------------------------------------------------------------------------------------
+
+
+                                                    STANDARD
+                                          STANDARD  ERROR OF
+                                VARIANCE DEVIATION  VARIANCE
+
+              UNIVERSE SCORE     0.49585   0.70416   0.02007
+     EXPECTED OBSERVED SCORE     0.51184   0.71543   0.01999
+            LOWER CASE DELTA     0.01599   0.12646   0.00054          GENERALIZABILITY COEFFICIENT =  0.96876  (31.00717)
+            UPPER CASE DELTA     0.01599   0.12646   0.00054                                   PHI =  0.96876  (31.00717)
+                        MEAN     0.00029   0.01694
+ ----------------------------------------------------------------------------------------------------------------------------------
+        NOTE:  SIGNAL/NOISE RATIOS ARE IN PARENTHESES
+   GENOVA  VERSION 3.1                                                                                                PAGE     105
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+                                                   D STUDY DESIGN NUMBER 001-012                    
+
+
+         VARIANCE - COVARIANCE MATRIX FOR ESTIMATED VARIANCE COMPONENTS (FOR MEAN SCORES) IN UNIVERSE OF GENERALIZATION (W)
+
+
+                  P             R             PR                                                                                  
+
+ P                0.0004029
+ R                0.0000000     0.0000000
+ PR              -0.0000017     0.0000000     0.0000003
+   GENOVA  VERSION 3.1                                                                                                PAGE     106
+          D STUDY                                    EXPERT RATER P X R DESIGN                      
+
+
+
+                              SUMMARY OF D STUDY RESULTS FOR SET OF CONTROL CARDS NO. 001
+
+ ---------------------------------------------------------------------------------------------------------------------------------
+                                                                          V A R I A N C E S
+                            SAMPLE SIZES               --------------------------------------------------------
+ D STUDY        -------------------------------------                 EXPECTED     LOWER     UPPER
+  DESIGN  INDEX=    $P     R                             UNIVERSE     OBSERVED      CASE      CASE               GEN.
+    NO    UNIV.=  INF.  INF.                               SCORE        SCORE      DELTA     DELTA     MEAN      COEF.      PHI
+ ---------------------------------------------------------------------------------------------------------------------------------
+ 001-001          1783     1                              0.49585      0.68774   0.19190   0.19190   0.00039   0.72098   0.72098
+ 001-002          1783     2                              0.49585      0.59180   0.09595   0.09595   0.00033   0.83787   0.83787
+ 001-003          1783     3                              0.49585      0.55981   0.06397   0.06397   0.00031   0.88574   0.88574
+ 001-004          1783     4                              0.49585      0.54382   0.04797   0.04797   0.00031   0.91178   0.91178
+ 001-005          1783     5                              0.49585      0.53423   0.03838   0.03838   0.00030   0.92816   0.92816
+ 001-006          1783     6                              0.49585      0.52783   0.03198   0.03198   0.00030   0.93941   0.93941
+ 001-007          1783     7                              0.49585      0.52326   0.02741   0.02741   0.00029   0.94761   0.94761
+ 001-008          1783     8                              0.49585      0.51983   0.02399   0.02399   0.00029   0.95386   0.95386
+ 001-009          1783     9                              0.49585      0.51717   0.02132   0.02132   0.00029   0.95877   0.95877
+ 001-010          1783    10                              0.49585      0.51504   0.01919   0.01919   0.00029   0.96274   0.96274
+ 001-011          1783    11                              0.49585      0.51329   0.01745   0.01745   0.00029   0.96601   0.96601
+ 001-012          1783    12                              0.49585      0.51184   0.01599   0.01599   0.00029   0.96876   0.96876
+   GENOVA  VERSION 3.1                                                                                                PAGE     107
+                                                     CONTROL CARD INPUT LISTING
+
+
+   COLUMN   11111111112222222222333333333344444444445555555555666666666677777777778
+   12345678901234567890123456789012345678901234567890123456789012345678901234567890
+   FINISH                                                                          
+                                                                                   

@@ -1,0 +1,2018 @@
+
+
+****************************************************************************************
+****************************************************************************************
+
+
+                 GGGGGGG     EEEEEEEE    N       N     OOOOO      V       V       AAA   
+                G       G    E           N N     N   O       O    V       V      A   A  
+MM        MM    G            E           N  N    N   O       O    V       V     A     A 
+MMM      MMM    G            EEEEE       N   N   N   O       O    V       V    AAAAAAAAA
+MM M    M MM    G     GGG    E           N    N  N   O       O     V     V     A       A
+MM  M  M  MM    G       G    E           N     N N   O       O      V   V      A       A
+MM   MM   MM     GGGGGGG     EEEEEEEE    N       N     OOOOO          V        A       A
+
+
+                Version 2.1                             Robert L. Brennan               
+                 July 2001                            Iowa Testing Programs             
+            All Rights Reserved                         University of Iowa              
+
+****************************************************************************************
+****************************************************************************************
+
+
+                             CONTROL CARDS FOR RUN 1
+    Control Cards File Name:  P_X_R_Writing_Assessment_Machine_3_3_4.MANUAL
+                       p x r for Writing Assessment_Set_8
+
+GSTUDY   p x r for Writing Assessment_Set_8
+COMMENT
+OPTIONS  NREC 3  "*.out"  DEFAULT_DSTUDY  TIME
+MULT     6 Ideas&Content Organization Voice Word-Choice Sentence-Fluency Conventions
+EFFECT   * p       723 723 723 723 723 723
+EFFECT   # r       2 2 2 2 2 2
+FORMAT   0 1 
+PROCESS
+
+
+
+                             INPUT RECORDS FOR RUN 1
+                       p x r for Writing Assessment_Set_8
+
+RECORD NUMBER 1:
+  4.000   4.000   4.000   4.000   4.000   4.000   3.000   3.000   3.000   3.000
+  2.000   2.000 
+RECORD NUMBER 2:
+  5.000   4.000   5.000   3.000   5.000   4.000   4.000   3.000   4.000   3.000
+  4.000   3.000 
+RECORD NUMBER 3:
+  4.000   4.000   4.000   3.000   5.000   5.000   4.000   3.000   4.000   3.000
+  3.000   3.000 
+
+
+              G STUDY VARIANCE AND COVARIANCE COMPONENTS FOR RUN 1
+                       p x r for Writing Assessment_Set_8
+
+
+
+INFORMATION ABOUT VARIABLE 1:  Ideas&Cont
+
+Number of levels of r = 2
+Order  of levels of r = 1 2 
+
+Means for r 
+
+  4.064   3.903 
+
+Grand mean:      3.98340
+
+
+INFORMATION ABOUT VARIABLE 2:  Organizati
+
+Number of levels of r = 2
+Order  of levels of r = 3 4 
+
+Means for r 
+
+  3.852   3.627 
+
+Grand mean:      3.73928
+
+
+INFORMATION ABOUT VARIABLE 3:  Voice
+
+Number of levels of r = 2
+Order  of levels of r = 5 6 
+
+Means for r 
+
+  4.012   4.415 
+
+Grand mean:      4.21369
+
+
+INFORMATION ABOUT VARIABLE 4:  Word-Choic
+
+Number of levels of r = 2
+Order  of levels of r = 7 8 
+
+Means for r 
+
+  3.268   3.314 
+
+Grand mean:      3.29115
+
+
+INFORMATION ABOUT VARIABLE 5:  Sentence-F
+
+Number of levels of r = 2
+Order  of levels of r = 9 10 
+
+Means for r 
+
+  3.444   3.209 
+
+Grand mean:      3.32642
+
+
+INFORMATION ABOUT VARIABLE 6:  Convention
+
+Number of levels of r = 2
+Order  of levels of r = 11 12 
+
+Means for r 
+
+  2.902   3.010 
+
+Grand mean:      2.95574
+
+
+STATISTICS FOR ESTIMATING G STUDY VARIANCE AND COVARIANCE COMPONENTS
+Note. Diagonal elements are mean squares.
+      Off-diagonal elements are mean products.
+
+Effect    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+p            1.59640
+             1.51903       1.67896
+             1.53203       1.48347       1.75134
+             1.15234       1.19081       1.16556       1.05530
+             1.30448       1.38789       1.29243       1.10676       1.39880
+             1.34479       1.49351       1.26548       1.16777       1.45206       1.98777
+      
+
+r            9.30567
+            13.07607      18.37414
+           -23.34440     -32.80290      58.56224
+            -2.64730      -3.71992       6.64108       0.75311
+            13.63762      19.16321     -34.21162      -3.87967      19.98617
+            -6.25726      -8.79253      15.69710       1.78008      -9.17012       4.20747
+      
+
+pr           0.21010
+             0.10239       0.19131
+             0.12652       0.10430       0.28246
+             0.07984       0.07025       0.09260       0.14923
+             0.05590       0.07457       0.07509       0.07393       0.18007
+             0.04052       0.06619       0.04474       0.05501       0.08542       0.23517
+      
+
+ESTIMATED G STUDY VARIANCE AND COVARIANCE COMPONENTS
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+Effect    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+p            0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+             0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+             0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+             0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+             0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+             0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+      
+
+r            0.01258
+             0.01794       0.02515
+            -0.03246      -0.04551       0.08061
+            -0.00377      -0.00524       0.00906       0.00084
+             0.01879       0.02640      -0.04742      -0.00547       0.02739
+            -0.00871      -0.01225       0.02165       0.00239      -0.01280       0.00549
+      
+
+pr           0.21010
+             0.10239       0.19131
+             0.12652       0.10430       0.28246
+             0.07984       0.07025       0.09260       0.14923
+             0.05590       0.07457       0.07509       0.07393       0.18007
+             0.04052       0.06619       0.04474       0.05501       0.08542       0.23517
+      
+
+
+                           DEFAULT D STUDY FOR RUN 1
+                       p x r for Writing Assessment_Set_8
+
+
+SAMPLE SIZE STATISTICS FOR r
+
+      Statistic    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+             nr             2             2             2             2             2             2
+
+
+ESTIMATED D STUDY VARIANCE AND COVARIANCE COMPONENTS
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+       Diagonal
+Effect  Divisor    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+p                     0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+      
+
+r         2.000       0.00629
+          2.000       0.00897       0.01257
+          2.000      -0.01623      -0.02276       0.04030
+          2.000      -0.00189      -0.00262       0.00453       0.00042
+          2.000       0.00939       0.01320      -0.02371      -0.00273       0.01370
+          2.000      -0.00436      -0.00613       0.01082       0.00119      -0.00640       0.00275
+      
+
+pr        2.000       0.10505
+          2.000       0.05119       0.09566
+          2.000       0.06326       0.05215       0.14123
+          2.000       0.03992       0.03512       0.04630       0.07462
+          2.000       0.02795       0.03728       0.03754       0.03697       0.09004
+          2.000       0.02026       0.03310       0.02237       0.02751       0.04271       0.11758
+      
+
+UNIVERSE SCORE MATRIX AND ERROR MATRICES
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Universe Score       0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+               
+
+ Relative Error       0.10505       0.51070       0.51934       0.45091       0.28741       0.18230
+                      0.05119       0.09566       0.44867       0.41576       0.40174       0.31208
+                      0.06326       0.05215       0.14123       0.45103       0.33293       0.17359
+                      0.03992       0.03512       0.04630       0.07462       0.45100       0.29366
+                      0.02795       0.03728       0.03754       0.03697       0.09004       0.41507
+                      0.02026       0.03310       0.02237       0.02751       0.04271       0.11758
+               
+
+ Absolute Error       0.11134       0.54809       0.33077       0.41614       0.34748       0.13742
+                      0.06017       0.10823       0.20968       0.36068       0.47645       0.23634
+                      0.04703       0.02939       0.18154       0.43552       0.10079       0.22460
+                      0.03804       0.03250       0.05083       0.07503       0.38801       0.30204
+                      0.03734       0.05048       0.01383       0.03423       0.10373       0.32497
+                      0.01591       0.02697       0.03320       0.02870       0.03631       0.12033
+               
+
+ Error for Mean       0.00739       0.99452      -0.86596      -0.37390       0.98864      -0.62046
+                      0.01002       0.01374      -0.91004      -0.45280       0.99777      -0.67694
+                     -0.01517      -0.02173       0.04152       0.77294      -0.92477       0.89440
+                     -0.00109      -0.00180       0.00533       0.00115      -0.47995       0.91993
+                      0.01029       0.01416      -0.02282      -0.00197       0.01466      -0.69414
+                     -0.00343      -0.00509       0.01170       0.00200      -0.00540       0.00412
+               
+
+D STUDY RESULTS FOR INDIVIDUAL VARIABLES
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Univ Score Var       0.69315       0.74382       0.73444       0.45303       0.60936       0.87630
+  Rel Error Var       0.10505       0.09566       0.14123       0.07462       0.09004       0.11758
+  Abs Error Var       0.11134       0.10823       0.18154       0.07503       0.10373       0.12033
+Er Var for Mean       0.00739       0.01374       0.04152       0.00115       0.01466       0.00412
+
+  Univ Score SD       0.83256       0.86245       0.85699       0.67308       0.78062       0.93611
+   Rel Error SD       0.32412       0.30928       0.37581       0.27316       0.30006       0.34291
+   Abs Error SD       0.33368       0.32898       0.42607       0.27392       0.32208       0.34689
+Err SD for Mean       0.08599       0.11720       0.20375       0.03387       0.12110       0.06420
+
+Gen Coefficient       0.86839       0.88605       0.83872       0.85859       0.87126       0.88169
+            Phi       0.86160       0.87298       0.80181       0.85791       0.85453       0.87926
+
+        S/N-Rel       6.59819       7.77612       5.20027       6.07145       6.76787       7.45248
+        S/N-Abs       6.22543       6.87266       4.04571       6.03766       5.87424       7.28234
+
+
+D STUDY RESULTS FOR COMPOSITE
+
+   Variable Wts    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+      w-weights       0.16667       0.16667       0.16667       0.16667       0.16667       0.16667
+
+---------------------------------------------------------------------------------------------------
+
+          Composite Universe Score Variance       0.63392
+          Composite Relative Error Variance       0.04921
+          Composite Absolute Error Variance       0.04917
+          Composite Error Variance for Mean       0.00091
+
+Composite Universe Score Standard Deviation       0.79619
+Composite Relative Error Standard Deviation       0.22183
+Composite Absolute Error Standard Deviation       0.22174
+Composite Error Standard Deviation for Mean       0.03010
+
+     Composite Generalizability Coefficient       0.92797
+                              Composite Phi       0.92802
+
+                          Composite S/N-Rel      12.88282
+                          Composite S/N-Abs      12.89296
+
+---------------------------------------------------------------------------------------------------
+
+   Contributions toIdeas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention    
+
+Comp Univ Score Var    17.16%        17.84%        17.01%        13.84%        16.21%        17.93%       
+ Comp Rel Error Var    17.37%        17.19%        20.48%        14.70%        15.38%        14.88%       
+ Comp Abs Error Var    17.50%        17.39%        20.10%        14.65%        15.59%        14.77%       
+
+
+
+                               D STUDY NUMBER 1.1
+                                        
+
+DSTUDY
+WWTS      .20 .20 0 0 .40 .20
+DEFFECT  $ p 300 300 300 300 300 300
+DEFFECT  # r 1 1 1 1 1 1
+ENDDSTUDY
+
+
+SAMPLE SIZE STATISTICS FOR r
+
+      Statistic    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+             nr             1             1             1             1             1             1
+
+
+ESTIMATED D STUDY VARIANCE AND COVARIANCE COMPONENTS
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+       Diagonal
+Effect  Divisor    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+p                     0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+      
+
+r         1.000       0.01258
+          1.000       0.01794       0.02515
+          1.000      -0.03246      -0.04551       0.08061
+          1.000      -0.00377      -0.00524       0.00906       0.00084
+          1.000       0.01879       0.02640      -0.04742      -0.00547       0.02739
+          1.000      -0.00871      -0.01225       0.02165       0.00239      -0.01280       0.00549
+      
+
+pr        1.000       0.21010
+          1.000       0.10239       0.19131
+          1.000       0.12652       0.10430       0.28246
+          1.000       0.07984       0.07025       0.09260       0.14923
+          1.000       0.05590       0.07457       0.07509       0.07393       0.18007
+          1.000       0.04052       0.06619       0.04474       0.05501       0.08542       0.23517
+      
+
+UNIVERSE SCORE MATRIX AND ERROR MATRICES
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Universe Score       0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+               
+
+ Relative Error       0.21010       0.51070       0.51934       0.45091       0.28741       0.18230
+                      0.10239       0.19131       0.44867       0.41576       0.40174       0.31208
+                      0.12652       0.10430       0.28246       0.45103       0.33293       0.17359
+                      0.07984       0.07025       0.09260       0.14923       0.45100       0.29366
+                      0.05590       0.07457       0.07509       0.07393       0.18007       0.41507
+                      0.04052       0.06619       0.04474       0.05501       0.08542       0.23517
+               
+
+ Absolute Error       0.22268       0.54809       0.33077       0.41614       0.34748       0.13742
+                      0.12033       0.21646       0.20968       0.36068       0.47645       0.23634
+                      0.09405       0.05878       0.36307       0.43552       0.10079       0.22460
+                      0.07607       0.06501       0.10166       0.15007       0.38801       0.30204
+                      0.07469       0.10097       0.02766       0.06846       0.20747       0.32497
+                      0.03181       0.05394       0.06639       0.05740       0.07261       0.24066
+               
+
+ Error for Mean       0.01559       0.98350      -0.82067      -0.25811       0.97301      -0.53455
+                      0.02065       0.02827      -0.87977      -0.35034       0.98993      -0.59864
+                     -0.02970      -0.04287       0.08400       0.72183      -0.89891       0.85737
+                     -0.00172      -0.00314       0.01115       0.00284      -0.37889       0.86510
+                      0.02105       0.02884      -0.04514      -0.00350       0.03003      -0.61609
+                     -0.00640      -0.00965       0.02383       0.00442      -0.01024       0.00920
+               
+
+D STUDY RESULTS FOR INDIVIDUAL VARIABLES
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Univ Score Var       0.69315       0.74382       0.73444       0.45303       0.60936       0.87630
+  Rel Error Var       0.21010       0.19131       0.28246       0.14923       0.18007       0.23517
+  Abs Error Var       0.22268       0.21646       0.36307       0.15007       0.20747       0.24066
+Er Var for Mean       0.01559       0.02827       0.08400       0.00284       0.03003       0.00920
+
+  Univ Score SD       0.83256       0.86245       0.85699       0.67308       0.78062       0.93611
+   Rel Error SD       0.45837       0.43739       0.53147       0.38631       0.42435       0.48494
+   Abs Error SD       0.47189       0.46525       0.60255       0.38739       0.45549       0.49058
+Err SD for Mean       0.12486       0.16813       0.28982       0.05332       0.17328       0.09591
+
+Gen Coefficient       0.76739       0.79542       0.72223       0.75221       0.77189       0.78842
+            Phi       0.75685       0.77459       0.66919       0.75117       0.74601       0.78454
+
+        S/N-Rel       3.29909       3.88806       2.60013       3.03572       3.38394       3.72624
+        S/N-Abs       3.11271       3.43633       2.02286       3.01883       2.93712       3.64117
+
+
+D STUDY RESULTS FOR COMPOSITE
+
+   Variable Wts    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+      w-weights       0.20000       0.20000       0.00000       0.00000       0.40000       0.20000
+
+---------------------------------------------------------------------------------------------------
+
+          Composite Universe Score Variance       0.67024
+          Composite Relative Error Variance       0.10555
+          Composite Absolute Error Variance       0.11660
+          Composite Error Variance for Mean       0.01364
+
+Composite Universe Score Standard Deviation       0.81868
+Composite Relative Error Standard Deviation       0.32488
+Composite Absolute Error Standard Deviation       0.34146
+Composite Error Standard Deviation for Mean       0.11678
+
+     Composite Generalizability Coefficient       0.86395
+                              Composite Phi       0.85182
+
+                          Composite S/N-Rel       6.35028
+                          Composite S/N-Abs       5.74834
+
+---------------------------------------------------------------------------------------------------
+
+   Contributions toIdeas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention    
+
+Comp Univ Score Var    19.71%        20.76%         0.00%         0.00%        37.99%        21.54%       
+ Comp Rel Error Var    17.62%        19.29%         0.00%         0.00%        43.66%        19.43%       
+ Comp Abs Error Var    17.98%        20.33%         0.00%         0.00%        45.50%        16.18%       
+
+
+
+                               D STUDY NUMBER 1.2
+                                        
+
+DSTUDY
+WWTS      .20 .20 0 0 .40 .20
+DEFFECT  $ p 300 300 300 300 300 300
+DEFFECT  # r 2 2 2 2 2 2
+ENDDSTUDY
+
+
+SAMPLE SIZE STATISTICS FOR r
+
+      Statistic    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+             nr             2             2             2             2             2             2
+
+
+ESTIMATED D STUDY VARIANCE AND COVARIANCE COMPONENTS
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+       Diagonal
+Effect  Divisor    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+p                     0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+      
+
+r         2.000       0.00629
+          2.000       0.00897       0.01257
+          2.000      -0.01623      -0.02276       0.04030
+          2.000      -0.00189      -0.00262       0.00453       0.00042
+          2.000       0.00939       0.01320      -0.02371      -0.00273       0.01370
+          2.000      -0.00436      -0.00613       0.01082       0.00119      -0.00640       0.00275
+      
+
+pr        2.000       0.10505
+          2.000       0.05119       0.09566
+          2.000       0.06326       0.05215       0.14123
+          2.000       0.03992       0.03512       0.04630       0.07462
+          2.000       0.02795       0.03728       0.03754       0.03697       0.09004
+          2.000       0.02026       0.03310       0.02237       0.02751       0.04271       0.11758
+      
+
+UNIVERSE SCORE MATRIX AND ERROR MATRICES
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Universe Score       0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+               
+
+ Relative Error       0.10505       0.51070       0.51934       0.45091       0.28741       0.18230
+                      0.05119       0.09566       0.44867       0.41576       0.40174       0.31208
+                      0.06326       0.05215       0.14123       0.45103       0.33293       0.17359
+                      0.03992       0.03512       0.04630       0.07462       0.45100       0.29366
+                      0.02795       0.03728       0.03754       0.03697       0.09004       0.41507
+                      0.02026       0.03310       0.02237       0.02751       0.04271       0.11758
+               
+
+ Absolute Error       0.11134       0.54809       0.33077       0.41614       0.34748       0.13742
+                      0.06017       0.10823       0.20968       0.36068       0.47645       0.23634
+                      0.04703       0.02939       0.18154       0.43552       0.10079       0.22460
+                      0.03804       0.03250       0.05083       0.07503       0.38801       0.30204
+                      0.03734       0.05048       0.01383       0.03423       0.10373       0.32497
+                      0.01591       0.02697       0.03320       0.02870       0.03631       0.12033
+               
+
+ Error for Mean       0.00895       0.98070      -0.69541       0.00783       0.96568      -0.28704
+                      0.01150       0.01537      -0.78694      -0.11003       0.98834      -0.37683
+                     -0.01368      -0.02028       0.04322       0.66720      -0.81901       0.79915
+                      0.00003      -0.00064       0.00647       0.00218      -0.15061       0.86441
+                      0.01157       0.01551      -0.02156      -0.00089       0.01603      -0.40390
+                     -0.00211      -0.00364       0.01293       0.00314      -0.00398       0.00606
+               
+
+D STUDY RESULTS FOR INDIVIDUAL VARIABLES
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Univ Score Var       0.69315       0.74382       0.73444       0.45303       0.60936       0.87630
+  Rel Error Var       0.10505       0.09566       0.14123       0.07462       0.09004       0.11758
+  Abs Error Var       0.11134       0.10823       0.18154       0.07503       0.10373       0.12033
+Er Var for Mean       0.00895       0.01537       0.04322       0.00218       0.01603       0.00606
+
+  Univ Score SD       0.83256       0.86245       0.85699       0.67308       0.78062       0.93611
+   Rel Error SD       0.32412       0.30928       0.37581       0.27316       0.30006       0.34291
+   Abs Error SD       0.33368       0.32898       0.42607       0.27392       0.32208       0.34689
+Err SD for Mean       0.09461       0.12399       0.20790       0.04665       0.12660       0.07785
+
+Gen Coefficient       0.86839       0.88605       0.83872       0.85859       0.87126       0.88169
+            Phi       0.86160       0.87298       0.80181       0.85791       0.85453       0.87926
+
+        S/N-Rel       6.59819       7.77612       5.20027       6.07145       6.76787       7.45248
+        S/N-Abs       6.22543       6.87266       4.04571       6.03766       5.87424       7.28234
+
+
+D STUDY RESULTS FOR COMPOSITE
+
+   Variable Wts    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+      w-weights       0.20000       0.20000       0.00000       0.00000       0.40000       0.20000
+
+---------------------------------------------------------------------------------------------------
+
+          Composite Universe Score Variance       0.67024
+          Composite Relative Error Variance       0.05277
+          Composite Absolute Error Variance       0.05830
+          Composite Error Variance for Mean       0.00794
+
+Composite Universe Score Standard Deviation       0.81868
+Composite Relative Error Standard Deviation       0.22972
+Composite Absolute Error Standard Deviation       0.24145
+Composite Error Standard Deviation for Mean       0.08909
+
+     Composite Generalizability Coefficient       0.92701
+                              Composite Phi       0.91998
+
+                          Composite S/N-Rel      12.70056
+                          Composite S/N-Abs      11.49668
+
+---------------------------------------------------------------------------------------------------
+
+   Contributions toIdeas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention    
+
+Comp Univ Score Var    19.71%        20.76%         0.00%         0.00%        37.99%        21.54%       
+ Comp Rel Error Var    17.62%        19.29%         0.00%         0.00%        43.66%        19.43%       
+ Comp Abs Error Var    17.98%        20.33%         0.00%         0.00%        45.50%        16.18%       
+
+
+
+                               D STUDY NUMBER 1.3
+                                        
+
+DSTUDY
+WWTS      .20 .20 0 0 .40 .20
+DEFFECT  $ p 300 300 300 300 300 300
+DEFFECT  # r 3 3 3 3 3 3
+ENDDSTUDY
+
+
+SAMPLE SIZE STATISTICS FOR r
+
+      Statistic    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+             nr             3             3             3             3             3             3
+
+
+ESTIMATED D STUDY VARIANCE AND COVARIANCE COMPONENTS
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+       Diagonal
+Effect  Divisor    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+p                     0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+      
+
+r         3.000       0.00419
+          3.000       0.00598       0.00838
+          3.000      -0.01082      -0.01517       0.02687
+          3.000      -0.00126      -0.00175       0.00302       0.00028
+          3.000       0.00626       0.00880      -0.01581      -0.00182       0.00913
+          3.000      -0.00290      -0.00408       0.00722       0.00080      -0.00427       0.00183
+      
+
+pr        3.000       0.07003
+          3.000       0.03413       0.06377
+          3.000       0.04217       0.03477       0.09415
+          3.000       0.02661       0.02342       0.03087       0.04974
+          3.000       0.01863       0.02486       0.02503       0.02464       0.06002
+          3.000       0.01351       0.02206       0.01491       0.01834       0.02847       0.07839
+      
+
+UNIVERSE SCORE MATRIX AND ERROR MATRICES
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Universe Score       0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+               
+
+ Relative Error       0.07003       0.51070       0.51934       0.45091       0.28741       0.18230
+                      0.03413       0.06377       0.44867       0.41576       0.40174       0.31208
+                      0.04217       0.03477       0.09415       0.45103       0.33293       0.17359
+                      0.02661       0.02342       0.03087       0.04974       0.45100       0.29366
+                      0.01863       0.02486       0.02503       0.02464       0.06002       0.41507
+                      0.01351       0.02206       0.01491       0.01834       0.02847       0.07839
+               
+
+ Absolute Error       0.07423       0.54809       0.33077       0.41614       0.34748       0.13742
+                      0.04011       0.07215       0.20968       0.36068       0.47645       0.23634
+                      0.03135       0.01959       0.12102       0.43552       0.10079       0.22460
+                      0.02536       0.02167       0.03389       0.05002       0.38801       0.30204
+                      0.02490       0.03366       0.00922       0.02282       0.06916       0.32497
+                      0.01060       0.01798       0.02213       0.01913       0.02420       0.08022
+               
+
+ Error for Mean       0.00674       0.97895      -0.59012       0.17055       0.96060      -0.11782
+                      0.00846       0.01108      -0.70421       0.04261       0.98702      -0.21899
+                     -0.00834      -0.01276       0.02963       0.64525      -0.74637       0.76306
+                      0.00062       0.00020       0.00491       0.00195      -0.00409       0.86608
+                      0.00840       0.01107      -0.01370      -0.00002       0.01136      -0.25101
+                     -0.00068      -0.00163       0.00930       0.00271      -0.00189       0.00501
+               
+
+D STUDY RESULTS FOR INDIVIDUAL VARIABLES
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Univ Score Var       0.69315       0.74382       0.73444       0.45303       0.60936       0.87630
+  Rel Error Var       0.07003       0.06377       0.09415       0.04974       0.06002       0.07839
+  Abs Error Var       0.07423       0.07215       0.12102       0.05002       0.06916       0.08022
+Er Var for Mean       0.00674       0.01108       0.02963       0.00195       0.01136       0.00501
+
+  Univ Score SD       0.83256       0.86245       0.85699       0.67308       0.78062       0.93611
+   Rel Error SD       0.26464       0.25253       0.30685       0.22304       0.24500       0.27998
+   Abs Error SD       0.27245       0.26861       0.34788       0.22366       0.26298       0.28323
+Err SD for Mean       0.08208       0.10524       0.17214       0.04421       0.10660       0.07081
+
+Gen Coefficient       0.90823       0.92104       0.88637       0.90106       0.91033       0.91789
+            Phi       0.90327       0.91157       0.85853       0.90056       0.89808       0.91613
+
+        S/N-Rel       9.89728      11.66418       7.80040       9.10717      10.15181      11.17871
+        S/N-Abs       9.33814      10.30898       6.06857       9.05649       8.81136      10.92351
+
+
+D STUDY RESULTS FOR COMPOSITE
+
+   Variable Wts    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+      w-weights       0.20000       0.20000       0.00000       0.00000       0.40000       0.20000
+
+---------------------------------------------------------------------------------------------------
+
+          Composite Universe Score Variance       0.67024
+          Composite Relative Error Variance       0.03518
+          Composite Absolute Error Variance       0.03887
+          Composite Error Variance for Mean       0.00604
+
+Composite Universe Score Standard Deviation       0.81868
+Composite Relative Error Standard Deviation       0.18757
+Composite Absolute Error Standard Deviation       0.19714
+Composite Error Standard Deviation for Mean       0.07769
+
+     Composite Generalizability Coefficient       0.95013
+                              Composite Phi       0.94519
+
+                          Composite S/N-Rel      19.05083
+                          Composite S/N-Abs      17.24502
+
+---------------------------------------------------------------------------------------------------
+
+   Contributions toIdeas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention    
+
+Comp Univ Score Var    19.71%        20.76%         0.00%         0.00%        37.99%        21.54%       
+ Comp Rel Error Var    17.62%        19.29%         0.00%         0.00%        43.66%        19.43%       
+ Comp Abs Error Var    17.98%        20.33%         0.00%         0.00%        45.50%        16.18%       
+
+
+
+                               D STUDY NUMBER 1.4
+                                        
+
+DSTUDY
+WWTS      .20 .20 0 0 .40 .20
+DEFFECT  $ p 300 300 300 300 300 300
+DEFFECT  # r 4 4 4 4 4 4
+ENDDSTUDY
+
+
+SAMPLE SIZE STATISTICS FOR r
+
+      Statistic    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+             nr             4             4             4             4             4             4
+
+
+ESTIMATED D STUDY VARIANCE AND COVARIANCE COMPONENTS
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+       Diagonal
+Effect  Divisor    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+p                     0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+      
+
+r         4.000       0.00315
+          4.000       0.00449       0.00629
+          4.000      -0.00812      -0.01138       0.02015
+          4.000      -0.00094      -0.00131       0.00226       0.00021
+          4.000       0.00470       0.00660      -0.01186      -0.00137       0.00685
+          4.000      -0.00218      -0.00306       0.00541       0.00060      -0.00320       0.00137
+      
+
+pr        4.000       0.05253
+          4.000       0.02560       0.04783
+          4.000       0.03163       0.02607       0.07062
+          4.000       0.01996       0.01756       0.02315       0.03731
+          4.000       0.01398       0.01864       0.01877       0.01848       0.04502
+          4.000       0.01013       0.01655       0.01119       0.01375       0.02135       0.05879
+      
+
+UNIVERSE SCORE MATRIX AND ERROR MATRICES
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Universe Score       0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+               
+
+ Relative Error       0.05253       0.51070       0.51934       0.45091       0.28741       0.18230
+                      0.02560       0.04783       0.44867       0.41576       0.40174       0.31208
+                      0.03163       0.02607       0.07062       0.45103       0.33293       0.17359
+                      0.01996       0.01756       0.02315       0.03731       0.45100       0.29366
+                      0.01398       0.01864       0.01877       0.01848       0.04502       0.41507
+                      0.01013       0.01655       0.01119       0.01375       0.02135       0.05879
+               
+
+ Absolute Error       0.05567       0.54809       0.33077       0.41614       0.34748       0.13742
+                      0.03008       0.05411       0.20968       0.36068       0.47645       0.23634
+                      0.02351       0.01470       0.09077       0.43552       0.10079       0.22460
+                      0.01902       0.01625       0.02541       0.03752       0.38801       0.30204
+                      0.01867       0.02524       0.00692       0.01712       0.05187       0.32497
+                      0.00795       0.01349       0.01660       0.01435       0.01815       0.06017
+               
+
+ Error for Mean       0.00563       0.97786      -0.49984       0.28279       0.95700       0.00594
+                      0.00693       0.00893      -0.62991       0.15176       0.98593      -0.09938
+                     -0.00567      -0.00899       0.02284       0.63654      -0.67997       0.73907
+                      0.00091       0.00062       0.00413       0.00184       0.10194       0.86789
+                      0.00682       0.00885      -0.00976       0.00042       0.00903      -0.13371
+                      0.00003      -0.00063       0.00748       0.00250      -0.00085       0.00449
+               
+
+D STUDY RESULTS FOR INDIVIDUAL VARIABLES
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Univ Score Var       0.69315       0.74382       0.73444       0.45303       0.60936       0.87630
+  Rel Error Var       0.05253       0.04783       0.07062       0.03731       0.04502       0.05879
+  Abs Error Var       0.05567       0.05411       0.09077       0.03752       0.05187       0.06017
+Er Var for Mean       0.00563       0.00893       0.02284       0.00184       0.00903       0.00449
+
+  Univ Score SD       0.83256       0.86245       0.85699       0.67308       0.78062       0.93611
+   Rel Error SD       0.22918       0.21870       0.26574       0.19315       0.21218       0.24247
+   Abs Error SD       0.23595       0.23263       0.30128       0.19369       0.22774       0.24529
+Err SD for Mean       0.07504       0.09448       0.15111       0.04293       0.09503       0.06701
+
+Gen Coefficient       0.92956       0.93959       0.91228       0.92391       0.93120       0.93713
+            Phi       0.92566       0.93218       0.89001       0.92352       0.92156       0.93575
+
+        S/N-Rel      13.19637      15.55224      10.40054      12.14290      13.53574      14.90495
+        S/N-Abs      12.45085      13.74531       8.09143      12.07532      11.74848      14.56468
+
+
+D STUDY RESULTS FOR COMPOSITE
+
+   Variable Wts    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+      w-weights       0.20000       0.20000       0.00000       0.00000       0.40000       0.20000
+
+---------------------------------------------------------------------------------------------------
+
+          Composite Universe Score Variance       0.67024
+          Composite Relative Error Variance       0.02639
+          Composite Absolute Error Variance       0.02915
+          Composite Error Variance for Mean       0.00509
+
+Composite Universe Score Standard Deviation       0.81868
+Composite Relative Error Standard Deviation       0.16244
+Composite Absolute Error Standard Deviation       0.17073
+Composite Error Standard Deviation for Mean       0.07131
+
+     Composite Generalizability Coefficient       0.96212
+                              Composite Phi       0.95832
+
+                          Composite S/N-Rel      25.40111
+                          Composite S/N-Abs      22.99335
+
+---------------------------------------------------------------------------------------------------
+
+   Contributions toIdeas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention    
+
+Comp Univ Score Var    19.71%        20.76%         0.00%         0.00%        37.99%        21.54%       
+ Comp Rel Error Var    17.62%        19.29%         0.00%         0.00%        43.66%        19.43%       
+ Comp Abs Error Var    17.98%        20.33%         0.00%         0.00%        45.50%        16.18%       
+
+
+
+                               D STUDY NUMBER 1.5
+                                        
+
+DSTUDY
+WWTS      .20 .20 0 0 .40 .20
+DEFFECT  $ p 300 300 300 300 300 300
+DEFFECT  # r 5 5 5 5 5 5
+ENDDSTUDY
+
+
+SAMPLE SIZE STATISTICS FOR r
+
+      Statistic    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+             nr             5             5             5             5             5             5
+
+
+ESTIMATED D STUDY VARIANCE AND COVARIANCE COMPONENTS
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+       Diagonal
+Effect  Divisor    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+p                     0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+      
+
+r         5.000       0.00252
+          5.000       0.00359       0.00503
+          5.000      -0.00649      -0.00910       0.01612
+          5.000      -0.00075      -0.00105       0.00181       0.00017
+          5.000       0.00376       0.00528      -0.00948      -0.00109       0.00548
+          5.000      -0.00174      -0.00245       0.00433       0.00048      -0.00256       0.00110
+      
+
+pr        5.000       0.04202
+          5.000       0.02048       0.03826
+          5.000       0.02530       0.02086       0.05649
+          5.000       0.01597       0.01405       0.01852       0.02985
+          5.000       0.01118       0.01491       0.01502       0.01479       0.03601
+          5.000       0.00810       0.01324       0.00895       0.01100       0.01708       0.04703
+      
+
+UNIVERSE SCORE MATRIX AND ERROR MATRICES
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Universe Score       0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+               
+
+ Relative Error       0.04202       0.51070       0.51934       0.45091       0.28741       0.18230
+                      0.02048       0.03826       0.44867       0.41576       0.40174       0.31208
+                      0.02530       0.02086       0.05649       0.45103       0.33293       0.17359
+                      0.01597       0.01405       0.01852       0.02985       0.45100       0.29366
+                      0.01118       0.01491       0.01502       0.01479       0.03601       0.41507
+                      0.00810       0.01324       0.00895       0.01100       0.01708       0.04703
+               
+
+ Absolute Error       0.04454       0.54809       0.33077       0.41614       0.34748       0.13742
+                      0.02407       0.04329       0.20968       0.36068       0.47645       0.23634
+                      0.01881       0.01176       0.07261       0.43552       0.10079       0.22460
+                      0.01521       0.01300       0.02033       0.03001       0.38801       0.30204
+                      0.01494       0.02019       0.00553       0.01369       0.04149       0.32497
+                      0.00636       0.01079       0.01328       0.01148       0.01452       0.04813
+               
+
+ Error for Mean       0.00497       0.97719      -0.42123       0.36570       0.95440       0.10071
+                      0.00602       0.00764      -0.56270       0.23510       0.98501      -0.00488
+                     -0.00407      -0.00673       0.01876       0.63425      -0.61901       0.72241
+                      0.00109       0.00087       0.00366       0.00178       0.18387       0.86947
+                      0.00588       0.00752      -0.00741       0.00068       0.00763      -0.03997
+                      0.00046      -0.00003       0.00639       0.00237      -0.00023       0.00418
+               
+
+D STUDY RESULTS FOR INDIVIDUAL VARIABLES
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Univ Score Var       0.69315       0.74382       0.73444       0.45303       0.60936       0.87630
+  Rel Error Var       0.04202       0.03826       0.05649       0.02985       0.03601       0.04703
+  Abs Error Var       0.04454       0.04329       0.07261       0.03001       0.04149       0.04813
+Er Var for Mean       0.00497       0.00764       0.01876       0.00178       0.00763       0.00418
+
+  Univ Score SD       0.83256       0.86245       0.85699       0.67308       0.78062       0.93611
+   Rel Error SD       0.20499       0.19561       0.23768       0.17276       0.18978       0.21687
+   Abs Error SD       0.21104       0.20807       0.26947       0.17325       0.20370       0.21939
+Err SD for Mean       0.07047       0.08739       0.13696       0.04215       0.08735       0.06463
+
+Gen Coefficient       0.94284       0.95108       0.92857       0.93819       0.94420       0.94906
+            Phi       0.93963       0.94500       0.91003       0.93787       0.93625       0.94793
+
+        S/N-Rel      16.49546      19.44029      13.00067      15.17862      16.91968      18.63119
+        S/N-Abs      15.56357      17.18164      10.11429      15.09414      14.68560      18.20585
+
+
+D STUDY RESULTS FOR COMPOSITE
+
+   Variable Wts    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+      w-weights       0.20000       0.20000       0.00000       0.00000       0.40000       0.20000
+
+---------------------------------------------------------------------------------------------------
+
+          Composite Universe Score Variance       0.67024
+          Composite Relative Error Variance       0.02111
+          Composite Absolute Error Variance       0.02332
+          Composite Error Variance for Mean       0.00451
+
+Composite Universe Score Standard Deviation       0.81868
+Composite Relative Error Standard Deviation       0.14529
+Composite Absolute Error Standard Deviation       0.15271
+Composite Error Standard Deviation for Mean       0.06719
+
+     Composite Generalizability Coefficient       0.96947
+                              Composite Phi       0.96638
+
+                          Composite S/N-Rel      31.75139
+                          Composite S/N-Abs      28.74169
+
+---------------------------------------------------------------------------------------------------
+
+   Contributions toIdeas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention    
+
+Comp Univ Score Var    19.71%        20.76%         0.00%         0.00%        37.99%        21.54%       
+ Comp Rel Error Var    17.62%        19.29%         0.00%         0.00%        43.66%        19.43%       
+ Comp Abs Error Var    17.98%        20.33%         0.00%         0.00%        45.50%        16.18%       
+
+
+
+                               D STUDY NUMBER 1.6
+                                        
+
+DSTUDY
+WWTS      .20 .20 0 0 .40 .20
+DEFFECT  $ p 300 300 300 300 300 300
+DEFFECT  # r 6 6 6 6 6 6
+ENDDSTUDY
+
+
+SAMPLE SIZE STATISTICS FOR r
+
+      Statistic    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+             nr             6             6             6             6             6             6
+
+
+ESTIMATED D STUDY VARIANCE AND COVARIANCE COMPONENTS
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+       Diagonal
+Effect  Divisor    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+p                     0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+      
+
+r         6.000       0.00210
+          6.000       0.00299       0.00419
+          6.000      -0.00541      -0.00759       0.01343
+          6.000      -0.00063      -0.00087       0.00151       0.00014
+          6.000       0.00313       0.00440      -0.00790      -0.00091       0.00457
+          6.000      -0.00145      -0.00204       0.00361       0.00040      -0.00213       0.00092
+      
+
+pr        6.000       0.03502
+          6.000       0.01706       0.03189
+          6.000       0.02109       0.01738       0.04708
+          6.000       0.01331       0.01171       0.01543       0.02487
+          6.000       0.00932       0.01243       0.01251       0.01232       0.03001
+          6.000       0.00675       0.01103       0.00746       0.00917       0.01424       0.03919
+      
+
+UNIVERSE SCORE MATRIX AND ERROR MATRICES
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Universe Score       0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+               
+
+ Relative Error       0.03502       0.51070       0.51934       0.45091       0.28741       0.18230
+                      0.01706       0.03189       0.44867       0.41576       0.40174       0.31208
+                      0.02109       0.01738       0.04708       0.45103       0.33293       0.17359
+                      0.01331       0.01171       0.01543       0.02487       0.45100       0.29366
+                      0.00932       0.01243       0.01251       0.01232       0.03001       0.41507
+                      0.00675       0.01103       0.00746       0.00917       0.01424       0.03919
+               
+
+ Absolute Error       0.03711       0.54809       0.33077       0.41614       0.34748       0.13742
+                      0.02006       0.03608       0.20968       0.36068       0.47645       0.23634
+                      0.01568       0.00980       0.06051       0.43552       0.10079       0.22460
+                      0.01268       0.01083       0.01694       0.02501       0.38801       0.30204
+                      0.01245       0.01683       0.00461       0.01141       0.03458       0.32497
+                      0.00530       0.00899       0.01107       0.00957       0.01210       0.04011
+               
+
+ Error for Mean       0.00452       0.97680      -0.35191       0.42980       0.95252       0.17574
+                      0.00541       0.00678      -0.50155       0.30146       0.98422       0.07203
+                     -0.00300      -0.00523       0.01604       0.63540      -0.56282       0.71048
+                      0.00120       0.00103       0.00335       0.00173       0.24987       0.87081
+                      0.00524       0.00663      -0.00583       0.00085       0.00670       0.03717
+                      0.00074       0.00037       0.00567       0.00228       0.00019       0.00397
+               
+
+D STUDY RESULTS FOR INDIVIDUAL VARIABLES
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Univ Score Var       0.69315       0.74382       0.73444       0.45303       0.60936       0.87630
+  Rel Error Var       0.03502       0.03189       0.04708       0.02487       0.03001       0.03919
+  Abs Error Var       0.03711       0.03608       0.06051       0.02501       0.03458       0.04011
+Er Var for Mean       0.00452       0.00678       0.01604       0.00173       0.00670       0.00397
+
+  Univ Score SD       0.83256       0.86245       0.85699       0.67308       0.78062       0.93611
+   Rel Error SD       0.18713       0.17856       0.21697       0.15771       0.17324       0.19798
+   Abs Error SD       0.19265       0.18994       0.24599       0.15815       0.18595       0.20028
+Err SD for Mean       0.06726       0.08232       0.12665       0.04162       0.08183       0.06299
+
+Gen Coefficient       0.95191       0.95890       0.93976       0.94796       0.95306       0.95719
+            Phi       0.94918       0.95374       0.92388       0.94768       0.94630       0.95623
+
+        S/N-Rel      19.79456      23.32835      15.60081      18.21435      20.30362      22.35743
+        S/N-Abs      18.67628      20.61797      12.13714      18.11297      17.62271      21.84702
+
+
+D STUDY RESULTS FOR COMPOSITE
+
+   Variable Wts    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+      w-weights       0.20000       0.20000       0.00000       0.00000       0.40000       0.20000
+
+---------------------------------------------------------------------------------------------------
+
+          Composite Universe Score Variance       0.67024
+          Composite Relative Error Variance       0.01759
+          Composite Absolute Error Variance       0.01943
+          Composite Error Variance for Mean       0.00413
+
+Composite Universe Score Standard Deviation       0.81868
+Composite Relative Error Standard Deviation       0.13263
+Composite Absolute Error Standard Deviation       0.13940
+Composite Error Standard Deviation for Mean       0.06430
+
+     Composite Generalizability Coefficient       0.97443
+                              Composite Phi       0.97182
+
+                          Composite S/N-Rel      38.10167
+                          Composite S/N-Abs      34.49003
+
+---------------------------------------------------------------------------------------------------
+
+   Contributions toIdeas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention    
+
+Comp Univ Score Var    19.71%        20.76%         0.00%         0.00%        37.99%        21.54%       
+ Comp Rel Error Var    17.62%        19.29%         0.00%         0.00%        43.66%        19.43%       
+ Comp Abs Error Var    17.98%        20.33%         0.00%         0.00%        45.50%        16.18%       
+
+
+
+                               D STUDY NUMBER 1.7
+                                        
+
+DSTUDY
+WWTS      .20 .20 0 0 .40 .20
+DEFFECT  $ p 300 300 300 300 300 300
+DEFFECT  # r 7 7 7 7 7 7
+ENDDSTUDY
+
+
+SAMPLE SIZE STATISTICS FOR r
+
+      Statistic    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+             nr             7             7             7             7             7             7
+
+
+ESTIMATED D STUDY VARIANCE AND COVARIANCE COMPONENTS
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+       Diagonal
+Effect  Divisor    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+p                     0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+      
+
+r         7.000       0.00180
+          7.000       0.00256       0.00359
+          7.000      -0.00464      -0.00650       0.01152
+          7.000      -0.00054      -0.00075       0.00129       0.00012
+          7.000       0.00268       0.00377      -0.00677      -0.00078       0.00391
+          7.000      -0.00124      -0.00175       0.00309       0.00034      -0.00183       0.00078
+      
+
+pr        7.000       0.03001
+          7.000       0.01463       0.02733
+          7.000       0.01807       0.01490       0.04035
+          7.000       0.01141       0.01004       0.01323       0.02132
+          7.000       0.00799       0.01065       0.01073       0.01056       0.02572
+          7.000       0.00579       0.00946       0.00639       0.00786       0.01220       0.03360
+      
+
+UNIVERSE SCORE MATRIX AND ERROR MATRICES
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Universe Score       0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+               
+
+ Relative Error       0.03001       0.51070       0.51934       0.45091       0.28741       0.18230
+                      0.01463       0.02733       0.44867       0.41576       0.40174       0.31208
+                      0.01807       0.01490       0.04035       0.45103       0.33293       0.17359
+                      0.01141       0.01004       0.01323       0.02132       0.45100       0.29366
+                      0.00799       0.01065       0.01073       0.01056       0.02572       0.41507
+                      0.00579       0.00946       0.00639       0.00786       0.01220       0.03360
+               
+
+ Absolute Error       0.03181       0.54809       0.33077       0.41614       0.34748       0.13742
+                      0.01719       0.03092       0.20968       0.36068       0.47645       0.23634
+                      0.01344       0.00840       0.05187       0.43552       0.10079       0.22460
+                      0.01087       0.00929       0.01452       0.02144       0.38801       0.30204
+                      0.01067       0.01442       0.00395       0.00978       0.02964       0.32497
+                      0.00454       0.00771       0.00948       0.00820       0.01037       0.03438
+               
+
+ Error for Mean       0.00421       0.97660      -0.29016       0.48101       0.95114       0.23670
+                      0.00497       0.00616      -0.44562       0.35589       0.98354       0.13606
+                     -0.00223      -0.00415       0.01410       0.63850      -0.51082       0.70178
+                      0.00129       0.00115       0.00313       0.00170       0.30459       0.87192
+                      0.00479       0.00600      -0.00471       0.00098       0.00603       0.10204
+                      0.00095       0.00066       0.00515       0.00222       0.00049       0.00382
+               
+
+D STUDY RESULTS FOR INDIVIDUAL VARIABLES
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Univ Score Var       0.69315       0.74382       0.73444       0.45303       0.60936       0.87630
+  Rel Error Var       0.03001       0.02733       0.04035       0.02132       0.02572       0.03360
+  Abs Error Var       0.03181       0.03092       0.05187       0.02144       0.02964       0.03438
+Er Var for Mean       0.00421       0.00616       0.01410       0.00170       0.00603       0.00382
+
+  Univ Score SD       0.83256       0.86245       0.85699       0.67308       0.78062       0.93611
+   Rel Error SD       0.17325       0.16532       0.20088       0.14601       0.16039       0.18329
+   Abs Error SD       0.17836       0.17585       0.22774       0.14642       0.17216       0.18542
+Err SD for Mean       0.06487       0.07851       0.11874       0.04124       0.07766       0.06179
+
+Gen Coefficient       0.95850       0.96456       0.94792       0.95506       0.95949       0.96308
+            Phi       0.95612       0.96009       0.93404       0.95482       0.95362       0.96225
+
+        S/N-Rel      23.09365      27.21641      18.20094      21.25007      23.68755      26.08367
+        S/N-Abs      21.78899      24.05430      14.16000      21.13180      20.55983      25.48820
+
+
+D STUDY RESULTS FOR COMPOSITE
+
+   Variable Wts    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+      w-weights       0.20000       0.20000       0.00000       0.00000       0.40000       0.20000
+
+---------------------------------------------------------------------------------------------------
+
+          Composite Universe Score Variance       0.67024
+          Composite Relative Error Variance       0.01508
+          Composite Absolute Error Variance       0.01666
+          Composite Error Variance for Mean       0.00386
+
+Composite Universe Score Standard Deviation       0.81868
+Composite Relative Error Standard Deviation       0.12279
+Composite Absolute Error Standard Deviation       0.12906
+Composite Error Standard Deviation for Mean       0.06216
+
+     Composite Generalizability Coefficient       0.97800
+                              Composite Phi       0.97575
+
+                          Composite S/N-Rel      44.45194
+                          Composite S/N-Abs      40.23837
+
+---------------------------------------------------------------------------------------------------
+
+   Contributions toIdeas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention    
+
+Comp Univ Score Var    19.71%        20.76%         0.00%         0.00%        37.99%        21.54%       
+ Comp Rel Error Var    17.62%        19.29%         0.00%         0.00%        43.66%        19.43%       
+ Comp Abs Error Var    17.98%        20.33%         0.00%         0.00%        45.50%        16.18%       
+
+
+
+                               D STUDY NUMBER 1.8
+                                        
+
+DSTUDY
+WWTS      .20 .20 0 0 .40 .20
+DEFFECT  $ p 300 300 300 300 300 300
+DEFFECT  # r 8 8 8 8 8 8
+ENDDSTUDY
+
+
+SAMPLE SIZE STATISTICS FOR r
+
+      Statistic    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+             nr             8             8             8             8             8             8
+
+
+ESTIMATED D STUDY VARIANCE AND COVARIANCE COMPONENTS
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+       Diagonal
+Effect  Divisor    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+p                     0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+      
+
+r         8.000       0.00157
+          8.000       0.00224       0.00314
+          8.000      -0.00406      -0.00569       0.01008
+          8.000      -0.00047      -0.00066       0.00113       0.00010
+          8.000       0.00235       0.00330      -0.00593      -0.00068       0.00342
+          8.000      -0.00109      -0.00153       0.00271       0.00030      -0.00160       0.00069
+      
+
+pr        8.000       0.02626
+          8.000       0.01280       0.02391
+          8.000       0.01581       0.01304       0.03531
+          8.000       0.00998       0.00878       0.01158       0.01865
+          8.000       0.00699       0.00932       0.00939       0.00924       0.02251
+          8.000       0.00507       0.00827       0.00559       0.00688       0.01068       0.02940
+      
+
+UNIVERSE SCORE MATRIX AND ERROR MATRICES
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Universe Score       0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+               
+
+ Relative Error       0.02626       0.51070       0.51934       0.45091       0.28741       0.18230
+                      0.01280       0.02391       0.44867       0.41576       0.40174       0.31208
+                      0.01581       0.01304       0.03531       0.45103       0.33293       0.17359
+                      0.00998       0.00878       0.01158       0.01865       0.45100       0.29366
+                      0.00699       0.00932       0.00939       0.00924       0.02251       0.41507
+                      0.00507       0.00827       0.00559       0.00688       0.01068       0.02940
+               
+
+ Absolute Error       0.02784       0.54809       0.33077       0.41614       0.34748       0.13742
+                      0.01504       0.02706       0.20968       0.36068       0.47645       0.23634
+                      0.01176       0.00735       0.04538       0.43552       0.10079       0.22460
+                      0.00951       0.00813       0.01271       0.01876       0.38801       0.30204
+                      0.00934       0.01262       0.00346       0.00856       0.02593       0.32497
+                      0.00398       0.00674       0.00830       0.00717       0.00908       0.03008
+               
+
+ Error for Mean       0.00397       0.97652      -0.23468       0.52293       0.95013       0.28724
+                      0.00465       0.00570      -0.39422       0.40152       0.98294       0.19031
+                     -0.00166      -0.00335       0.01264       0.64271      -0.46255       0.69535
+                      0.00135       0.00124       0.00296       0.00168       0.35093       0.87287
+                      0.00445       0.00552      -0.00387       0.00107       0.00553       0.15753
+                      0.00110       0.00087       0.00476       0.00218       0.00071       0.00371
+               
+
+D STUDY RESULTS FOR INDIVIDUAL VARIABLES
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Univ Score Var       0.69315       0.74382       0.73444       0.45303       0.60936       0.87630
+  Rel Error Var       0.02626       0.02391       0.03531       0.01865       0.02251       0.02940
+  Abs Error Var       0.02784       0.02706       0.04538       0.01876       0.02593       0.03008
+Er Var for Mean       0.00397       0.00570       0.01264       0.00168       0.00553       0.00371
+
+  Univ Score SD       0.83256       0.86245       0.85699       0.67308       0.78062       0.93611
+   Rel Error SD       0.16206       0.15464       0.18790       0.13658       0.15003       0.17145
+   Abs Error SD       0.16684       0.16449       0.21303       0.13696       0.16104       0.17344
+Err SD for Mean       0.06301       0.07552       0.11244       0.04095       0.07437       0.06087
+
+Gen Coefficient       0.96349       0.96885       0.95413       0.96045       0.96438       0.96754
+            Phi       0.96139       0.96490       0.94180       0.96024       0.95918       0.96681
+
+        S/N-Rel      26.39274      31.10447      20.80107      24.28580      27.07149      29.80991
+        S/N-Abs      24.90171      27.49062      16.18286      24.15063      23.49695      29.12937
+
+
+D STUDY RESULTS FOR COMPOSITE
+
+   Variable Wts    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+      w-weights       0.20000       0.20000       0.00000       0.00000       0.40000       0.20000
+
+---------------------------------------------------------------------------------------------------
+
+          Composite Universe Score Variance       0.67024
+          Composite Relative Error Variance       0.01319
+          Composite Absolute Error Variance       0.01457
+          Composite Error Variance for Mean       0.00366
+
+Composite Universe Score Standard Deviation       0.81868
+Composite Relative Error Standard Deviation       0.11486
+Composite Absolute Error Standard Deviation       0.12073
+Composite Error Standard Deviation for Mean       0.06049
+
+     Composite Generalizability Coefficient       0.98070
+                              Composite Phi       0.97872
+
+                          Composite S/N-Rel      50.80222
+                          Composite S/N-Abs      45.98671
+
+---------------------------------------------------------------------------------------------------
+
+   Contributions toIdeas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention    
+
+Comp Univ Score Var    19.71%        20.76%         0.00%         0.00%        37.99%        21.54%       
+ Comp Rel Error Var    17.62%        19.29%         0.00%         0.00%        43.66%        19.43%       
+ Comp Abs Error Var    17.98%        20.33%         0.00%         0.00%        45.50%        16.18%       
+
+
+
+                               D STUDY NUMBER 1.9
+                                        
+
+DSTUDY
+WWTS      .20 .20 0 0 .40 .20
+DEFFECT  $ p 300 300 300 300 300 300
+DEFFECT  # r 9 9 9 9 9 9
+ENDDSTUDY
+
+
+SAMPLE SIZE STATISTICS FOR r
+
+      Statistic    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+             nr             9             9             9             9             9             9
+
+
+ESTIMATED D STUDY VARIANCE AND COVARIANCE COMPONENTS
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+       Diagonal
+Effect  Divisor    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+p                     0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+      
+
+r         9.000       0.00140
+          9.000       0.00199       0.00279
+          9.000      -0.00361      -0.00506       0.00896
+          9.000      -0.00042      -0.00058       0.00101       0.00009
+          9.000       0.00209       0.00293      -0.00527      -0.00061       0.00304
+          9.000      -0.00097      -0.00136       0.00241       0.00027      -0.00142       0.00061
+      
+
+pr        9.000       0.02334
+          9.000       0.01138       0.02126
+          9.000       0.01406       0.01159       0.03138
+          9.000       0.00887       0.00781       0.01029       0.01658
+          9.000       0.00621       0.00829       0.00834       0.00821       0.02001
+          9.000       0.00450       0.00735       0.00497       0.00611       0.00949       0.02613
+      
+
+UNIVERSE SCORE MATRIX AND ERROR MATRICES
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Universe Score       0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+               
+
+ Relative Error       0.02334       0.51070       0.51934       0.45091       0.28741       0.18230
+                      0.01138       0.02126       0.44867       0.41576       0.40174       0.31208
+                      0.01406       0.01159       0.03138       0.45103       0.33293       0.17359
+                      0.00887       0.00781       0.01029       0.01658       0.45100       0.29366
+                      0.00621       0.00829       0.00834       0.00821       0.02001       0.41507
+                      0.00450       0.00735       0.00497       0.00611       0.00949       0.02613
+               
+
+ Absolute Error       0.02474       0.54809       0.33077       0.41614       0.34748       0.13742
+                      0.01337       0.02405       0.20968       0.36068       0.47645       0.23634
+                      0.01045       0.00653       0.04034       0.43552       0.10079       0.22460
+                      0.00845       0.00722       0.01130       0.01667       0.38801       0.30204
+                      0.00830       0.01122       0.00307       0.00761       0.02305       0.32497
+                      0.00353       0.00599       0.00738       0.00638       0.00807       0.02674
+               
+
+ Error for Mean       0.00379       0.97653      -0.18446       0.55793       0.94940       0.32986
+                      0.00439       0.00534      -0.34680       0.44043       0.98242       0.23693
+                     -0.00122      -0.00272       0.01151       0.64757      -0.41760       0.69058
+                      0.00140       0.00131       0.00283       0.00166       0.39082       0.87367
+                      0.00419       0.00515      -0.00321       0.00114       0.00514       0.20563
+                      0.00122       0.00104       0.00446       0.00214       0.00089       0.00362
+               
+
+D STUDY RESULTS FOR INDIVIDUAL VARIABLES
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Univ Score Var       0.69315       0.74382       0.73444       0.45303       0.60936       0.87630
+  Rel Error Var       0.02334       0.02126       0.03138       0.01658       0.02001       0.02613
+  Abs Error Var       0.02474       0.02405       0.04034       0.01667       0.02305       0.02674
+Er Var for Mean       0.00379       0.00534       0.01151       0.00166       0.00514       0.00362
+
+  Univ Score SD       0.83256       0.86245       0.85699       0.67308       0.78062       0.93611
+   Rel Error SD       0.15279       0.14580       0.17716       0.12877       0.14145       0.16165
+   Abs Error SD       0.15730       0.15508       0.20085       0.12913       0.15183       0.16353
+Err SD for Mean       0.06153       0.07311       0.10728       0.04072       0.07171       0.06015
+
+Gen Coefficient       0.96742       0.97222       0.95902       0.96469       0.96821       0.97104
+            Phi       0.96553       0.96868       0.94793       0.96450       0.96355       0.97039
+
+        S/N-Rel      29.69183      34.99253      23.40121      27.32152      30.45543      33.53614
+        S/N-Abs      28.01442      30.92695      18.20571      27.16946      26.43407      32.77054
+
+
+D STUDY RESULTS FOR COMPOSITE
+
+   Variable Wts    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+      w-weights       0.20000       0.20000       0.00000       0.00000       0.40000       0.20000
+
+---------------------------------------------------------------------------------------------------
+
+          Composite Universe Score Variance       0.67024
+          Composite Relative Error Variance       0.01173
+          Composite Absolute Error Variance       0.01296
+          Composite Error Variance for Mean       0.00350
+
+Composite Universe Score Standard Deviation       0.81868
+Composite Relative Error Standard Deviation       0.10829
+Composite Absolute Error Standard Deviation       0.11382
+Composite Error Standard Deviation for Mean       0.05917
+
+     Composite Generalizability Coefficient       0.98280
+                              Composite Phi       0.98104
+
+                          Composite S/N-Rel      57.15250
+                          Composite S/N-Abs      51.73505
+
+---------------------------------------------------------------------------------------------------
+
+   Contributions toIdeas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention    
+
+Comp Univ Score Var    19.71%        20.76%         0.00%         0.00%        37.99%        21.54%       
+ Comp Rel Error Var    17.62%        19.29%         0.00%         0.00%        43.66%        19.43%       
+ Comp Abs Error Var    17.98%        20.33%         0.00%         0.00%        45.50%        16.18%       
+
+
+
+                               D STUDY NUMBER 1.10
+                                        
+
+DSTUDY
+WWTS      .20 .20 0 0 .40 .20
+DEFFECT  $ p 300 300 300 300 300 300
+DEFFECT  # r 10 10 10 10 10 10
+ENDDSTUDY
+
+
+SAMPLE SIZE STATISTICS FOR r
+
+      Statistic    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+             nr            10            10            10            10            10            10
+
+
+ESTIMATED D STUDY VARIANCE AND COVARIANCE COMPONENTS
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+       Diagonal
+Effect  Divisor    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+p                     0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+      
+
+r        10.000       0.00126
+         10.000       0.00179       0.00251
+         10.000      -0.00325      -0.00455       0.00806
+         10.000      -0.00038      -0.00052       0.00091       0.00008
+         10.000       0.00188       0.00264      -0.00474      -0.00055       0.00274
+         10.000      -0.00087      -0.00123       0.00216       0.00024      -0.00128       0.00055
+      
+
+pr       10.000       0.02101
+         10.000       0.01024       0.01913
+         10.000       0.01265       0.01043       0.02825
+         10.000       0.00798       0.00702       0.00926       0.01492
+         10.000       0.00559       0.00746       0.00751       0.00739       0.01801
+         10.000       0.00405       0.00662       0.00447       0.00550       0.00854       0.02352
+      
+
+UNIVERSE SCORE MATRIX AND ERROR MATRICES
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Universe Score       0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+               
+
+ Relative Error       0.02101       0.51070       0.51934       0.45091       0.28741       0.18230
+                      0.01024       0.01913       0.44867       0.41576       0.40174       0.31208
+                      0.01265       0.01043       0.02825       0.45103       0.33293       0.17359
+                      0.00798       0.00702       0.00926       0.01492       0.45100       0.29366
+                      0.00559       0.00746       0.00751       0.00739       0.01801       0.41507
+                      0.00405       0.00662       0.00447       0.00550       0.00854       0.02352
+               
+
+ Absolute Error       0.02227       0.54809       0.33077       0.41614       0.34748       0.13742
+                      0.01203       0.02165       0.20968       0.36068       0.47645       0.23634
+                      0.00941       0.00588       0.03631       0.43552       0.10079       0.22460
+                      0.00761       0.00650       0.01017       0.01501       0.38801       0.30204
+                      0.00747       0.01010       0.00277       0.00685       0.02075       0.32497
+                      0.00318       0.00539       0.00664       0.00574       0.00726       0.02407
+               
+
+ Error for Mean       0.00364       0.97660      -0.13872       0.58762       0.94888       0.36629
+                      0.00419       0.00506      -0.30288       0.47406       0.98197       0.27749
+                     -0.00086      -0.00222       0.01060       0.65277      -0.37563       0.68703
+                      0.00144       0.00137       0.00272       0.00164       0.42561       0.87436
+                      0.00398       0.00485      -0.00269       0.00120       0.00483       0.24782
+                      0.00132       0.00118       0.00421       0.00211       0.00103       0.00355
+               
+
+D STUDY RESULTS FOR INDIVIDUAL VARIABLES
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Univ Score Var       0.69315       0.74382       0.73444       0.45303       0.60936       0.87630
+  Rel Error Var       0.02101       0.01913       0.02825       0.01492       0.01801       0.02352
+  Abs Error Var       0.02227       0.02165       0.03631       0.01501       0.02075       0.02407
+Er Var for Mean       0.00364       0.00506       0.01060       0.00164       0.00483       0.00355
+
+  Univ Score SD       0.83256       0.86245       0.85699       0.67308       0.78062       0.93611
+   Rel Error SD       0.14495       0.13831       0.16807       0.12216       0.13419       0.15335
+   Abs Error SD       0.14923       0.14713       0.19054       0.12250       0.14404       0.15513
+Err SD for Mean       0.06032       0.07112       0.10297       0.04054       0.06950       0.05957
+
+Gen Coefficient       0.97058       0.97493       0.96296       0.96811       0.97130       0.97386
+            Phi       0.96887       0.97172       0.95289       0.96794       0.96707       0.97327
+
+        S/N-Rel      32.99093      38.88059      26.00134      30.35725      33.83936      37.26238
+        S/N-Abs      31.12713      34.36328      20.22857      30.18829      29.37119      36.41171
+
+
+D STUDY RESULTS FOR COMPOSITE
+
+   Variable Wts    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+      w-weights       0.20000       0.20000       0.00000       0.00000       0.40000       0.20000
+
+---------------------------------------------------------------------------------------------------
+
+          Composite Universe Score Variance       0.67024
+          Composite Relative Error Variance       0.01055
+          Composite Absolute Error Variance       0.01166
+          Composite Error Variance for Mean       0.00337
+
+Composite Universe Score Standard Deviation       0.81868
+Composite Relative Error Standard Deviation       0.10274
+Composite Absolute Error Standard Deviation       0.10798
+Composite Error Standard Deviation for Mean       0.05809
+
+     Composite Generalizability Coefficient       0.98450
+                              Composite Phi       0.98290
+
+                          Composite S/N-Rel      63.50278
+                          Composite S/N-Abs      57.48338
+
+---------------------------------------------------------------------------------------------------
+
+   Contributions toIdeas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention    
+
+Comp Univ Score Var    19.71%        20.76%         0.00%         0.00%        37.99%        21.54%       
+ Comp Rel Error Var    17.62%        19.29%         0.00%         0.00%        43.66%        19.43%       
+ Comp Abs Error Var    17.98%        20.33%         0.00%         0.00%        45.50%        16.18%       
+
+
+
+                               D STUDY NUMBER 1.11
+                                        
+
+DSTUDY
+WWTS      .20 .20 0 0 .40 .20
+DEFFECT  $ p 300 300 300 300 300 300
+DEFFECT  # r 11 11 11 11 11 11
+ENDDSTUDY
+
+
+SAMPLE SIZE STATISTICS FOR r
+
+      Statistic    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+             nr            11            11            11            11            11            11
+
+
+ESTIMATED D STUDY VARIANCE AND COVARIANCE COMPONENTS
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+       Diagonal
+Effect  Divisor    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+p                     0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+      
+
+r        11.000       0.00114
+         11.000       0.00163       0.00229
+         11.000      -0.00295      -0.00414       0.00733
+         11.000      -0.00034      -0.00048       0.00082       0.00008
+         11.000       0.00171       0.00240      -0.00431      -0.00050       0.00249
+         11.000      -0.00079      -0.00111       0.00197       0.00022      -0.00116       0.00050
+      
+
+pr       11.000       0.01910
+         11.000       0.00931       0.01739
+         11.000       0.01150       0.00948       0.02568
+         11.000       0.00726       0.00639       0.00842       0.01357
+         11.000       0.00508       0.00678       0.00683       0.00672       0.01637
+         11.000       0.00368       0.00602       0.00407       0.00500       0.00777       0.02138
+      
+
+UNIVERSE SCORE MATRIX AND ERROR MATRICES
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Universe Score       0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+               
+
+ Relative Error       0.01910       0.51070       0.51934       0.45091       0.28741       0.18230
+                      0.00931       0.01739       0.44867       0.41576       0.40174       0.31208
+                      0.01150       0.00948       0.02568       0.45103       0.33293       0.17359
+                      0.00726       0.00639       0.00842       0.01357       0.45100       0.29366
+                      0.00508       0.00678       0.00683       0.00672       0.01637       0.41507
+                      0.00368       0.00602       0.00407       0.00500       0.00777       0.02138
+               
+
+ Absolute Error       0.02024       0.54809       0.33077       0.41614       0.34748       0.13742
+                      0.01094       0.01968       0.20968       0.36068       0.47645       0.23634
+                      0.00855       0.00534       0.03301       0.43552       0.10079       0.22460
+                      0.00692       0.00591       0.00924       0.01364       0.38801       0.30204
+                      0.00679       0.00918       0.00251       0.00622       0.01886       0.32497
+                      0.00289       0.00490       0.00604       0.00522       0.00660       0.02188
+               
+
+ Error for Mean       0.00352       0.97671      -0.09683       0.61314       0.94851       0.39780
+                      0.00402       0.00482      -0.26207       0.50348       0.98156       0.31312
+                     -0.00057      -0.00181       0.00986       0.65814      -0.33634       0.68442
+                      0.00147       0.00141       0.00264       0.00163       0.45628       0.87495
+                      0.00381       0.00461      -0.00226       0.00125       0.00458       0.28515
+                      0.00139       0.00129       0.00402       0.00209       0.00114       0.00349
+               
+
+D STUDY RESULTS FOR INDIVIDUAL VARIABLES
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Univ Score Var       0.69315       0.74382       0.73444       0.45303       0.60936       0.87630
+  Rel Error Var       0.01910       0.01739       0.02568       0.01357       0.01637       0.02138
+  Abs Error Var       0.02024       0.01968       0.03301       0.01364       0.01886       0.02188
+Er Var for Mean       0.00352       0.00482       0.00986       0.00163       0.00458       0.00349
+
+  Univ Score SD       0.83256       0.86245       0.85699       0.67308       0.78062       0.93611
+   Rel Error SD       0.13820       0.13188       0.16024       0.11648       0.12795       0.14622
+   Abs Error SD       0.14228       0.14028       0.18168       0.11680       0.13733       0.14791
+Err SD for Mean       0.05931       0.06945       0.09931       0.04039       0.06765       0.05909
+
+Gen Coefficient       0.97318       0.97715       0.96622       0.97092       0.97384       0.97618
+            Phi       0.97162       0.97423       0.95699       0.97077       0.96998       0.97564
+
+        S/N-Rel      36.29002      42.76865      28.60148      33.39297      37.22330      40.98862
+        S/N-Abs      34.23984      37.79961      22.25143      33.20712      32.30831      40.05288
+
+
+D STUDY RESULTS FOR COMPOSITE
+
+   Variable Wts    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+      w-weights       0.20000       0.20000       0.00000       0.00000       0.40000       0.20000
+
+---------------------------------------------------------------------------------------------------
+
+          Composite Universe Score Variance       0.67024
+          Composite Relative Error Variance       0.00960
+          Composite Absolute Error Variance       0.01060
+          Composite Error Variance for Mean       0.00327
+
+Composite Universe Score Standard Deviation       0.81868
+Composite Relative Error Standard Deviation       0.09795
+Composite Absolute Error Standard Deviation       0.10296
+Composite Error Standard Deviation for Mean       0.05719
+
+     Composite Generalizability Coefficient       0.98589
+                              Composite Phi       0.98443
+
+                          Composite S/N-Rel      69.85305
+                          Composite S/N-Abs      63.23172
+
+---------------------------------------------------------------------------------------------------
+
+   Contributions toIdeas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention    
+
+Comp Univ Score Var    19.71%        20.76%         0.00%         0.00%        37.99%        21.54%       
+ Comp Rel Error Var    17.62%        19.29%         0.00%         0.00%        43.66%        19.43%       
+ Comp Abs Error Var    17.98%        20.33%         0.00%         0.00%        45.50%        16.18%       
+
+
+
+                               D STUDY NUMBER 1.12
+                                        
+
+DSTUDY
+WWTS      .20 .20 0 0 .40 .20
+DEFFECT  $ p 300 300 300 300 300 300
+DEFFECT  # r 12 12 12 12 12 12
+ENDDSTUDY
+
+
+SAMPLE SIZE STATISTICS FOR r
+
+      Statistic    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+             nr            12            12            12            12            12            12
+
+
+ESTIMATED D STUDY VARIANCE AND COVARIANCE COMPONENTS
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+       Diagonal
+Effect  Divisor    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+p                     0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+      
+
+r        12.000       0.00105
+         12.000       0.00150       0.00210
+         12.000      -0.00271      -0.00379       0.00672
+         12.000      -0.00031      -0.00044       0.00075       0.00007
+         12.000       0.00157       0.00220      -0.00395      -0.00046       0.00228
+         12.000      -0.00073      -0.00102       0.00180       0.00020      -0.00107       0.00046
+      
+
+pr       12.000       0.01751
+         12.000       0.00853       0.01594
+         12.000       0.01054       0.00869       0.02354
+         12.000       0.00665       0.00585       0.00772       0.01244
+         12.000       0.00466       0.00621       0.00626       0.00616       0.01501
+         12.000       0.00338       0.00552       0.00373       0.00458       0.00712       0.01960
+      
+
+UNIVERSE SCORE MATRIX AND ERROR MATRICES
+Note. Lower diagonal elements are covariances.
+      Upper diagonal elements are correlations.
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Universe Score       0.69315       0.98647       0.98495       0.95694       0.96058       0.83675
+                      0.70832       0.74382       0.93298       0.96517       0.97537       0.88395
+                      0.70276       0.68958       0.73444       0.93006       0.90985       0.76083
+                      0.53625       0.56028       0.53648       0.45303       0.98286       0.88304
+                      0.62429       0.65666       0.60867       0.51641       0.60936       0.93511
+                      0.65213       0.71366       0.61037       0.55638       0.68332       0.87630
+               
+
+ Relative Error       0.01751       0.51070       0.51934       0.45091       0.28741       0.18230
+                      0.00853       0.01594       0.44867       0.41576       0.40174       0.31208
+                      0.01054       0.00869       0.02354       0.45103       0.33293       0.17359
+                      0.00665       0.00585       0.00772       0.01244       0.45100       0.29366
+                      0.00466       0.00621       0.00626       0.00616       0.01501       0.41507
+                      0.00338       0.00552       0.00373       0.00458       0.00712       0.01960
+               
+
+ Absolute Error       0.01856       0.54809       0.33077       0.41614       0.34748       0.13742
+                      0.01003       0.01804       0.20968       0.36068       0.47645       0.23634
+                      0.00784       0.00490       0.03026       0.43552       0.10079       0.22460
+                      0.00634       0.00542       0.00847       0.01251       0.38801       0.30204
+                      0.00622       0.00841       0.00231       0.00571       0.01729       0.32497
+                      0.00265       0.00450       0.00553       0.00478       0.00605       0.02006
+               
+
+ Error for Mean       0.00342       0.97685      -0.05829       0.63531       0.94826       0.42532
+                      0.00388       0.00463      -0.22402       0.52944       0.98120       0.34469
+                     -0.00033      -0.00147       0.00924       0.66356      -0.29948       0.68252
+                      0.00150       0.00145       0.00257       0.00162       0.48356       0.87548
+                      0.00366       0.00441      -0.00190       0.00129       0.00436       0.31847
+                      0.00146       0.00138       0.00385       0.00207       0.00123       0.00344
+               
+
+D STUDY RESULTS FOR INDIVIDUAL VARIABLES
+
+                   Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+ Univ Score Var       0.69315       0.74382       0.73444       0.45303       0.60936       0.87630
+  Rel Error Var       0.01751       0.01594       0.02354       0.01244       0.01501       0.01960
+  Abs Error Var       0.01856       0.01804       0.03026       0.01251       0.01729       0.02006
+Er Var for Mean       0.00342       0.00463       0.00924       0.00162       0.00436       0.00344
+
+  Univ Score SD       0.83256       0.86245       0.85699       0.67308       0.78062       0.93611
+   Rel Error SD       0.13232       0.12626       0.15342       0.11152       0.12250       0.13999
+   Abs Error SD       0.13622       0.13431       0.17394       0.11183       0.13149       0.14162
+Err SD for Mean       0.05846       0.06803       0.09615       0.04026       0.06606       0.05869
+
+Gen Coefficient       0.97536       0.97902       0.96895       0.97328       0.97597       0.97813
+            Phi       0.97393       0.97632       0.96043       0.97314       0.97241       0.97763
+
+        S/N-Rel      39.58911      46.65671      31.20161      36.42870      40.60723      44.71486
+        S/N-Abs      37.35256      41.23593      24.27429      36.22595      35.24543      43.69405
+
+
+D STUDY RESULTS FOR COMPOSITE
+
+   Variable Wts    Ideas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention
+
+      w-weights       0.20000       0.20000       0.00000       0.00000       0.40000       0.20000
+
+---------------------------------------------------------------------------------------------------
+
+          Composite Universe Score Variance       0.67024
+          Composite Relative Error Variance       0.00880
+          Composite Absolute Error Variance       0.00972
+          Composite Error Variance for Mean       0.00318
+
+Composite Universe Score Standard Deviation       0.81868
+Composite Relative Error Standard Deviation       0.09378
+Composite Absolute Error Standard Deviation       0.09857
+Composite Error Standard Deviation for Mean       0.05643
+
+     Composite Generalizability Coefficient       0.98705
+                              Composite Phi       0.98571
+
+                          Composite S/N-Rel      76.20333
+                          Composite S/N-Abs      68.98006
+
+---------------------------------------------------------------------------------------------------
+
+   Contributions toIdeas&Cont    Organizati         Voice    Word-Choic    Sentence-F    Convention    
+
+Comp Univ Score Var    19.71%        20.76%         0.00%         0.00%        37.99%        21.54%       
+ Comp Rel Error Var    17.62%        19.29%         0.00%         0.00%        43.66%        19.43%       
+ Comp Abs Error Var    17.98%        20.33%         0.00%         0.00%        45.50%        16.18%       
+
+
+Date and time at beginning of Run 1:  Fri Jan  3 03:44:38 2025
+Processor time for run: 0 seconds
