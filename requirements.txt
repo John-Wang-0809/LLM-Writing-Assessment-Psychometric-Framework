@@ -1,0 +1,6 @@
+# Python Core
+numpy>=1.23.5
+pandas>=1.5.3
+scipy>=1.10.0
+scikit-learn>=1.2.2
+jupyterlab>=3.6.3  # Optional - Interactive Analysis
