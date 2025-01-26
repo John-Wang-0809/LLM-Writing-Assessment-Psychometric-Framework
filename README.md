@@ -234,6 +234,6 @@ Please ensure your code follows the project's coding standards and include relev
 ---
 
 ## Contact
-For any questions or suggestions, please open an issue [here](https://github.com/John-Wang-0809/LLM-Writing-Assessment-Psychometric-Framework) or contact [wangyuehan090050@gmail.com](wangyuehan090050@gmail.com).
+For any questions or suggestions, please open an issue [here](https://github.com/John-Wang-0809/LLM-Writing-Assessment-Psychometric-Framework/issues) or contact [wangyuehan0809@163.com](wangyuehan0809@163.com).
 
 Thank you for your interest and support in this project!
