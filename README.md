@@ -138,15 +138,19 @@ This project explores the use of Large Language Models (LLMs) as raters in large
    ```
 
 ### Usage
-1. **Data Preparation**
-   - Place writing samples and human scoring results in the `data/` directory.
-   - Ensure data formats align with the scripts' requirements.
-
-2. **Model Inference**
-   - Run the inference script to generate LLM scores.
+1. **Data Generation**
+   - The raw data is stored in the `repository/data/raw` directory.
+   - Run the Inference script to generate LLM scores.
    ```bash
-   python scripts/run_inference.py
+   python repository/scripts/data_generation/Writing_Assessment.py
    ```
+
+2. **G- and D- Study Analysis**
+   - The data for the G-Study and D-Study is derived from the score samples obtained in the first step. Two human raters were selected to form the human rating group, while the   
+     first-round scores from GPT-4o-mini and GPT-4o were used to form the GPT rating group, and the first-round scores from Claude-3.5-Haiku and Claude-3.5-Sonnet were used to 
+     form the Claude rating group.
+   - For Set #1 and Set #2, input the `.MANUAL` file name into `genova36.exe` and specify the output file name as `P_X_R_RESULT_...` to obtain the results. For Set #3, input the   
+     `.MANUAL` file name into `mGENOVA.exe`, and the output will be generated directly without the need to specify an output file name.
 
 3. **Psychometric Analysis**
    - Execute the analysis script to evaluate reliability and validity using G-Theory and MFRM.
