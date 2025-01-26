@@ -159,20 +159,28 @@ This project explores the use of Large Language Models (LLMs) as raters in large
 
 4. **Information**
    - The data for Information function visualization is stored in the `repository/data/visualization` directory.
-   - Click the `Source` button on the "Information_Function_Plot.R" code to visualize the information function.
+   - Click the `Source` button on the `Information_Function_Plot.R` code to visualize the information function.
    - Execute the information function statics script to obtain the descriptive statistical components of the information function.
    ```bash
    python scripts/analysis/Info_Function_Statics.py
    ```
 
-5. **Information**
-   - The data for Information function visualization is stored in the `repository/data/visualization` directory.
-   - Click the `Source` button on the "Information_Function_Plot.R" code to visualize the information function.
-   - Execute the information function statics script to obtain the descriptive statistical components of the information function.
-   ```bash
-   python scripts/analysis/Info_Function_Statics.py
-   ```
+5. **Expected Item Characteristic Curves**
+   - The data for Expected Item Characteristic Curve visualization is stored in the `repository/data/visualization` directory.
+   - Click the `source` button on the `ICC_Function_Plot.R` code to visualize the Expected Item Characteristic Curves.
 
+6. **Rating Scale Bar & Rater Probability Curves**
+   - The data for Rating Scale Bar and Rater Probability Curve visualization is stored in the `repository/data/visualization`   
+     directory.
+   - Click the `source` button on the `Rating_Scale_Bar.R` code to visualize the Rating Scale Bar.
+   - Execute the rater probability curve script to generate the visualization of the Rater Probability Curves.
+   ```bash
+   python scripts/analysis/Rater_Prob_Curve_Plot.py
+   ```
+7. **Overall Rating Frequency**
+   - The data for Overall Rating Frequency visualization is stored in the `repository/data/visualization`   
+     directory.
+   - Click the `source` button on the `Rating_Scale_Bar.R` code to visualize the Rating Scale Bar.   
 ---
 
 ## Citations and References
@@ -180,24 +188,18 @@ When citing this project or using its resources in your research, please use the
 
 **BibTeX**
 ```bibtex
-@misc{yourname2025evaluating,
+@misc{wang2025evaluating,
   title={Evaluating Large Language Models as Raters in Large-Scale Writing Assessments: A Psychometric Framework for Reliability and Validity},
-  author={Your Name},
+  author={Yuehan Wang},
   year={2025},
-  howpublished={\url{https://github.com/your-username/LLM-Writing-Assessment}},
+  howpublished={\url{https://github.com/John-Wang-0809/LLM-Writing-Assessment-Psychometric-Framework}},
 }
 ```
 
 **APA**
 ```
-Your Name. (2025). Evaluating Large Language Models as Raters in Large-Scale Writing Assessments: A Psychometric Framework for Reliability and Validity. Retrieved from https://github.com/your-username/LLM-Writing-Assessment
+Wang, Y. (2025). Evaluating Large Language Models as Raters in Large-Scale Writing Assessments: A Psychometric Framework for Reliability and Validity. Retrieved from https://github.com/John-Wang-0809/LLM-Writing-Assessment-Psychometric-Framework
 ```
-
-**References**
-1. Bachman, L. F. (1990). *Fundamental considerations in language testing*. Oxford University Press.
-2. Brennan, R. L. (2001). *Generalizability theory*. Springer.
-3. McNamara, T. (1996). *Measuring second language performance*. Longman.
-4. ... *(Add additional references as needed)*
 
 ---
 
@@ -232,6 +234,6 @@ Please ensure your code follows the project's coding standards and include relev
 ---
 
 ## Contact
-For any questions or suggestions, please open an issue [here](https://github.com/your-username/LLM-Writing-Assessment/issues) or contact [your.email@example.com](mailto:your.email@example.com).
+For any questions or suggestions, please open an issue [here](https://github.com/John-Wang-0809/LLM-Writing-Assessment-Psychometric-Framework) or contact [wangyuehan090050@gmail.com](wangyuehan090050@gmail.com).
 
 Thank you for your interest and support in this project!
