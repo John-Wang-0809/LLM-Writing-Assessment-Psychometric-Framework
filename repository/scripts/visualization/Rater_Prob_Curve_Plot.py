@@ -1,9 +1,9 @@
-# 导入必要的库
+# Import required libraries
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-# 配置参数
+# Configuration parameters
 CONFIG = {
     'figure': {
         'subplot_figsize': (24, 6),
@@ -21,7 +21,7 @@ CONFIG = {
     }
 }
 
-# 更新数据集配置
+# Update dataset configurations
 DATA_CONFIG = {
     'base_path': r"repository\data\visualization",
     'datasets': {
@@ -78,26 +78,26 @@ DATA_CONFIG = {
 
 def load_and_preprocess_data(dataset_key):
     """
-    加载并预处理指定数据集的数据
+    Load and preprocess data for the specified dataset
     
     Args:
-        dataset_key: 数据集配置中的键名（如'set1', 'set2', 'set3'）
+        dataset_key: Key name in dataset configuration (e.g., 'set1', 'set2', 'set3')
     """
     dataset = DATA_CONFIG['datasets'][dataset_key]
     file_path = os.path.join(DATA_CONFIG['base_path'], dataset['file'])
     
-    # 根据文件扩展名选择读取方法
+    # Choose reading method based on file extension
     if file_path.endswith('.csv'):
         df_rater = pd.read_csv(file_path)
     else:
         df_rater = pd.read_excel(file_path)
         
-    # 添加前缀
+    # Add prefix
     df_rater['Rater'] = df_rater['Rater'].apply(lambda x: f'{dataset["prefix"]} {x}')
     return df_rater
 
 def setup_subplot(ax, rater, cfg):
-    """设置子图的基本属性"""
+    """Set basic properties for subplot"""
     ax.set_title(rater, fontname=cfg['figure']['font_family'], 
                 fontsize=cfg['figure']['subtitle_fontsize'])
     ax.set_xlabel(r'$\Theta$', fontname=cfg['figure']['font_family'], 
@@ -108,17 +108,17 @@ def setup_subplot(ax, rater, cfg):
     ax.set_ylim(cfg['plot']['prob_range'])
     ax.grid(True)
     
-    # 设置刻度字体
+    # Set tick font
     ax.tick_params(axis='both', labelsize=cfg['figure']['tick_fontsize'])
     for tick in ax.get_xticklabels() + ax.get_yticklabels():
         tick.set_fontname(cfg['figure']['font_family'])
 
 def plot_rater_curves(df_rater, raters_subset, title_suffix, cfg, dataset):
-    """绘制评分者概率曲线"""
+    """Plot probability curves for raters"""
     categories = dataset['categories']
     colors = dataset['colors']
     
-    # 创建子图布局
+    # Create subplot layout
     fig, axes = plt.subplots(1, len(raters_subset), figsize=cfg['figure']['subplot_figsize'])
     if len(raters_subset) == 1:
         axes = [axes]
@@ -128,7 +128,7 @@ def plot_rater_curves(df_rater, raters_subset, title_suffix, cfg, dataset):
         df_filtered = df_rater[df_rater['Rater'] == rater]
         theta = df_filtered['Theta']
         
-        # 绘制每个类别的概率曲线
+        # Plot probability curves for each category
         for i, category in enumerate(categories):
             ax.plot(theta, df_filtered[category],
                    label=f'Point.{i+1}',
@@ -137,12 +137,12 @@ def plot_rater_curves(df_rater, raters_subset, title_suffix, cfg, dataset):
         
         setup_subplot(ax, rater, cfg)
     
-    # 处理图例
+    # Handle legend
     handles, labels = axes[0].get_legend_handles_labels()
     for ax in axes:
         ax.legend().remove()
     
-    # 添加全局图例和标题
+    # Add global legend and title
     fig.legend(handles, labels, loc='center right', 
               bbox_to_anchor=(0.95, 0.5), frameon=False,
               prop={'family': cfg['figure']['font_family'], 
@@ -152,37 +152,37 @@ def plot_rater_curves(df_rater, raters_subset, title_suffix, cfg, dataset):
                 fontname=cfg['figure']['font_family'], 
                 fontsize=cfg['figure']['title_fontsize'])
     
-    # 调整布局
+    # Adjust layout
     plt.tight_layout(rect=[0, 0, 0.85, 0.95], pad=4.0)
     plt.show()
 
 def process_dataset(dataset_key):
-    """处理单个数据集"""
+    """Process a single dataset"""
     dataset = DATA_CONFIG['datasets'][dataset_key]
     df_rater = load_and_preprocess_data(dataset_key)
     
-    # 获取所有评分者并分组
+    # Get all raters and group them
     raters = df_rater['Rater'].unique()
     num_raters = len(raters)
     mid_point = num_raters // 2
     raters_first_half = raters[:mid_point]
     raters_second_half = raters[mid_point:]
     
-    # 绘制图表
+    # Plot charts
     plot_rater_curves(df_rater, raters_first_half, f"{dataset_key}-1", CONFIG, dataset)
     plot_rater_curves(df_rater, raters_second_half, f"{dataset_key}-2", CONFIG, dataset)
 
 def main():
-    """主函数"""
-    # 按数据集组处理
+    """Main function"""
+    # Process by dataset groups
     dataset_groups = {
         'set1': ['set1'],
         'set2': ['set2'],
         'set3': ['set3_ic','set3_org','set3_v','set3_wc','set3_sf','set3_con']
     }
     
-    # 选择要处理的数据集组
-    group_to_process = 'set2'  # 可以改为 'set1' 或 'set2'
+    # Choose dataset group to process
+    group_to_process = 'set2'  # Can be changed to 'set1' or 'set2'
     
     print(f"Processing {group_to_process} datasets...")
     for dataset_key in dataset_groups[group_to_process]:
