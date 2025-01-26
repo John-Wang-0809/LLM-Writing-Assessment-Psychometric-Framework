@@ -146,22 +146,31 @@ This project explores the use of Large Language Models (LLMs) as raters in large
    ```
 
 2. **G- and D- Study Analysis**
-   - The data for the G-Study and D-Study is derived from the score samples obtained in the first step. Two human raters were selected to form the human rating group, while the   
-     first-round scores from GPT-4o-mini and GPT-4o were used to form the GPT rating group, and the first-round scores from Claude-3.5-Haiku and Claude-3.5-Sonnet were used to 
-     form the Claude rating group.
-   - For Set #1 and Set #2, input the `.MANUAL` file name into `genova36.exe` and specify the output file name as `P_X_R_RESULT_...` to obtain the results. For Set #3, input the   
-     `.MANUAL` file name into `mGENOVA.exe`, and the output will be generated directly without the need to specify an output file name.
+   - The data for the G-Study and D-Study is derived from the score samples obtained in the first step. Two human raters were selected to form the human rating group, while the first-round scores from GPT-4o-mini and GPT-4o were used to form the GPT rating group, and the first-round scores from Claude-3.5-Haiku and Claude-3.5-Sonnet were used to form the Claude rating group.
+   - For Set #1 and Set #2, input the `.MANUAL` file name into `genova36.exe` and specify the output file name as `P_X_R_RESULT_...` to obtain the results. For Set #3, input the `.MANUAL` file name into `mGENOVA.exe`, and the output will be generated directly without the need to specify an output file name.
+   - Click the `Source` button on the "D_Study_Results_Plot.R" code to visualize the D-Study Results.
 
-3. **Psychometric Analysis**
-   - Execute the analysis script to evaluate reliability and validity using G-Theory and MFRM.
+3. **Regression Analysis**
+   - The data for regression analysis is stored in the `repository/data/processed` directory.
+   - Execute the regression script to evaluate the intra-rater reliability of each rater.
    ```bash
-   python scripts/psychometric_analysis.py
+   python scripts/analysis/Regression.py
    ```
 
-4. **Visualization**
-   - Generate visualizations for score consistency and information functions.
+4. **Information**
+   - The data for Information function visualization is stored in the `repository/data/visualization` directory.
+   - Click the `Source` button on the "Information_Function_Plot.R" code to visualize the information function.
+   - Execute the information function statics script to obtain the descriptive statistical components of the information function.
    ```bash
-   python scripts/visualize_results.py
+   python scripts/analysis/Info_Function_Statics.py
+   ```
+
+5. **Information**
+   - The data for Information function visualization is stored in the `repository/data/visualization` directory.
+   - Click the `Source` button on the "Information_Function_Plot.R" code to visualize the information function.
+   - Execute the information function statics script to obtain the descriptive statistical components of the information function.
+   ```bash
+   python scripts/analysis/Info_Function_Statics.py
    ```
 
 ---
